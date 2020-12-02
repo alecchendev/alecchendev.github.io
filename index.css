@@ -8,28 +8,42 @@
 
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
 }
 
 .wrapper {
   width: 70vw;
-  margin: 4rem;
+  margin: 4rem auto;
 }
 
 .header {
   text-align: left;
   font-family: Roboto;
-  font-size: 4em;
+  font-size: 4rem;
   font-weight: bold;
 }
 
 .subtitle {
   text-align: left;
   font-family: Roboto mono;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: #888888;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+}
+
+.iconContainer {
+  width: 150px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+i {
+  font-size: 2rem;
 }
 
 .project {
@@ -55,21 +69,21 @@ body {
 .projectHeader {
   margin-top: 0px;
   font-family: Roboto;
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: bold;
 }
 
 .projectStack {
   margin-top: 5px;
   font-family: Roboto mono;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: #888888;
 }
 
 .projectDescription {
   margin-top: 10px;
   font-family: Roboto;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
