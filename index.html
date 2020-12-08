@@ -5,6 +5,13 @@
     <link rel="stylesheet" href="index.css">
     <meta charset="utf-8">
     <title>Alec Chen</title>
+
+    <script>
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("darkMode");
+      }
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -17,10 +24,10 @@
         Welcome!
       </div>
       <div class="iconContainer">
-        <a href="mailto:alecchendev@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/alecchendev" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://alecchendev.medium.com/" target="_blank"><i class="fab fa-medium"></i></a>
-        <a href="https://linkedin.com/in/alec-chen-450273182/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a class="socialIcon" href="mailto:alecchendev@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a class="socialIcon" href="https://github.com/alecchendev" target="_blank"><i class="fab fa-github"></i></a>
+        <a class="socialIcon" href="https://alecchendev.medium.com/" target="_blank"><i class="fab fa-medium"></i></a>
+        <a class="socialIcon" href="https://linkedin.com/in/alec-chen-450273182/" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
       <div class="project">
         <img class="projectImage" src="images/3DEngine.gif"/>
@@ -96,6 +103,13 @@
             read my piece.
           </div>
         </div>
+      </div>
+      <div class="toggle">
+        <label class="switch">
+          <input type="checkbox" onclick="myFunction()">
+          <span class="slider round"></span>
+        </label>
+        Dark Mode
       </div>
     </div>
   </body>
