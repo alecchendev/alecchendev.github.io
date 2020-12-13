@@ -5,7 +5,7 @@
 :root {
   font-size: 100%;
 
-  --color-text-link: #58a6ff;
+  --color-text-link: #2196F3;
 }
 
 body {
@@ -13,70 +13,15 @@ body {
   color: black;
 }
 
-/* DARK MODE TOGGLE */
-.toggle {
-  font-family: Roboto;
-  font-weight: bold;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-  margin-right: 10px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #eeeeee;
-  border-radius: 34px;
-  transition: .2s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  top: -3px;
-  left: -5px;
-  background-color: #dddddd;
-  border-radius: 50%;
-  transition: .2s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(24px);
-}
-
-body.darkMode {
-  background-color: #0d1117;
-  color: #dddddd;
-}
-
-body.darkMode .socialIcon {
-  color: #dddddd;
+.projectBody {
+  background-color: #ffffff;
 }
 
 .wrapper {
   width: 70vw;
-  margin: 4rem auto;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 50px;
 }
 
 .header {
@@ -103,6 +48,10 @@ body.darkMode .socialIcon {
 
 a {
   color: black;
+}
+
+a:hover {
+  color: var(--color-text-link);
 }
 
 i {
@@ -150,6 +99,51 @@ i {
   font-weight: 300;
 }
 
+.writingBody {
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+.writingWrapper {
+  width: 70vw;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.writingHeader {
+  font-family: Roboto;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+
+.sectionHeader {
+  margin-top: 5px;
+  font-family: Roboto mono;
+  font-size: 1.2rem;
+  color: #888888;
+}
+
+.writingLink {
+  font-family: Roboto;
+  margin-top: 0.5em;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
 @media screen and (max-width: 1450px) {
   .project {
     flex-direction: column;
@@ -167,8 +161,23 @@ i {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .sectionContainer {
+    flex-direction: column;
+  }
+
+  .section {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
 @media screen and (max-width: 720px) {
   .wrapper {
+    width: 80vw;
+  }
+
+  .writingWrapper {
     width: 80vw;
   }
 }
