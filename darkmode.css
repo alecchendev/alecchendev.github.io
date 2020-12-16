@@ -1,0 +1,76 @@
+
+/* DARK MODE TOGGLE */
+.toggle {
+    font-family: Roboto;
+    font-weight: 300;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eeeeee;
+    border-radius: 34px;
+    transition: .2s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    top: -3px;
+    left: -5px;
+    background-color: #dddddd;
+    border-radius: 50%;
+    transition: .2s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+
+  /* UPON DARKMODE */
+  
+  body.darkMode .projectBody {
+    background-color: #141a24;
+    color: #dddddd;
+  }
+  
+  body.darkMode .socialIcon {
+    color: #dddddd;
+  }
+
+  body.darkMode .writingBody {
+    background-color: #1e242e;
+    color: #dddddd;
+  }
+
+  body.darkMode a {
+    color: #dddddd;
+  }
+
+  body.darkMode a:hover {
+    color: var(--color-text-link);
+  }

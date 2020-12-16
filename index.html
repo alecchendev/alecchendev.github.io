@@ -3,132 +3,216 @@
   <head>
     <script src="https://kit.fontawesome.com/98bcd674c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="darkmode.css">
     <meta charset="utf-8">
     <title>Alec Chen</title>
 
     <script>
-      function myFunction() {
+      function toggleDarkMode() {
         var element = document.body;
         element.classList.toggle("darkMode");
       }
     </script>
+
   </head>
   <body>
-    <div class="wrapper">
-      <div class="header">
-        Hey! My name is Alec Chen.
-      </div>
-      <div class="subtitle">
-        I'm a budding software engineer and CS student at the University of Illinois
-        at Urbana-Champaign. This site is a visual collection of some of my projects.
-        Welcome!
-      </div>
-      <div class="iconContainer">
-        <a class="socialIcon" href="mailto:alecchendev@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-        <a class="socialIcon" href="https://github.com/alecchendev" target="_blank"><i class="fab fa-github"></i></a>
-        <a class="socialIcon" href="https://alecchendev.medium.com/" target="_blank"><i class="fab fa-medium"></i></a>
-        <a class="socialIcon" href="https://linkedin.com/in/alec-chen-450273182/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
-      <div class="project">
-        <img class="projectImage" src="images/RunnerGame2.gif"/>
-        <div class="projectInfoContainer">
-          <div class="projectHeader">
-            ?????
-          </div>
-          <div class="projectStack">
-            Rust WebAssembly Javascript WebGL
-          </div>
-          <div class="projectDescription">
-            This project is very much still a work in progress, and I'm currently
-            working through the basic mechanics of the game. I'm not using a game
-            engine, or even a graphics library, and so working with the graphics 
-            directly and doing everything myself makes things a bit more difficult, 
-            but I'm really proud of my work so far. Looking forward to fleshing out
-            the rest of the game, and hopefully getting to multiplayer functionality.
+    <div class="projectBody">
+      <div class="wrapper">
+        <div class="header">
+          Hey! My name is Alec Chen.
+        </div>
+        <div class="subtitle">
+          I'm a budding software engineer and CS student at the University of Illinois
+          at Urbana-Champaign. This site is a visual collection of some things that
+          I've worked on. Welcome!
+        </div>
+        <div class="iconContainer">
+          <a class="socialIcon" href="mailto:alecchendev@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+          <a class="socialIcon" href="https://github.com/alecchendev" target="_blank"><i class="fab fa-github"></i></a>
+          <a class="socialIcon" href="https://alecchendev.medium.com/" target="_blank"><i class="fab fa-medium"></i></a>
+          <a class="socialIcon" href="https://linkedin.com/in/alec-chen-450273182/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="project">
+          <img class="projectImage" src="images/RunnerGame2.gif"/>
+          <div class="projectInfoContainer">
+            <div class="projectHeader">
+              Runner Game
+            </div>
+            <div class="projectStack">
+              Rust WebAssembly Javascript WebGL
+            </div>
+            <div class="projectDescription">
+              This project is very much still a work in progress, and I'm currently
+              working through the basic mechanics of the game. I'm not using a game
+              engine, or even a graphics library, and so working with the graphics 
+              directly and doing everything myself makes things a bit more difficult, 
+              but I'm really proud of my work so far. Looking forward to fleshing out
+              the rest of the game, and hopefully getting to multiplayer functionality.
+            </div>
           </div>
         </div>
-      </div>
-      <div class="project">
-        <img class="projectImage" src="images/3DEngine.gif"/>
-        <div class="projectInfoContainer">
-          <div class="projectHeader">
-            3D Graphics Engine From Scratch
-          </div>
-          <div class="projectStack">
-            C++ Cinder
-          </div>
-          <div class="projectDescription">
-            Given 3-4 weeks to just "make something" using C++ and the graphics API
-            Cinder, I set out to build the systems behind transforming 3D perspective
-            to a 2D screen. After a lot of pacing around my dorm room thinking about
-            matrices, I developed a system with simple lighting that could render a
-            first person perspective moving and looking around inside of a room, or
-            any 3D model made of triangles.
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <img class="projectImage" src="images/Nutribuddy2.gif"/>
-        <div class="projectInfoContainer">
-          <div class="projectHeader">
-            Nutribuddy
-          </div>
-          <div class="projectStack">
-            Javascript React Python Flask
-          </div>
-          <div class="projectDescription">
-            Putting my newfound React skills to the test, I served as the frontend
-            developer on a nutrition recommendation web app that my group called
-            Nutribuddy. Working together going through the motions of agile development
-            methodologies and practicing proper version control to contribute to a code
-            base, we cranked out a pretty sleek MVP that takes in a user's dietary
-            preferences and restrictions, and outputs a week's worth of curated meals.
+        <div class="project">
+          <img class="projectImage" src="images/3DEngine.gif"/>
+          <div class="projectInfoContainer">
+            <div class="projectHeader">
+              3D Graphics Engine From Scratch
+            </div>
+            <div class="projectStack">
+              C++ Cinder
+            </div>
+            <div class="projectDescription">
+              Given 3-4 weeks to just "make something" using C++ and the graphics API
+              Cinder, I set out to build the systems behind transforming 3D perspective
+              to a 2D screen. After a lot of pacing around my dorm room thinking about
+              matrices, I developed a system with simple lighting that could render a
+              first person perspective moving and looking around inside of a room, or
+              any 3D model made of triangles.
+            </div>
           </div>
         </div>
-      </div>
-      <div class="project">
-        <img class="projectImage" src="images/PersonalOrganization.gif"/>
-        <div class="projectInfoContainer">
-          <div class="projectHeader">
-            Personal Organization App
-          </div>
-          <div class="projectStack">
-            Javascript React
-          </div>
-          <div class="projectDescription">
-            This was the first project I worked on while learning React. I tried to
-            emulate a similar concept of linked databases that my current organization
-            app, Notion, uses. It parses the input into the appropriate data, and then
-            all the tables are controlled and filtered versions of a single database.
-          </div>
-        </div>
-      </div>
-      <div class="project">
-        <img class="projectImage" src="images/SocialNetwork.png"/>
-        <div class="projectInfoContainer">
-          <div class="projectHeader">
-            Social Network Analysis
-          </div>
-          <div class="projectStack">
-            Python Matplotlib Networkx
-          </div>
-          <div class="projectDescription">
-            Getting into network analysis through research during high school, I
-            thought it'd be so interesting to analyze the social network of those
-            around me. A year later I collected friendship data through survey
-            responses and wrote an article with my analysis and visualization. I
-            tried really hard to break down the raw statistics into more digestible
-            insights, and it was really cool to get responses from classmates that'd
-            read my piece.
+        <div class="project">
+          <img class="projectImage" src="images/Nutribuddy2.gif"/>
+          <div class="projectInfoContainer">
+            <div class="projectHeader">
+              Nutribuddy
+            </div>
+            <div class="projectStack">
+              Javascript React Python Flask
+            </div>
+            <div class="projectDescription">
+              Putting my newfound React skills to the test, I served as the frontend
+              developer on a nutrition recommendation web app that my group called
+              Nutribuddy. Working together going through the motions of agile development
+              methodologies and practicing proper version control to contribute to a code
+              base, we cranked out a pretty sleek MVP that takes in a user's dietary
+              preferences and restrictions, and outputs a week's worth of curated meals.
+            </div>
           </div>
         </div>
+        <div class="project">
+          <img class="projectImage" src="images/PersonalOrganization.gif"/>
+          <div class="projectInfoContainer">
+            <div class="projectHeader">
+              Personal Organization App
+            </div>
+            <div class="projectStack">
+              Javascript React
+            </div>
+            <div class="projectDescription">
+              This was the first project I worked on while learning React. I tried to
+              emulate a similar concept of linked databases that my current organization
+              app, Notion, uses. It parses the input into the appropriate data, and then
+              all the tables are controlled and filtered versions of a single database.
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <img class="projectImage" src="images/SocialNetwork.png"/>
+          <div class="projectInfoContainer">
+            <div class="projectHeader">
+              Social Network Analysis
+            </div>
+            <div class="projectStack">
+              Python Matplotlib Networkx
+            </div>
+            <div class="projectDescription">
+              Getting into network analysis through research during high school, I
+              thought it'd be so interesting to analyze the social network of those
+              around me. A year later I collected friendship data through survey
+              responses and wrote an article with my analysis and visualization. I
+              tried really hard to break down the raw statistics into more digestible
+              insights, and it was really cool to get responses from classmates that'd
+              read my piece.
+            </div>
+          </div>
+        </div>
+        <div class="toggle">
+          <label class="switch">
+            <input type="checkbox" onclick="toggleDarkMode()">
+            <span class="slider round"></span>
+          </label>
+          Dark Mode
+        </div>
       </div>
-      <div class="toggle">
-        <label class="switch">
-          <input type="checkbox" onclick="myFunction()">
-          <span class="slider round"></span>
-        </label>
-        Dark Mode
+    </div>
+    <div class="writingBody">
+      <div class="writingWrapper">
+        <div class="writingHeader">
+          Writing
+        </div>
+        <div class="sectionContainer">
+          <div class="section">
+            <div class="sectionHeader">
+              Computer Science
+            </div>
+            <div class="writingLink">
+              <a href="https://medium.com/swlh/building-a-personal-coding-portfolio-website-60ccc6137f3?sk=b3b77ab2ea1d144e32b017093f374f4b" target="_blank">
+                Building a Personal Coding Portfolio Website
+              </a>
+            </div>
+            <div class="writingLink">
+              <a href="https://medium.com/datadriveninvestor/why-programming-tutorials-arent-a-waste-of-time-cb5ca2552046?source=friends_link&sk=f562dd192c3199ea776dc9876b17b1f0" target="_blank">
+                Why Programming Tutorials Aren't a Waste of Time
+              </a>
+            </div>
+            <div class="writingLink">
+              <a href="https://medium.com/dev-genius/how-i-built-a-basic-3d-graphics-engine-from-scratch-a54df82031f3?source=friends_link&sk=8c0d8ceb7da3e19e73c0175d988befc5" target="_blank">
+                How I Built a Basic 3D Graphics Engine From Scratch
+              </a>
+            </div>
+            <div class="writingLink">
+              <a href="https://medium.com/swlh/a-crash-course-on-software-testing-but-interesting-8cbe007e021b?source=friends_link&sk=f14fba221c26fef8c13ea25abd1ec12a" target="_blank">
+                A Crash Course on Software Testing But Interesting
+              </a>
+            </div>
+            <div class="writingLink">
+              <a href="https://medium.com/swlh/she-treats-he-recruits-analyzing-gender-in-netflixs-catalog-fbe059b26004?source=friends_link&sk=c7d19b6bbe376276c654c1db7fd91b96" target="_blank">
+                She Treats, He Recruits: Analyzing Gender in Netflix’s Catalog
+              </a>
+            </div>
+            <div class="writingLink">
+              <a href="https://medium.com/analytics-vidhya/basic-web-scraping-d6bb44118304?source=friends_link&sk=b77e6e1f00935617db6ccd1652d56448" target="_blank">
+                Basic Web Scraping
+              </a>
+            </div>
+            <div class="writingLink">
+              <a href="https://medium.com/analytics-vidhya/lessons-from-my-first-data-science-project-4d3bae8add55?source=friends_link&sk=e8c49a2fbac9c6fc2e6c6ee3c2fae06f" target="_blank">
+                Lessons From My First Data Science Project
+              </a>
+            </div>
+            <div class="writingLink">
+              <a href="https://alecchendev.medium.com/analyzing-the-social-network-of-my-high-school-7763df719363?source=friends_link&sk=62b4f16ac9c4786c71b801b226f7e289" target="_blank">
+                Analyzing the Social Network of My High School
+              </a>
+            </div>
+            <div class="writingLink">
+              <a href="https://alecchendev.medium.com/my-first-30-days-in-competitive-programming-9c2e11bdc4?source=friends_link&sk=a03efebf9c6f3dab2621112cb369bcae" target="_blank">
+                My First 30 Days in Competitive Programming
+              </a>
+            </div>
+          </div>
+          <div class="section">
+            <div class="sectionHeader">
+              Weeklies and Other Topics
+            </div>
+            <div class="writingLink">
+              <a href="https://alecchendev.medium.com/weekly-1-an-update-a-reflection-a-thought-4e8a8b68f5f?source=friends_link&sk=af8237688c60a327c8fbda744e0777df" target="_blank">
+                Weekly 1: An Update, a Reflection, a Thought
+              </a>
+            </div>
+            <div class="writingLink">
+              <a href="https://alecchendev.medium.com/the-simple-key-to-living-healthier-and-happier-529dbb7f0b9c?source=friends_link&sk=e86240a7ba734db4ee2a3afa3669e745" target="_blank">
+                The Simple Key to Living Healthier and Happier
+              </a>
+            </div>
+            <div class="writingLink">
+              <a href="https://alecchendev.medium.com/finding-solace-through-television-fe7392a40b11?sk=d10049e4c852838ced7328caf61e205e" target="_blank">
+                The Worth of Television
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </body>
