@@ -5,4 +5,4 @@ Article on the process of making it: https://medium.com/swlh/building-a-personal
 
 Preview:
 
-![preview](preview.png)
+![preview](images/preview.png)
