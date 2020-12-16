@@ -3,8 +3,17 @@
   <head>
     <script src="https://kit.fontawesome.com/98bcd674c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="darkmode.css">
     <meta charset="utf-8">
     <title>Alec Chen</title>
+
+    <script>
+      function toggleDarkMode() {
+        var element = document.body;
+        element.classList.toggle("darkMode");
+      }
+    </script>
+
   </head>
   <body>
     <div class="projectBody">
@@ -27,7 +36,7 @@
           <img class="projectImage" src="images/RunnerGame2.gif"/>
           <div class="projectInfoContainer">
             <div class="projectHeader">
-              ?????
+              Runner Game
             </div>
             <div class="projectStack">
               Rust WebAssembly Javascript WebGL
@@ -116,6 +125,13 @@
               read my piece.
             </div>
           </div>
+        </div>
+        <div class="toggle">
+          <label class="switch">
+            <input type="checkbox" onclick="toggleDarkMode()">
+            <span class="slider round"></span>
+          </label>
+          Dark Mode
         </div>
       </div>
     </div>
