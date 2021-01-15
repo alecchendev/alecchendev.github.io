@@ -10,14 +10,13 @@
 			image: "MyPhoto.jpg",
 			header: "Hey! I'm Alec.",
 			points: [
-				"I'm a software developer, writer, and freshman majoring in CS\
-				and Stats at University of Illinois at Urbana-Champaign.",
-				"This semester I'll be continuing my degree and begin training as part\
-				of AROTC at my school.",
-				"I've also worked on a plethora of other personal and\
-				group projects that you can check out in the projects section\
-				of this website.",
-				"When I'm not working, I like to write, cook, and watch movies/tv shows.",
+				"I'm a software developer, writer, AROTC cadet, and freshman at the University of Illinois at Urbana-Champaign.",
+				"This spring and summer I'll be working for Procter & Gamble as a data\
+				science/software development intern, and I've also worked on a lot of personal and group projects\
+				that you check out on this website.",
+				"Outside of work, if I'm not jotting down notes for my next piece, I'm probably\
+				cooking shrimp linguine so I can have something to eat while I watch this month's\
+				favorite tv show.",
 			],
 		},
 		projects: [
