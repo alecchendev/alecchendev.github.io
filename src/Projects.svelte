@@ -33,6 +33,7 @@
         margin: 0;
         margin-top: 10px;
         font-size: 1.1rem;
+        line-height: 1.5;
     }
     @media screen and (max-width: 1080px) {
         .project {
