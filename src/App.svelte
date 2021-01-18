@@ -14,9 +14,8 @@
 				"This spring and summer I'll be working for Procter & Gamble as a data\
 				science/software development intern, and I've also worked on a lot of personal and group projects\
 				that you check out on this website.",
-				"Outside of work, if I'm not jotting down notes for my next piece, I'm probably\
-				cooking shrimp linguine so I can have something to eat while I watch this month's\
-				favorite tv show.",
+				"Outside of work, I like to write, cook, and watch movies/tv shows. If you ever want to talk\
+				or get in touch about anything from CS to fitness to tv shows, don't hesitate to reach out.",
 			],
 		},
 		projects: [
