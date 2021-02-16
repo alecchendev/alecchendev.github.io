@@ -8,7 +8,7 @@
 	const data = {
 		summary: {
 			image: "MyPhoto.jpg",
-			header: "Hey! I'm Alec.",
+			header: "👋 Hey! I'm Alec.",
 			points: [
 				"I'm a software developer, writer, AROTC cadet, and freshman at the University of Illinois at Urbana-Champaign.",
 				"This spring and summer I'll be working for Procter & Gamble as a data\

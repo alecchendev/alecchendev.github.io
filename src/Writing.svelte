@@ -47,7 +47,7 @@
 </style>
 
 <div>
-    <h1>Featured Writing</h1>
+    <h1>✒️ Featured Writing</h1>
     <p>To read the rest of my pieces, visit my <a href="https://alecchendev.medium.com" target="_blank">Medium</a>.</p>
     <div class="writing">
         {#each data as article}
