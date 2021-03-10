@@ -1,7 +1,14 @@
-<script>
-    export let data;
-</script>
+<script lang='ts'>
 
+    export let data: Array<ArticleData>;
+</script>
+<script lang='ts' context='module'>
+    export interface ArticleData {
+        image: string,
+        title: string,
+        link: string
+    }
+</script>
 <style>
     .writing {
         width: 100%;

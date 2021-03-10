@@ -1,5 +1,14 @@
-<script>
-    export let projects = [];
+<script lang='ts'>
+    export let projects: Array<ProjectData> = [];
+</script>
+
+<script lang='ts' context='module'>
+    export interface ProjectData {
+        image: string,
+        title: string,
+        stack: Array<string>,
+        description: string
+    }
 </script>
 
 <style>

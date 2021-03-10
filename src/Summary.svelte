@@ -1,5 +1,16 @@
-<script>
-    export let data;
+<script lang='ts'>
+
+
+    export let data: SummaryData;
+</script>
+
+<script lang='ts' context='module'>
+    export interface SummaryData {
+        image: string,
+        header: string,
+        points: Array<string>
+    };
+
 </script>
 
 <style>

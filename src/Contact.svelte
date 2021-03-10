@@ -1,7 +1,14 @@
-<script lang="ts">
-    export let data;
+<script lang='ts'>
+    export let data: ContactData;
 </script>
-
+<script lang='ts' context='module'>
+    export interface ContactData {
+        email: string,
+        github: string,
+        medium: string,
+        linkedin: string
+    }
+</script>
 <style>
     .iconContainer {
         display: flex;

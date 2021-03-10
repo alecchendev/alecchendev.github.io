@@ -1,11 +1,18 @@
 <script lang="ts">
 	import Header from './Header.svelte';
-	import Summary from './Summary.svelte';
-	import Projects from './Projects.svelte';
-	import Writing from './Writing.svelte';
-	import Contact from './Contact.svelte';
+	import Summary, { SummaryData } from './Summary.svelte';
+	import Projects, { ProjectData } from './Projects.svelte';
+	import Writing, { ArticleData } from './Writing.svelte';
+	import Contact, { ContactData } from './Contact.svelte';
+
+	interface SiteData {
+		summary: SummaryData,
+		projects: Array<ProjectData>,
+		writing: Array<ArticleData>,
+		contact: ContactData
+	}
 	
-	const data = {
+	const data: SiteData = {
 		summary: {
 			image: "MyPhoto.jpg",
 			header: "👋 Hey! I'm Alec.",
