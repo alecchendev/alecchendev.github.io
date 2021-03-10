@@ -10,6 +10,7 @@
         justify-content: space-between;
 
         font-size: 1.1rem;
+        line-height: 1.4;
     }
     .right {
         width: 40%;
