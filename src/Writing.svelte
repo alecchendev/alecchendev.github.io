@@ -1,5 +1,5 @@
 <script lang='ts'>
-
+    import Layout from './Layout.svelte';
     export let data: Array<ArticleData>;
 </script>
 <script lang='ts' context='module'>
@@ -53,17 +53,17 @@
     }
 </style>
 
-<div>
+<Layout>
     <h1>✒️ Featured Writing</h1>
-    <p>To read the rest of my pieces, visit my <a href="https://alecchendev.medium.com" target="_blank">Medium</a>.</p>
+    <p>To read the rest of my pieces, visit my <a class='link' href="https://alecchendev.medium.com" target="_blank">Medium</a>.</p>
     <div class="writing">
         {#each data as article}
             <div class="article">
                 <div class="imageContainer">
                     <img alt={"Article image"} src={"images/" + article.image} />
                 </div>
-                <h2><a href={article.link} target="_blank">{article.title}</a></h2>
+                <h2><a class='link' href={article.link} target="_blank">{article.title}</a></h2>
             </div>
         {/each}
     </div>
-</div>
+</Layout>

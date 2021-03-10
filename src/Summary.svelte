@@ -1,6 +1,7 @@
 <script lang='ts'>
 
 
+    import Layout from './Layout.svelte';
     export let data: SummaryData;
 </script>
 
@@ -30,7 +31,7 @@
     }
 </style>
 
-<div>
+<Layout>
     <img alt={"Picture of Alec"} src={"images/" + data.image} />
     <h1>{data.header}</h1>
     <ul>
@@ -38,4 +39,4 @@
             <li>{point}</li>
         {/each}
     </ul>
-</div>
+</Layout>

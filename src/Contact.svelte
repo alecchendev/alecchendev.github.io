@@ -1,5 +1,10 @@
 <script lang='ts'>
-    export let data: ContactData;
+    export let data: ContactData = {
+        email: "mailto:alecchendev@gmail.com",
+        github: "https://github.com/alecchendev",
+        medium: "https://alecchendev.medium.com/",
+        linkedin: "https://linkedin.com/in/alec-chen-450273182/",
+    };
 </script>
 <script lang='ts' context='module'>
     export interface ContactData {
