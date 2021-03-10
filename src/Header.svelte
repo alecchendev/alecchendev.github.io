@@ -1,6 +1,5 @@
 <script lang='ts'>
 	import { Link } from "svelte-routing";
-    export let navigate;
 </script>
 
 <style>
@@ -33,10 +32,10 @@
 </style>
 
 <div class="header">
-    <div class="left"><Link to='/'><div class="navLink" on:click={navigate("summary")}>Alec Chen</div></Link></div>
+    <div class="left"><Link to='/'><div class="navLink" >Alec Chen</div></Link></div>
     <div class="right">
-        <Link to='/'><div class="navLink" on:click={navigate("summary")}>🏠 Home/About</div></Link>
-        <Link to='projects'><div class="navLink" on:click={navigate("projects")}>🚀 Projects</div></Link>
-        <Link to='writing'><div class="navLink" on:click={navigate("writing")}>✒️ Writing</div></Link>
+        <Link to='/'><div class="navLink" >🏠 Home/About</div></Link>
+        <Link to='projects'><div class="navLink" >🚀 Projects</div></Link>
+        <Link to='writing'><div class="navLink" >✒️ Writing</div></Link>
     </div>
 </div>

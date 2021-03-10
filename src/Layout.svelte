@@ -23,7 +23,7 @@
 </style>
 
 <div class="wrapper">
-	<Header navigate={(section) => navigate(section)} />
+	<Header/>
 	<div class="contentWrapper">
 		<slot></slot>
 	</div>
