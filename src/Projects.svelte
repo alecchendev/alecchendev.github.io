@@ -1,5 +1,15 @@
-<script>
-    export let projects = [];
+<script lang='ts'>
+    import Layout from './Layout.svelte';
+    export let projects: Array<ProjectData> = [];
+</script>
+
+<script lang='ts' context='module'>
+    export interface ProjectData {
+        image: string,
+        title: string,
+        stack: Array<string>,
+        description: string
+    }
 </script>
 
 <style>
@@ -51,7 +61,7 @@
     }
 </style>
 
-<div>
+<Layout>
     <h1>🚀 Projects</h1>
     {#each projects as project}
         <div class="project">
@@ -63,4 +73,4 @@
             </div>
         </div>
     {/each}
-</div>
+</Layout>

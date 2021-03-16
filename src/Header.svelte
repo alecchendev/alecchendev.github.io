@@ -1,5 +1,5 @@
-<script>
-    export let navigate;
+<script lang='ts'>
+	import { Link } from "svelte-routing";
 </script>
 
 <style>
@@ -10,6 +10,7 @@
         justify-content: space-between;
 
         font-size: 1.1rem;
+        line-height: 1.4;
     }
     .right {
         width: 40%;
@@ -32,10 +33,10 @@
 </style>
 
 <div class="header">
-    <div class="left"><div class="navLink" on:click={navigate("summary")}>Alec Chen</div></div>
+    <div class="left"><Link to='/'><div class="navLink" >Alec Chen</div></Link></div>
     <div class="right">
-        <div class="navLink" on:click={navigate("summary")}>🏠 Home/About</div>
-        <div class="navLink" on:click={navigate("projects")}>🚀 Projects</div>
-        <div class="navLink" on:click={navigate("writing")}>✒️ Writing</div>
+        <Link to='/'><div class="navLink" >🏠 Home/About</div></Link>
+        <Link to='projects'><div class="navLink" >🚀 Projects</div></Link>
+        <Link to='writing'><div class="navLink" >✒️ Writing</div></Link>
     </div>
 </div>

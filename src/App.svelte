@@ -1,11 +1,21 @@
 <script lang="ts">
-	import Header from './Header.svelte';
+	import { Router, Route } from "svelte-routing";
+
 	import Summary from './Summary.svelte';
 	import Projects from './Projects.svelte';
 	import Writing from './Writing.svelte';
-	import Contact from './Contact.svelte';
+
+	import type { SummaryData } from './Summary.svelte';
+	import type { ProjectData } from './Projects.svelte';
+	import type { ArticleData } from './Writing.svelte';
 	
-	const data = {
+	interface SiteData {
+		summary: SummaryData,
+		projects: Array<ProjectData>,
+		writing: Array<ArticleData>,
+	}
+	
+	const data: SiteData = {
 		summary: {
 			image: "MyPhoto.jpg",
 			header: "👋 Hey! I'm Alec.",
@@ -92,54 +102,12 @@
 				title: "Getting Rejected From All My Colleges",
 				link: "https://alecchendev.medium.com/getting-rejected-from-all-my-colleges-eae0b39e3d72?sk=e7483fdbd458188b051de9fd0709207f",
 			},
-		],
-		contact: {
-			email: "mailto:alecchendev@gmail.com",
-			github: "https://github.com/alecchendev",
-			medium: "https://alecchendev.medium.com/",
-			linkedin: "https://linkedin.com/in/alec-chen-450273182/",
-		}
+		]
 	};
-	let menu = 0;
-	const sectionKey = {
-		"summary": 0,
-		"projects": 1,
-		"writing": 2, 
-	};
-	const navigate = (section) => {
-		menu = sectionKey[section];
-	};
-	
 </script>
 
-<style>
-	.wrapper {
-		width: 950px;
-
-		margin: auto;
-		padding-top: 100px;
-		padding-bottom: 100px;
-	}
-	.contentWrapper {
-		margin-top: 100px;
-	}
-	@media screen and (max-width: 1080px) {
-        .wrapper {
-			width: 90%;
-		}
-    }
-</style>
-
-<div class="wrapper">
-	<Header navigate={(section) => navigate(section)} />
-	<div class="contentWrapper">
-		{#if menu === 0}
-			<Summary data={data.summary} />
-		{:else if menu === 1}
-			<Projects projects={data.projects} />
-		{:else if menu === 2}
-			<Writing data={data.writing} />
-		{/if}
-	</div>
-	<Contact data={data.contact} />
-</div>
+<Router url="">
+	<Route path="/"><Summary data={data.summary}/></Route>
+	<Route path="projects"><Projects projects={data.projects}/></Route>
+	<Route path="writing"><Writing data={data.writing}/></Route>
+</Router>

@@ -1,7 +1,19 @@
-<script lang="ts">
-    export let data;
+<script lang='ts'>
+    export let data: ContactData = {
+        email: "mailto:alecchendev@gmail.com",
+        github: "https://github.com/alecchendev",
+        medium: "https://alecchendev.medium.com/",
+        linkedin: "https://linkedin.com/in/alec-chen-450273182/",
+    };
 </script>
-
+<script lang='ts' context='module'>
+    export interface ContactData {
+        email: string,
+        github: string,
+        medium: string,
+        linkedin: string
+    }
+</script>
 <style>
     .iconContainer {
         display: flex;
