@@ -2,6 +2,7 @@
 <script lang="ts">
     import Header from './Header.svelte';
 	import Contact from './Contact.svelte';
+	import MDTest from './MDTest.svelte';
 </script>
 
 <style>
@@ -24,6 +25,7 @@
 
 <div class="wrapper">
 	<Header/>
+	<MDTest/>
 	<div class="contentWrapper">
 		<slot></slot>
 	</div>
