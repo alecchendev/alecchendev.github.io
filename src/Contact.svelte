@@ -24,17 +24,10 @@
         margin-top: 100px;
         text-align: center;
     }
-    .iconContainer:hover .socialIcon {
-        opacity: 0.5;
-    }
     .socialIcon {
         font-size: 1.75rem;
         background-image: none;
-        opacity: 1;
         transition: 0.15s;
-    }
-    .iconContainer:hover .socialIcon:hover {
-        opacity: 1;
     }
 </style>
 
