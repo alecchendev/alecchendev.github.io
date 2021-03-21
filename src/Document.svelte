@@ -8,9 +8,25 @@
 Here is some placeholder content.
     `;
 
+    if (docName === 'Home')
+        content = `
+<style>img { width: 100px; }</style>
+<div style='display: flex; flex-direction: row-reverse;'>
+
+![alt text](images/MyPhoto.jpg)
+
+# Welcome! I'm Alec.
+This is my personal website. It's a place
+for me to share a bit about myself, and mark
+my corner of the internet.
+        `;
+
     
 </script>
 
-<Layout>
-    <SvelteMarkdown source={content}/>
-</Layout>
+
+<style>
+
+</style>
+
+<SvelteMarkdown source={content}/>

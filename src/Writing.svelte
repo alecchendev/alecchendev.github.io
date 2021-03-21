@@ -53,7 +53,7 @@
     }
 </style>
 
-<Layout>
+<div>
     <h1>✒️ Featured Writing</h1>
     <p>To read the rest of my pieces, visit my <a class='link' href="https://alecchendev.medium.com" target="_blank">Medium</a>.</p>
     <div class="writing">
@@ -66,4 +66,4 @@
             </div>
         {/each}
     </div>
-</Layout>
+</div>

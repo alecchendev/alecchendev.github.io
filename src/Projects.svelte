@@ -61,8 +61,8 @@
     }
 </style>
 
-<Layout>
-    <h1>🚀 Projects</h1>
+<div>
+    <h2>🚀 Projects</h2>
     {#each projects as project}
         <div class="project">
             <img class="projectImage" alt={"project image"} src={"images/" + project.image}/>
@@ -73,4 +73,4 @@
             </div>
         </div>
     {/each}
-</Layout>
+</div>

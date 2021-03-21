@@ -2,9 +2,11 @@
 	import { Router, Route } from "svelte-routing";
 
 	import Summary from './Summary.svelte';
+	import Layout from './Layout.svelte';
 	import Projects from './Projects.svelte';
 	import Writing from './Writing.svelte';
 	import Document from './Document.svelte';
+	import About from './About.svelte';
 
 	import type { SummaryData } from './Summary.svelte';
 	import type { ProjectData } from './Projects.svelte';
@@ -108,7 +110,11 @@
 </script>
 
 <Router url="">
-	<Route path="/"><Summary data={data.summary}/></Route>
-	<Route path="/projects"><Projects projects={data.projects}/></Route>
-	<Route path="/:docName" let:params ><Document docName={params.docName} /></Route>
+	<Layout>
+		<Route path="/"><Summary data={data.summary}/><!--<Document docName={'Home'} />--></Route>
+		<Route path="/projects"><Projects projects={data.projects}/></Route>
+		<Route path="/about"><About/></Route>
+		<Route path="/writing" let:params ><Writing data={data.writing} /></Route>
+		<Route path="/:docName" let:params ><Document docName={params.docName} /></Route>
+	</Layout>
 </Router>

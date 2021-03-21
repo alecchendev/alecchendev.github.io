@@ -2,7 +2,6 @@
 <script lang="ts">
     import Header from './Header.svelte';
 	import Contact from './Contact.svelte';
-	import MDTest from './Content.svelte';
 </script>
 
 <style>
@@ -10,11 +9,11 @@
 		width: 950px;
 
 		margin: auto;
-		padding-top: 100px;
+		padding-top: 50px;
 		padding-bottom: 100px;
 	}
 	.contentWrapper {
-		margin-top: 100px;
+		margin-top: 150px;
 	}
 	@media screen and (max-width: 1080px) {
         .wrapper {
@@ -25,7 +24,6 @@
 
 <div class="wrapper">
 	<Header/>
-	<MDTest/>
 	<div class="contentWrapper">
 		<slot></slot>
 	</div>

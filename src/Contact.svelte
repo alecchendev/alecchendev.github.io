@@ -35,7 +35,6 @@
     }
     .iconContainer:hover .socialIcon:hover {
         opacity: 1;
-        background-image: linear-gradient(180deg,transparent 90%, var(--link-color) 0);
     }
 </style>
 

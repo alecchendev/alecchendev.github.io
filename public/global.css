@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 :root {
 	--link-color: #62f088;
 }
@@ -13,22 +15,38 @@ body {
 	margin: 0;
 	padding: 8px;
 	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: Inter;
+	line-height: 1.4;
+	/* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; */
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.4rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+	font-weight: normal;
+}
+
+p {
+	font-size: 1.1rem;
 }
 
 a {
 	color: black;
-	text-decoration: none;
-}
-
-.link {
-	background-image: linear-gradient(180deg,transparent 90%, var(--link-color) 0);
-	opacity: 0.7;
-	transition: 0.08s;
+	text-decoration: underline;
+	text-underline-offset: 0.25em;
+	transition: 0.1s;
 }
 
 a:hover {
-	opacity: 1;
+	opacity: 0.6;
+	cursor: pointer;
 }
 
 label {
