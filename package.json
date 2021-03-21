@@ -2,9 +2,9 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public -s",
+    "build": "tsc && rollup -c",
+    "dev": "tsc && rollup -c -w",
+    "start": "tsc && sirv public -s",
     "validate": "svelte-check"
   },
   "devDependencies": {

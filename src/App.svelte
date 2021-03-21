@@ -4,6 +4,7 @@
 	import Summary from './Summary.svelte';
 	import Projects from './Projects.svelte';
 	import Writing from './Writing.svelte';
+	import Document from './Document.svelte';
 
 	import type { SummaryData } from './Summary.svelte';
 	import type { ProjectData } from './Projects.svelte';
@@ -108,6 +109,6 @@
 
 <Router url="">
 	<Route path="/"><Summary data={data.summary}/></Route>
-	<Route path="projects"><Projects projects={data.projects}/></Route>
-	<Route path="writing"><Writing data={data.writing}/></Route>
+	<Route path="/projects"><Projects projects={data.projects}/></Route>
+	<Route path="/:docName" let:params ><Document docName={params.docName} /></Route>
 </Router>

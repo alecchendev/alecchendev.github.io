@@ -2,7 +2,7 @@
 <script lang="ts">
     import Header from './Header.svelte';
 	import Contact from './Contact.svelte';
-	import MDTest from './MDTest.svelte';
+	import MDTest from './Content.svelte';
 </script>
 
 <style>
