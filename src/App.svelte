@@ -111,7 +111,7 @@
 
 <Router url="">
 	<Layout>
-		<Route path="/"><Summary data={data.summary}/><!--<Document docName={'Home'} />--></Route>
+		<Route path="/"><Summary /><!--<Document docName={'Home'} />--></Route>
 		<Route path="/projects"><Projects projects={data.projects}/></Route>
 		<Route path="/about"><About/></Route>
 		<Route path="/writing" let:params ><Writing data={data.writing} /></Route>
