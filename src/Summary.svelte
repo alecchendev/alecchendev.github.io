@@ -8,14 +8,9 @@
 
 # Welcome! I'm Alec.
 #### I'm a software developer, ROTC cadet, and amateur filmmaker. \
-Here on my personal website you can get a glimpse into how I like \
-to live my life.
+Here on my personal website you can get a glimpse into how I  \
+live my life.
 
-<br>
-<br>
-<br>
-<br>
-<br>
 
 `} />
 
@@ -64,31 +59,6 @@ to live my life.
 		]}/> -->
 
 <SvelteMarkdown source={`
-
-<br>
-<br>
-<br>
-
-## Explore
-[About](/projects)
-
-[Projects](/projects)
-
-[Writing](/writing)
-
-<br>
-
-### Coming Soon...
-
-[My Hobbies](/)
-
-[My Minimalist Notion Setup](/)
-
-[What Am I Listening To?](/)
-
-[The Making of this Website](/)
-
-[Mantras/Themes I live by](/)
 `}/>
 
 </div>

@@ -62,7 +62,7 @@
 </style>
 
 <div>
-    <h2>🚀 Projects</h2>
+    <h2>Projects</h2>
     {#each projects as project}
         <div class="project">
             <img class="projectImage" alt={"project image"} src={"images/" + project.image}/>

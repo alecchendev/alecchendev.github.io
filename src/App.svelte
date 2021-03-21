@@ -7,6 +7,7 @@
 	import Writing from './Writing.svelte';
 	import Document from './Document.svelte';
 	import About from './About.svelte';
+	import Explore from './Explore.svelte';
 
 	import type { SummaryData } from './Summary.svelte';
 	import type { ProjectData } from './Projects.svelte';
@@ -114,6 +115,7 @@
 		<Route path="/"><Summary /><!--<Document docName={'Home'} />--></Route>
 		<Route path="/projects"><Projects projects={data.projects}/></Route>
 		<Route path="/about"><About/></Route>
+		<Route path="/explore"><Explore/></Route>
 		<Route path="/writing" let:params ><Writing data={data.writing} /></Route>
 		<Route path="/:docName" let:params ><Document docName={params.docName} /></Route>
 	</Layout>

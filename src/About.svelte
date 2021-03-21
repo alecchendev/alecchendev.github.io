@@ -16,11 +16,11 @@
         systems programming with C++.
         <br>
         <br>
-        For exercising, I'm currently attend physical training for ROTC, but on \
+        For exercising, I currently have physical training for ROTC 3 days a week, but on \
         our off-days I like to lift weights.
         <br>
         <br>
-        For filmmaking, I am in my very early stages of creating for myself, \
+        For filmmaking, I'm in my very early stages of creating for myself, \
         but some movies I've enjoyed recently would include The Truman Show, Gone Girl, \
         The Dark Knight Trilogy, and Rain Man.
     </p>

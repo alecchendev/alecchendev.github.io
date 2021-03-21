@@ -49,6 +49,10 @@ a:hover {
 	cursor: pointer;
 }
 
+.explore-flex p {
+	width: 50%;
+}
+
 label {
 	display: block;
 }

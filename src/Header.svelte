@@ -31,7 +31,7 @@
     </div>
     <div class="right">
         <Link to='/about'>About</Link>
-        <Link to='projects'>Projects</Link>
-        <Link to='writing'>Writing</Link>
+        <Link to='/projects'>Projects</Link>
+        <Link to='/explore'>Explore</Link>
     </div>
 </div>
