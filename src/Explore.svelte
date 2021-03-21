@@ -10,7 +10,7 @@
 </style>
 
 <div>
-<h2>Explore</h2>
+<h2>Coming Soon...</h2>
 <div class='explore-flex'>
     <SvelteMarkdown source={`
 [Writing](/writing)

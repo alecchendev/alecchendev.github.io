@@ -19,7 +19,7 @@
         display: flex;
         justify-content: space-between;
 
-        width: 150px;
+        width: 125px;
         margin: auto;
         margin-top: 100px;
         text-align: center;
@@ -34,6 +34,5 @@
 <div class="iconContainer">
     <a class="socialIcon" href={data.email} target="_blank"><i class="fas fa-envelope"></i></a>
     <a class="socialIcon" href={data.github} target="_blank"><i class="fab fa-github"></i></a>
-    <a class="socialIcon" href={data.medium} target="_blank"><i class="fab fa-medium"></i></a>
     <a class="socialIcon" href={data.linkedin} target="_blank"><i class="fab fa-linkedin"></i></a>
 </div>
