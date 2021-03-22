@@ -1,10 +1,11 @@
 {
   "name": "svelte-app",
   "version": "1.0.0",
+  "main": "functions/server.js",
   "scripts": {
-    "build": "tsc && rollup -c",
-    "dev": "tsc && rollup -c -w",
-    "start": "tsc && sirv public -s",
+    "build": "rollup -c && netlify-lambda build server",
+    "dev": "rollup -c -w",
+    "start": "nodemon server-local.js",
     "validate": "svelte-check"
   },
   "devDependencies": {
@@ -27,6 +28,9 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "netlify-lambda": "^2.0.3",
+    "nodemon": "^2.0.7",
+    "serverless-http": "^2.7.0",
     "sirv-cli": "^1.0.0",
     "svelte-markdown": "^0.1.4"
   }
