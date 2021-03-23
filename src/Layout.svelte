@@ -13,7 +13,7 @@
 		padding-bottom: 100px;
 	}
 	.contentWrapper {
-		margin-top: 150px;
+		margin-top: 125px;
 	}
 	@media screen and (max-width: 1080px) {
         .wrapper {

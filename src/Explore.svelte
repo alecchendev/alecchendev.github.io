@@ -19,7 +19,7 @@
 
 [My Minimalist Notion Setup](/)
 
-[What Am I Listening To?](/)
+[What Am I Listening To?](/spotify)
 
 [The Making of this Website](/)
 
