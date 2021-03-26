@@ -30,7 +30,7 @@
         object-fit: cover;
         border: 1px solid black;
     }
-    h2 {
+    h3 {
         margin-top: 10px;
     }
     @media screen and (max-width: 810px) {
@@ -53,8 +53,8 @@
     }
 </style>
 
-<Layout>
-    <h1>✒️ Featured Writing</h1>
+<div>
+    <h2>Featured Writing</h2>
     <p>To read the rest of my pieces, visit my <a class='link' href="https://alecchendev.medium.com" target="_blank">Medium</a>.</p>
     <div class="writing">
         {#each data as article}
@@ -62,8 +62,8 @@
                 <div class="imageContainer">
                     <img alt={"Article image"} src={"images/" + article.image} />
                 </div>
-                <h2><a class='link' href={article.link} target="_blank">{article.title}</a></h2>
+                <h3><a class='link' href={article.link} target="_blank">{article.title}</a></h3>
             </div>
         {/each}
     </div>
-</Layout>
+</div>

@@ -2,3 +2,7 @@
 /public/build/
 
 .DS_Store
+
+functions
+
+.env
