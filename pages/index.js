@@ -26,8 +26,8 @@ export default function Home({ allPostsData }) {
           and hobbyist filmmaker.
         </p>
         <p>
-          Feel free to contact me through <a href='mailto:alecchendev@gmail.com'>email </a>
-          or <a href='https://twitter.com/alecchendev'>Twitter</a>. I love meeting new
+          Feel free to contact me through <a href='mailto:alecchendev@gmail.com' target='_blank'>email </a>
+          or <a href='https://twitter.com/alecchendev' target='_blank'>Twitter</a>. I love meeting new
           people, so don't hesitate to reach out!
         </p>
       </section>
