@@ -18,8 +18,6 @@ export default function Post({ postData }) {
         <Date dateString={postData.date} />
       </div>
       <Component content={postData.content} />
-      {/* <DynamicComponent content={postData.content}/> */}
-      {/* <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /> */}
     </article> 
   </Layout>
   )
