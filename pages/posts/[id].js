@@ -3,10 +3,10 @@ import Head from 'next/head';
 import Date from '../../components/date';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import utilStyles from '../../styles/utils.module.css';
-import Components from '../../components';
+// import Components from '../../components';
 
 export default function Post({ postData }) {
-  const Component = Components[postData.component];
+  // const Component = Components[postData.component];
   return (
   <Layout>
     <Head>
@@ -17,7 +17,8 @@ export default function Post({ postData }) {
       <div className={utilStyles.lightText}>
         <Date dateString={postData.date} />
       </div>
-      <Component content={postData.content} />
+      <div dangerouslySetInnerHTML={{ __html: postData.content }} />
+      {/* <Component content={postData.content} /> */}
     </article> 
   </Layout>
   )
