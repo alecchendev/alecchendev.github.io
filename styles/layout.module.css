@@ -1,5 +1,5 @@
 .container {
-	max-width: 36rem;
+	max-width: 50rem;
 	padding: 0 1rem;
 	margin: 3rem auto 6rem;
 }
@@ -12,4 +12,10 @@
 
 .backToHome {
 	margin: 3rem 0 0;
+}
+
+@media screen and (max-width: 1080px) {
+	.container {
+		width: 90%;
+	}
 }

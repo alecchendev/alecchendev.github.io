@@ -1,0 +1,50 @@
+
+.container {
+	display: flex;
+	margin-bottom: 15px;
+}
+
+.image {
+	width: 400px;
+	height: 100%;
+	border: 1px solid black;
+}
+
+.infoContainer {
+	margin-left: 10px;
+}
+
+.title {
+	margin: 0;
+	font-size: 1.75rem;
+}
+
+.stack {
+	display: inline-block;
+	margin: 0;
+	margin-top: 5px;
+	font-size: 1.25rem;
+	font-weight: normal;
+	opacity: 0.75;
+}
+	
+.description {
+	margin: 0;
+	margin-top: 10px;
+	font-size: 1.1rem;
+	line-height: 1.5;
+}
+@media screen and (max-width: 1080px) {
+	.container {
+			flex-direction: column;
+	}
+	.image {
+			width: 100%;
+			height: auto;
+	}
+	.info {
+			margin-left: 0;
+			margin-top: 10px;
+			margin-bottom: 25px;
+	}
+}

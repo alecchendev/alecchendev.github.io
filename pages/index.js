@@ -31,6 +31,12 @@ export default function Home({ allPostsData }) {
           people, so don't hesitate to reach out!
         </p>
       </section>
+      <section>
+        <h2 className={utilStyles.headingLg}>Featured</h2>
+        <Link href={`/projects`}>
+          <a>Projects</a>
+        </Link>
+      </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
