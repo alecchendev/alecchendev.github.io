@@ -1,7 +1,7 @@
 
 .landingContainer {
 	display: flex;
-	margin-bottom: 5rem;
+	margin-bottom: 3rem;
 }
 
 .headingContainer {
@@ -50,7 +50,6 @@
 @media screen and (max-width: 720px) {
 	.landingContainer {
 		flex-direction: column;
-		margin-bottom: 2.5rem;
 	}
 
 	.headingContainer {
