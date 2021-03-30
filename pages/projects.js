@@ -1,4 +1,5 @@
 import Layout from '../components/layout';
+import Head from 'next/head';
 import styles from '../styles/projects.module.css';
 import { getProjectsData } from '../lib/projects';
 
@@ -7,6 +8,9 @@ export default function Projects({ projectsData }) {
     
 	return (
 		<Layout>
+			<Head>
+				<title>Projects</title>
+			</Head>
 			<h1>
 				Projects
 			</h1>

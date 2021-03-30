@@ -7,14 +7,14 @@ import Link from 'next/link'
 const name = 'Alec Chen';
 export const siteTitle = 'Alec Chen';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, skinny }) {
   return (
-    <div className={styles.container}>
+    <div className={skinny ? styles.skinnyContainer : styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className={styles.header}>
-        {home ? (
+        {/* {home ? (
           <>
             <Image
               priority
@@ -29,7 +29,7 @@ export default function Layout({ children, home }) {
         ) : (
           <>
           </>
-        )}
+        )} */}
       </header>
 
       <main>{children}</main>

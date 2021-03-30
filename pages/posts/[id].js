@@ -8,7 +8,7 @@ import utilStyles from '../../styles/utils.module.css';
 export default function Post({ postData }) {
   // const Component = Components[postData.component];
   return (
-  <Layout>
+  <Layout skinny>
     <Head>
       <title>{postData.title}</title>
     </Head>

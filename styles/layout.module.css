@@ -1,6 +1,14 @@
 .container {
-	max-width: 50rem;
+	width: 50rem;
 	padding: 0 1rem;
+	padding-top: 50px;
+	margin: 3rem auto 6rem;
+}
+
+.skinnyContainer {
+	width: 36rem;
+	padding: 0 1rem;
+	padding-top: 50px;
 	margin: 3rem auto 6rem;
 }
 
