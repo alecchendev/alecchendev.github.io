@@ -16,6 +16,7 @@
 
 .title {
 	margin: 0;
+	font-family: DM Sans;
 	font-size: 1.75rem;
 }
 
@@ -23,7 +24,9 @@
 	display: inline-block;
 	margin: 0;
 	margin-top: 5px;
-	font-size: 1.25rem;
+	/* font-family: DM Mono; */
+	color: var(--accent-color);
+	font-size: 1rem;
 	font-weight: normal;
 	opacity: 0.75;
 }
@@ -31,7 +34,7 @@
 .description {
 	margin: 0;
 	margin-top: 10px;
-	font-size: 1.1rem;
+	font-size: 1rem;
 	line-height: 1.5;
 }
 @media screen and (max-width: 1080px) {

@@ -6,17 +6,21 @@ import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getProjectsData } from '../lib/projects';
+import Projects from '../components/projects';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  const projectsData = getProjectsData();
   return {
     props: {
-      allPostsData
+      allPostsData,
+      projectsData
     }
   }
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, projectsData }) {
   return (
     <Layout home>
       <Head>
@@ -28,27 +32,25 @@ export default function Home({ allPostsData }) {
           <h1 className={styles.heading}>
             Hey! I'm Alec.
             <br/>
-            I'm a <Link href='/projects'><a>software engineer</a></Link> and <Link href='/projects'><a>hobbyist filmmaker</a></Link>.
+            I'm a <Link href='/projects'><a>software engineer</a></Link> and
+            <Link href='/projects'><a> hobbyist filmmaker</a></Link>.
           </h1>
 
           <h2 className={styles.subheading}>
-            
             Feel free to contact me through <a href='mailto:alecchendev@gmail.com' target='_blank'>email </a>
             or <a href='https://twitter.com/alecchendev' target='_blank'>Twitter</a>. I love meeting new
             people, so don't hesitate to reach out!
           </h2>
-          
 
         </div>
         <img className={styles.profileImg} src={'./images/profileAlt.png'}/>
-        {/* <Image
-          priority
-          src="/images/profileAlt.png"
-          className={utilStyles.borderCircle}
-          height={144}
-          width={144}
-          alt={name}
-        /> */}
+      </div>
+
+      <div className={styles.projectsContainer}>
+        <div className={styles.sectionHeaderContainer}>
+          <h1 className={styles.sectionHeader}>Projects</h1>
+        </div>
+        <Projects projectsData={projectsData} />
       </div>
 
       {false &&

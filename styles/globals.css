@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
 
 :root {
   --accent-color: #ff8d54;
@@ -9,13 +10,12 @@
 
 html,
 body {
-  color: #333;
+
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 300;
-  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, */
-    /* Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
   line-height: 1.4;
   font-size: 18px;
 }
@@ -34,9 +34,4 @@ a:hover {
   /* text-decoration: underline; */
   opacity: 0.65;
   cursor: pointer;
-}
-
-img {
-  max-width: 100%;
-  display: block;
 }

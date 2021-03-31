@@ -21,7 +21,6 @@
 }
 
 .subheading {
-	font-family: Roboto;
 	font-weight: 300;
 	font-size: 1rem;
 	margin-bottom: 2rem;
@@ -34,10 +33,37 @@
 	border-radius: 9999px;
 }
 
+.projectsContainer {
+	margin-top: 10rem;
+}
+.sectionHeaderContainer {
+
+
+}
+.sectionHeader {
+	display: flex;
+	justify-content: space-between;
+	font-family: DM Sans;
+	font-weight: 600;
+	font-size: 2.5rem;
+}
+
+.sectionHeader::after {
+	content: "";
+	margin-top: 1.75rem;
+	width: 81%;
+	height: 1px;
+	background-color: black;
+}
+
+
+
 .rule {
 	color: gray;
 	opacity: 0.25;
-	margin: 2.5rem auto 0;
+	width: 30%;
+	margin-left: 0;
+  margin-right: 0;
 }
 
 .navContainer {
@@ -53,6 +79,7 @@
 .sectionContainerLg {
 	width: 100%;
 }
+
 
 @media screen and (max-width: 720px) {
 	.landingContainer {
