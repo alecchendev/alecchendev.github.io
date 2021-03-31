@@ -5,7 +5,7 @@
 }
 
 .image {
-	width: 400px;
+	width: 450px;
 	height: 100%;
 	border: 1px solid black;
 }
@@ -36,7 +36,7 @@
 	font-size: 1rem;
 	line-height: 1.5;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 800px) {
 	.container {
 		flex-direction: column;
 	}
