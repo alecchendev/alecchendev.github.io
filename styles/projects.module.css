@@ -28,7 +28,6 @@
 	color: var(--accent-color);
 	font-size: 1rem;
 	font-weight: normal;
-	opacity: 0.75;
 }
 	
 .description {
@@ -39,15 +38,15 @@
 }
 @media screen and (max-width: 1080px) {
 	.container {
-			flex-direction: column;
+		flex-direction: column;
 	}
 	.image {
-			width: 100%;
-			height: auto;
+		width: 100%;
+		height: auto;
 	}
-	.info {
-			margin-left: 0;
-			margin-top: 10px;
-			margin-bottom: 25px;
+	.infoContainer {
+		margin-left: 0;
+		margin-top: 10px;
+		margin-bottom: 25px;
 	}
 }

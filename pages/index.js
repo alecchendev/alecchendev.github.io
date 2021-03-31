@@ -8,19 +8,23 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getProjectsData } from '../lib/projects';
 import Projects from '../components/projects';
+import Videos from '../components/videos';
+import { getVideosData } from '../lib/videos';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   const projectsData = getProjectsData();
+  const videosData = getVideosData();
   return {
     props: {
       allPostsData,
-      projectsData
+      projectsData,
+      videosData
     }
   }
 }
 
-export default function Home({ allPostsData, projectsData }) {
+export default function Home({ allPostsData, projectsData, videosData }) {
   return (
     <Layout home>
       <Head>
@@ -32,8 +36,8 @@ export default function Home({ allPostsData, projectsData }) {
           <h1 className={styles.heading}>
             Hey! I'm Alec.
             <br/>
-            I'm a <Link href='/projects'><a>software engineer</a></Link> and
-            <Link href='/projects'><a> hobbyist filmmaker</a></Link>.
+            I'm a <Link href='#projects'><a>software engineer</a></Link> and
+            <Link href='#videos'><a> hobbyist filmmaker</a></Link>.
           </h1>
 
           <h2 className={styles.subheading}>
@@ -46,11 +50,18 @@ export default function Home({ allPostsData, projectsData }) {
         <img className={styles.profileImg} src={'./images/profileAlt.png'}/>
       </div>
 
-      <div className={styles.projectsContainer}>
+      <div id='projects' className={styles.sectionContainer}>
         <div className={styles.sectionHeaderContainer}>
           <h1 className={styles.sectionHeader}>Projects</h1>
         </div>
         <Projects projectsData={projectsData} />
+      </div>
+
+      <div id='videos' className={styles.sectionContainer}>
+        <div className={styles.sectionHeaderContainer}>
+          <h1 className={styles.sectionHeader}>Videos</h1>
+        </div>
+        <Videos videosData={videosData} />
       </div>
 
       {false &&

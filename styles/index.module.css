@@ -33,7 +33,7 @@
 	border-radius: 9999px;
 }
 
-.projectsContainer {
+.sectionContainer {
 	margin-top: 10rem;
 }
 .sectionHeaderContainer {
@@ -69,11 +69,6 @@
 .navContainer {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.sectionContainer {
-	width: 50%;
-	margin-bottom: 2rem;
 }
 
 .sectionContainerLg {
