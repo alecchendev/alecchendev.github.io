@@ -5,6 +5,7 @@ import styles from '../styles/index.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -22,17 +23,16 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <div className={styles.landingContainer}>
-
         <div className={styles.headingContainer}>
 
           <h1 className={styles.heading}>
-            Welcome! I'm Alec.
+            Hey! I'm Alec.
+            <br/>
+            I'm a <Link href='/projects'><a>software engineer</a></Link> and <Link href='/projects'><a>hobbyist filmmaker</a></Link>.
           </h1>
 
           <h2 className={styles.subheading}>
-            I'm a software engineer and hobbyist filmmaker.
-            <br/>
-            <br/>
+            
             Feel free to contact me through <a href='mailto:alecchendev@gmail.com' target='_blank'>email </a>
             or <a href='https://twitter.com/alecchendev' target='_blank'>Twitter</a>. I love meeting new
             people, so don't hesitate to reach out!
@@ -41,8 +41,17 @@ export default function Home({ allPostsData }) {
 
         </div>
         <img className={styles.profileImg} src={'./images/profileAlt.png'}/>
+        {/* <Image
+          priority
+          src="/images/profileAlt.png"
+          className={utilStyles.borderCircle}
+          height={144}
+          width={144}
+          alt={name}
+        /> */}
       </div>
 
+      {false &&
       <div className={styles.navContainer}>
         <section className={styles.sectionContainer}>
           <h2 className={utilStyles.headingLg}>Featured</h2>
@@ -73,7 +82,7 @@ export default function Home({ allPostsData }) {
           </ul>
         </section>
       </div>
-
+      }
       
     </Layout>
   )
