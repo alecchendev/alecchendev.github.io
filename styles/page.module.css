@@ -1,0 +1,25 @@
+
+.headerContainer {
+	width: 60%;
+	height: 17rem;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	/* font-family: DM Sans; */
+	font-weight: 700;
+	font-size: 2.5rem;
+	margin-bottom: 0;
+}
+
+.subheader {
+	font-size: 1.1rem;
+}
+
+
+@media screen and (max-width: 800px) {
+	.headerContainer {
+		width: 100%;
+	}
+}

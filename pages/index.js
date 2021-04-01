@@ -36,8 +36,8 @@ export default function Home({ allPostsData, projectsData, videosData }) {
           <h1 className={styles.heading}>
             Hey! I'm Alec.
             <br/>
-            I'm a <Link href='#projects'><a>software engineer</a></Link> and
-            <Link href='#videos'><a> hobbyist filmmaker</a></Link>.
+            I'm a <Link href='/projects'><a>software engineer</a></Link> and
+            <Link href='/videos'><a> hobbyist filmmaker</a></Link>.
           </h1>
 
           <h2 className={styles.subheading}>
@@ -50,6 +50,7 @@ export default function Home({ allPostsData, projectsData, videosData }) {
         <img className={styles.profileImg} src={'./images/profileAlt.png'}/>
       </div>
 
+      {false && (<>
       <div id='projects' className={styles.sectionContainer}>
         <div className={styles.sectionHeaderContainer}>
           <h1 className={styles.sectionHeader}>Projects</h1>
@@ -63,6 +64,8 @@ export default function Home({ allPostsData, projectsData, videosData }) {
         </div>
         <Videos videosData={videosData} />
       </div>
+      </>
+      )}
 
       {false &&
       <div className={styles.navContainer}>

@@ -30,12 +30,14 @@
 .title {
 	margin-top: 0.75rem;
 	margin-bottom: 0;
-	font-family: DM Sans;
+	/* font-family: DM Sans; */
+	font-weight: 700;
 	font-size: 1.75rem;
 }
 
 .description {
 	margin-top: 0.5rem;
+	font-size: 1.1rem;
 }
 
 

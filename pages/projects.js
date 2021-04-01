@@ -1,30 +1,28 @@
 import Layout from '../components/layout';
 import Head from 'next/head';
-import styles from '../styles/projects.module.css';
+import styles from '../styles/page.module.css';
 import { getProjectsData } from '../lib/projects';
+import Projects from '../components/projects';
 
 
-export default function Projects({ projectsData }) {
+export default function ProjectsPage({ projectsData }) {
     
 	return (
 		<Layout>
 			<Head>
 				<title>Projects</title>
 			</Head>
-			<h1>
+			<div className={styles.headerContainer}>
+			<h1 className={styles.header}>
 				Projects
 			</h1>
-			{projectsData &&
-			projectsData.map(item => {
-				return (<div className={styles.container} key={item.title}>
-					<img className={styles.image} alt={item.alt} src={item.imgSrc}/>
-					<div className={styles.infoContainer}>
-						<h2 className={styles.title}>{item.title}</h2>
-						<h3 className={styles.stack}>{item.stack}</h3>
-						<p className={styles.description}>{item.description}</p>
-					</div>
-				</div>)
-			})}
+			<p className={styles.subheader}>
+				I love to code, so sometimes I'll do a bit on my own time. This is a collection of
+				miscellaneous personal and group projects I've made in my free time.
+			</p>
+
+			</div>
+			<Projects projectsData={projectsData} />
 			
 		</Layout>
 
