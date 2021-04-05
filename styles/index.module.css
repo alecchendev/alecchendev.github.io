@@ -1,0 +1,96 @@
+
+.landingContainer {
+	display: flex;
+	margin-bottom: 3rem;
+}
+
+.headingContainer {
+	width: 65%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 25px;
+}
+
+
+.heading {
+	/* font-family: DM Sans; */
+	font-weight: 700;
+	font-size: 2.5rem;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.subheading {
+	font-size: 1.1rem;
+	margin-bottom: 2rem;
+}
+
+.profileImg {
+	width: 32.5%;
+	height: 100%;
+	margin-left: 30px;
+	border-radius: 9999px;
+}
+
+.sectionContainer {
+	margin-top: 8rem;
+}
+
+.sectionHeader {
+	display: flex;
+	justify-content: space-between;
+	font-family: DM Sans;
+	font-weight: 600;
+	font-size: 2.5rem;
+	padding-top: 25px;
+}
+
+.sectionHeader::after {
+	content: "";
+	margin-top: 1.75rem;
+	width: 81%;
+	height: 1px;
+	background-color: black;
+}
+
+
+
+.rule {
+	color: gray;
+	opacity: 0.25;
+	width: 30%;
+	margin-left: 0;
+  margin-right: 0;
+}
+
+.navContainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.sectionContainerLg {
+	width: 100%;
+}
+
+
+@media screen and (max-width: 800px) {
+	.landingContainer {
+		flex-direction: column;
+	}
+
+	.headingContainer {
+		width: 100%;
+	}
+
+	.profileImg {
+		width: 100%;
+		border-radius: 10px;
+		margin: 0;
+	}
+
+	.sectionContainer {
+		margin-top: 5rem;
+	}
+
+}
