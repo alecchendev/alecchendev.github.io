@@ -7,7 +7,7 @@
 .image {
 	width: 450px;
 	height: 100%;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 }
 
 .infoContainer {
@@ -26,7 +26,8 @@
 	margin: 0;
 	margin-top: 5px;
 	/* font-family: DM Mono; */
-	color: var(--accent-color);
+	/* color: var(--accent-color); */
+	color: gray;
 	font-size: 1rem;
 	font-weight: normal;
 }

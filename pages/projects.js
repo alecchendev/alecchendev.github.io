@@ -17,8 +17,9 @@ export default function ProjectsPage({ projectsData }) {
 				Projects
 			</h1>
 			<p className={styles.subheader}>
-				I love to code, so sometimes I'll do a bit on my own time. This is a collection of
-				miscellaneous personal and group projects I've made in my free time.
+				Coding is not just my career but a hobby of mine. I like working
+				on projects I'm interested in, and side projects can be a nice way
+				to learn new things and play around with different tools and stacks.
 			</p>
 
 			</div>

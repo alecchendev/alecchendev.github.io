@@ -9,10 +9,17 @@ export const siteTitle = 'Alec Chen';
 
 export default function Layout({ children, home, skinny }) {
   return (
-    <div className={skinny ? styles.skinnyContainer : styles.container}>
+    <div className={(home && styles.padTop) + ' ' + (skinny ? styles.skinnyContainer : styles.container)}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {!home && (
+        <div className={styles.backToHome}>
+          <Link href="/">
+            <a>← Back to home</a>
+          </Link>
+        </div>
+      )}
       <header className={styles.header}>
         {/* {home ? (
           <>
@@ -34,13 +41,7 @@ export default function Layout({ children, home, skinny }) {
 
       <main>{children}</main>
 
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      
     </div>
   )
 }

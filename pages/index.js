@@ -40,14 +40,14 @@ export default function Home({ allPostsData, projectsData, videosData }) {
             <Link href='/videos'><a> hobbyist filmmaker</a></Link>.
           </h1>
 
-          <h2 className={styles.subheading}>
+          <p className={styles.subheading}>
             Feel free to contact me through <a href='mailto:alecchendev@gmail.com' target='_blank'>email </a>
             or <a href='https://twitter.com/alecchendev' target='_blank'>Twitter</a>. I love meeting new
             people, so don't hesitate to reach out!
-          </h2>
+          </p>
 
         </div>
-        <img className={styles.profileImg} src={'./images/profileAlt.png'}/>
+        <img className={styles.profileImg} src={'./images/profile2.png'}/>
       </div>
 
       {false && (<>

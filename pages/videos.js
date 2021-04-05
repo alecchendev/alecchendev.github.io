@@ -17,11 +17,10 @@ export default function VideosPage({ videosData }) {
 				Videos	
 			</h1>
 			<p className={styles.subheader}>
-				I've recently made the committment to myself to give my
-				long-standing creative aspirations for film a fair shot. Although
-				I'm still in my very early stages and what you may see is pretty
-				mediocre, I've gotta start somewhere. Come back in a year and
-				see if I've kept my promise.
+				I'm a huge movie/tv buff and I've recently began my own
+				journey as a filmmaker. I've had the aspirations to make my
+				own films for a while, and so I'm finally giving it a fair shot.
+				Just trying to enjoy the process and make things I find cool.
 			</p>
 
 			</div>
