@@ -12,6 +12,7 @@ export default function Layout({ children, home, skinny }) {
     <div className={(home && styles.padTop) + ' ' + (skinny ? styles.skinnyContainer : styles.container)}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <script src="https://kit.fontawesome.com/98bcd674c2.js" crossorigin="anonymous"></script>
       </Head>
       {!home && (
         <div className={styles.backToHome}>

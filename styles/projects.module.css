@@ -28,7 +28,7 @@
 	/* font-family: DM Mono; */
 	/* color: var(--accent-color); */
 	color: gray;
-	font-size: 1rem;
+	/* font-size: 1rem; */
 	font-weight: normal;
 }
 	
@@ -38,6 +38,18 @@
 	font-size: 1.1rem;
 	line-height: 1.5;
 }
+
+.links {
+	display: flex;
+	justify-content: space-between;
+	width: 75px;
+	margin-top: 15px;
+}
+
+.icon {
+	font-size: 1.75rem;
+}
+
 @media screen and (max-width: 800px) {
 	.container {
 		flex-direction: column;

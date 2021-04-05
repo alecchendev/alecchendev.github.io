@@ -2,6 +2,8 @@
 imgSrc: './images/3dEngine.gif'
 title: '3D Engine From Scratch'
 stack: 'C++ Cinder'
-description: "Given 3-4 weeks to make something using C++ and the graphics API Cinder, I set out to build the systems behind transforming 3D perspective to a 2D screen. After a lot of pacing around my dorm room, I developed a system with simple lighting that could render a first person perspective moving around inside of a room."
+description: "The right-hand rule couldn't save me here. Nevertheless, actually using the linear algebra I learned
+in math class was a fun/stimulating experience."
 date: '2020-12-01'
+medium: "https://medium.com/dev-genius/how-i-built-a-basic-3d-graphics-engine-from-scratch-a54df82031f3?source=friends_link&sk=8c0d8ceb7da3e19e73c0175d988befc5"
 ---

@@ -2,6 +2,7 @@
 imgSrc: './images/nutribuddy.gif'
 title: 'Nutribuddy'
 stack: 'React Flask Firebase'
-description: "Here I served as the frontend developer on a nutrition recommendation web app my team called Nutribuddy. Working together we cranked out a pretty sleek MVP that takes in a user's dietary preferences and restrictions, and outputs a week's worth of curated meals."
+description: "Served as the frontend developer on a nutrition recommendation web app my team called Nutribuddy. This was one of
+my baby steps towards getting into web dev and it's crazy looking back on what I would come to learn about it all."
 date: '2020-11-01'
 ---
