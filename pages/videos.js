@@ -20,7 +20,7 @@ export default function VideosPage({ videosData }) {
 				I'm a huge movie/tv buff and I've recently began my own
 				journey as a filmmaker. I've had the aspirations to make my
 				own films for a while, and so I'm finally giving it a fair shot.
-				Just trying to enjoy the process and make things I find cool.
+				Just trying to enjoy the process and get better at the craft.
 			</p>
 
 			</div>
