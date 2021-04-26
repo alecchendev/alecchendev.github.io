@@ -9,7 +9,7 @@ import { MdEmail } from 'react-icons/md';
 const name = 'Alec Chen';
 export const siteTitle = 'Alec Chen';
 
-export default function Layout({ children, home, skinny }) {
+export default function Layout({ children, home, skinny, selected }) {
   return (
     <div className={(home && styles.padTop) + ' ' + (skinny ? styles.skinnyContainer : styles.container)}>
       <Head>
@@ -19,19 +19,19 @@ export default function Layout({ children, home, skinny }) {
       <header className={styles.header}>
         <div className={styles.left}>
           <Link href='/'>
-            <div className={styles.navItem}>
+            <div className={styles.navItem + ' ' + (selected == '' && styles.selected)}>
               Alec Chen
             </div>
           </Link>
         </div>
         <div className={styles.right}>
           <Link href='projects'>
-            <div className={styles.navItem}>
+            <div className={styles.navItem + ' ' + (selected == 'projects' && styles.selected)}>
               Projects
             </div>
           </Link>
           <Link href='videos'>
-            <div className={styles.navItem}>
+            <div className={styles.navItem + ' ' + (selected == 'videos' && styles.selected)}>
               Videos
             </div>
           </Link>

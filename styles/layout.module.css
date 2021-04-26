@@ -34,12 +34,18 @@
 }
 
 .navItem {
+	color: var(--gray);
 	padding: 5px 10px;
 	border-radius: 5px;
 }
 
+.selected {
+	color: var(--white);
+}
+
 .navItem:hover {
-	background-color: whitesmoke;
+	color: var(--white);
+	background-color: var(--dark-gray);
 	cursor: default !important;
 }
 

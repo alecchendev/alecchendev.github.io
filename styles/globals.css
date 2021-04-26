@@ -6,8 +6,12 @@
 
 
 :root {
-  --accent-color: #42a5f5;
+  --accent-color: #38a5ff;
   --highlight-color: #80c6ff;
+  --black: #121212;
+  --dark-gray: #2f2f2f;
+  --gray: #9F9F9F;
+  --white: #F5F5F5;
 }
 
 html,
@@ -23,6 +27,8 @@ body {
   /* background-color: black; */
   /* color: white; */
   line-height: 1.4;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 * {

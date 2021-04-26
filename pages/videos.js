@@ -8,7 +8,7 @@ import Videos from '../components/videos';
 export default function VideosPage({ videosData }) {
     
 	return (
-		<Layout>
+		<Layout selected={'videos'}>
 			<Head>
 				<title>Videos</title>
 			</Head>

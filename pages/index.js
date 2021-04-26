@@ -26,7 +26,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData, projectsData, videosData }) {
   return (
-    <Layout home>
+    <Layout home selected={''}>
       <Head>
         <title>{siteTitle}</title>
       </Head>
