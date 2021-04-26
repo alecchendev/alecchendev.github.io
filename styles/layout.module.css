@@ -1,7 +1,8 @@
 .container {
-	max-width: 60rem;
+	max-width: 950px;
+	padding-top: 75px;
 	padding-bottom: 100px;
-	margin: 0 auto 3rem;
+	margin: auto;
 }
 
 .padTop {
@@ -24,7 +25,6 @@
 .header {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 5rem;
 }
 
 .right {
@@ -47,10 +47,21 @@
 	margin-top: 100px;
 }
 
+.footer {
+	width: 150px;
+	margin: auto;
+	margin-top: 100px;
+	display: flex;
+	justify-content: space-between;
+}
 
-@media screen and (max-width: 70.6rem) {
+.icon {
+	font-size: 2rem;
+}
+
+@media screen and (max-width: 1080px) {
 	.container {
-		max-width: 85%;
+		max-width: 90%;
 		padding-left: 0;
 		padding-right: 0;
 		padding-bottom: 0;
