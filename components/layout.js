@@ -13,33 +13,34 @@ export default function Layout({ children, home, skinny }) {
       <Head>
         <script src="https://kit.fontawesome.com/98bcd674c2.js" crossorigin="anonymous"></script>
       </Head>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
+
+      <header className={styles.header}>
+        <div className={styles.left}>
+          <Link href='/'>
+            <div className={styles.navItem}>
+              Alec Chen
+            </div>
           </Link>
         </div>
-      )}
-      <header className={styles.header}>
-        {/* {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.png"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-          </>
-        )} */}
+        <div className={styles.right}>
+          <Link href='projects'>
+            <div className={styles.navItem}>
+              Projects
+            </div>
+          </Link>
+          <Link href='videos'>
+            <div className={styles.navItem}>
+              Videos
+            </div>
+          </Link>
+        </div>
       </header>
 
-      <main>{children}</main>
+      <main className={styles.content}>{children}</main>
+
+      <footer className={styles.footer}>
+        
+      </footer>
 
       
     </div>
