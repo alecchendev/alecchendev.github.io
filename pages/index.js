@@ -35,16 +35,11 @@ export default function Home({ allPostsData, projectsData, videosData }) {
 
           <h1 className={styles.heading}>
             Hey! I'm Alec.
-            <br/>
+          </h1>
+          <h2 className={styles.subheading}>
             I'm a <Link href='/projects'><a>software engineer</a></Link> and
             <Link href='/videos'><a> hobbyist filmmaker</a></Link>.
-          </h1>
-
-          <p className={styles.subheading}>
-            Feel free to contact me through <a href='mailto:alecchendev@gmail.com' target='_blank'>email </a>
-            or <a href='https://twitter.com/alecchendev' target='_blank'>Twitter</a>. I love meeting new
-            people, so don't hesitate to reach out!
-          </p>
+          </h2>
 
         </div>
         <img className={styles.profileImg} src={'./images/profile2.png'}/>
