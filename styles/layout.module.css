@@ -83,13 +83,6 @@
 		max-width: 90%;
 		padding-left: 0;
 		padding-right: 0;
-		padding-bottom: 0;
 	}
 
-}
-
-@media screen and (max-width: 800px) {
-	.padTop {
-		padding-top: 50px;
-	}
 }
