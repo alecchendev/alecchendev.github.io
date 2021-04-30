@@ -41,10 +41,9 @@ export default function Layout({ children, home, skinny, selected }) {
       <main className={styles.content}>{children}</main>
 
       <div className={styles.footer}>
-        <a className={styles.icon} href={'https://github.com/alecchendev'} target="_blank"><MdEmail/></a>
-        <a className={styles.icon} href={'mailto:alecchendev@gmail.com'} target="_blank"><FaGithub/></a>
+        <a className={styles.icon} href={'mailto:alecchendev@gmail.com'} target="_blank"><MdEmail/></a>
+        <a className={styles.icon} href={'https://github.com/alecchendev'} target="_blank"><FaGithub/></a>
         <a className={styles.icon} href={'https://twitter.com/alecchendev'} target="_blank"><FaTwitter/></a>
-        {/* <a className={styles.icon} href={item.medium} target="_blank"><FaMedium/></a> */}
       </div>
 
       
