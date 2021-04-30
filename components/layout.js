@@ -19,21 +19,21 @@ export default function Layout({ children, home, skinny, selected }) {
       <header className={styles.header}>
         <div className={styles.left}>
           <Link href='/'>
-            <div className={styles.navItem + ' ' + (selected == '' && styles.selected)}>
+            <a className={styles.navItem + ' ' + (selected == '' && styles.selected)}>
               Alec Chen
-            </div>
+            </a>
           </Link>
         </div>
         <div className={styles.right}>
           <Link href='projects'>
-            <div className={styles.navItem + ' ' + (selected == 'projects' && styles.selected)}>
+            <a className={styles.navItem + ' ' + (selected == 'projects' && styles.selected)}>
               Projects
-            </div>
+            </a>
           </Link>
           <Link href='videos'>
-            <div className={styles.navItem + ' ' + (selected == 'videos' && styles.selected)}>
+            <a className={styles.navItem + ' ' + (selected == 'videos' && styles.selected)}>
               Videos
-            </div>
+            </a>
           </Link>
         </div>
       </header>

@@ -35,8 +35,8 @@
 
 .navItem {
 	color: var(--gray);
-	padding: 5px 10px;
-	border-radius: 5px;
+	/* padding: 5px 10px; */
+	/* border-radius: 5px; */
 }
 
 .selected {
@@ -45,8 +45,9 @@
 
 .navItem:hover {
 	color: var(--white);
-	background-color: var(--dark-gray);
-	cursor: default !important;
+	/* background-color: var(--dark-gray); */
+	/* cursor: default !important; */
+	/* cursor: pointer; */
 }
 
 .content {
