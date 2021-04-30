@@ -8,7 +8,7 @@ import Projects from '../components/projects';
 export default function ProjectsPage({ projectsData }) {
     
 	return (
-		<Layout>
+		<Layout selected={'projects'}>
 			<Head>
 				<title>Projects</title>
 			</Head>
