@@ -17,7 +17,7 @@ export default function ProjectsPage({ projectsData }) {
 				Projects
 			</h1>
 			<p className={styles.subheader}>
-				Coding is not just my a part of my career but a hobby of mine. I love to 
+				Coding is not just a part of my career but a hobby of mine. I love to 
 				build cool stuff, and side projects can be a nice way
 				to learn new things and play around with different tools and stacks.
 			</p>
