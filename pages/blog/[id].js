@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Date from '../../components/date';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
+const postsDirectory = process.cwd() + '/blog'
+
 export default function Post({ postData }) {
   return (
   <Layout skinny>
@@ -21,7 +23,8 @@ export default function Post({ postData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  console.log(process.cwd());
+  const paths = getAllPostIds(postsDirectory);
   return {
     paths,
     fallback: false
@@ -30,7 +33,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id);
+  const postData = await getPostData(postsDirectory, params.id);
   return {
     props: {
       postData

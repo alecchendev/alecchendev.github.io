@@ -6,14 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getSortedPostsData, getPostData } from '../lib/posts';
 
-// export async function getStaticProps() {
-//   const allPostsData = getSortedPostsData();
-//   return {
-//     props: {
-//       allPostsData
-//     }
-//   }
-// }
+const postsDirectory = process.cwd() + '/main'
 
 export default function Home({ postData }) {
   return (
@@ -29,7 +22,7 @@ export default function Home({ postData }) {
 }
 
 export async function getStaticProps() {
-  const postData = await getPostData('index');
+  const postData = await getPostData(postsDirectory, 'index');
   return {
     props: {
       postData
