@@ -1,24 +1,20 @@
-import Layout from '../../components/layout';
+import Layout from '../components/layout';
 import Head from 'next/head';
-import Date from '../../components/date';
-import { getAllPostIds, getPostData } from '../../lib/posts';
-import utilStyles from '../../styles/utils.module.css';
-// import Components from '../../components';
+import Date from '../components/date';
+import { getAllPostIds, getPostData } from '../lib/posts';
 
 export default function Post({ postData }) {
-  // const Component = Components[postData.component];
   return (
   <Layout skinny>
     <Head>
       <title>{postData.title}</title>
     </Head>
     <article>
-      <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-      <div className={utilStyles.lightText}>
+      <h1>{postData.title}</h1>
+      <div>
         <Date dateString={postData.date} />
       </div>
       <div dangerouslySetInnerHTML={{ __html: postData.content }} />
-      {/* <Component content={postData.content} /> */}
     </article> 
   </Layout>
   )

@@ -1,7 +1,6 @@
 ---
 title: "Projects"
 date: "2020-01-01"
-component: "projects"
 ---
 
 Smth smth paragraph about my interests in coding.
