@@ -3,7 +3,6 @@ import Layout from '../../components/layout'
 import styles from '../../styles/blog.module.css';
 import Date from '../../components/date';
 import Link from 'next/link';
-import Image from 'next/image';
 import { getSortedPostsData, getPostData } from '../../lib/posts';
 
 const postsDirectory = process.cwd() + '/blog'
