@@ -3,7 +3,6 @@ title: "Index"
 date: "2021-01-01"
 ---
 
-
 ![Profile photo of Alec](../images/profile.png)
 
 Hey! I'm Alec.

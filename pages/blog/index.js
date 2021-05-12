@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Layout from '../../components/layout'
-import styles from '../../styles/blog.module.css';
 import Date from '../../components/date';
 import Link from 'next/link';
 import { getSortedPostsData, getPostData } from '../../lib/posts';
@@ -15,7 +14,7 @@ export default function Home({ postData }) {
       </Head>
 
 
-      <div className={styles.content} dangerouslySetInnerHTML={{ __html: postData.content }} />
+      <div dangerouslySetInnerHTML={{ __html: postData.content }} />
       <Link href='/blog/test'>Test</Link>
 
     </Layout>
