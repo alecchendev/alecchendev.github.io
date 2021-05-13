@@ -1,7 +1,7 @@
 import Layout from '../../components/layout';
 import Head from 'next/head';
-import Date from '../../components/date';
 import styles from '../../styles/blog.module.css';
+import { parseISO, format } from 'date-fns'
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
 const postsDirectory = process.cwd() + '/blog'
@@ -14,9 +14,7 @@ export default function Post({ postData }) {
     </Head>
     <article>
       <h1>{postData.title}</h1>
-      <div>
-        <p><Date dateString={postData.date} /></p>
-      </div>
+      <p className={"date"}>{format(parseISO(postData.date), 'LLLL d, yyyy')}</p>
       <div dangerouslySetInnerHTML={{ __html: postData.content }} />
     </article> 
   </Layout>

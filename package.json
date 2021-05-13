@@ -9,6 +9,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "date-fns": "^2.19.0",
     "gray-matter": "^4.0.2",
     "next": "10.0.9",
