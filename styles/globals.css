@@ -27,11 +27,23 @@ h1 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 2rem;
-  /* font-family: serif; */
-  /* font-weight: 500; */
-  /* font-size: 1.8rem; */
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .date {
   color: gray;
+}
+
+.hobby-img {
+  width: 32.8%;
+}
+
+.hobby-embed {
+  width: 49.5%;
+  height: auto;
+  border: none;
 }

@@ -6,7 +6,12 @@ date: "2021-05-10"
 
 # Blog
 
-Read my work on my [Medium](https://alecchendev.medium.com).
+A means for me to share things I find interesting that don't quite
+fit into the 280 character limit.
+
+### Recent
+
+- [Sapiens and the Merkle Web](/blog/test)
 
 ### Popular
 - [Objected-Oriented Programming in Rust](https://medium.com/dev-genius/object-oriented-programming-in-rust-691baf4d2996?sk=977a77798fc39d452d16a722a55284be)
@@ -18,3 +23,5 @@ Read my work on my [Medium](https://alecchendev.medium.com).
 - [Things I Hope to Remember in 10 Years](https://alecchendev.medium.com/things-i-hope-to-remember-in-10-years-2400fcbcee5d?sk=da8eda8d65aff3680d804a38b6c4d65b)
 - [The Worth of Television](https://alecchendev.medium.com/finding-solace-through-television-fe7392a40b11?sk=d10049e4c852838ced7328caf61e205e)
 - [Getting Rejected From All My Colleges](https://alecchendev.medium.com/getting-rejected-from-all-my-colleges-eae0b39e3d72?sk=e7483fdbd458188b051de9fd0709207f)
+
+Read the rest of my work on [Medium](https://alecchendev.medium.com).

@@ -12,7 +12,6 @@ export default function Post({ postData }) {
       <title>{postData.title}</title>
     </Head>
     <article>
-      <h1>{postData.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: postData.content }} />
     </article> 
   </Layout>

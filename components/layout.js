@@ -15,9 +15,8 @@ export default function Layout({ children, home, skinny, selected }) {
       <div className={styles.navigation}>
         <Link href='/'>Alec Chen</Link>
         <Link href='/projects'>Projects</Link>
-        <Link href='/videos'>Videos</Link>
+        <Link href='/hobbies'>Hobbies</Link>
         <Link href='/consumption'>Consumption</Link>
-        <Link href='/timeline'>Timeline</Link>
         <Link href='/people'>People</Link>
         <Link href='/blog'>Blog</Link>
       </div>

@@ -13,9 +13,7 @@ export default function Home({ postData }) {
         <title>Blog</title>
       </Head>
 
-
       <div dangerouslySetInnerHTML={{ __html: postData.content }} />
-      <Link href='/blog/test'>Test</Link>
 
     </Layout>
   )
