@@ -11,6 +11,15 @@ body {
   color: #333;
 }
 
+.dark-mode {
+  background-color: #161a20;
+  color: #ccc;
+}
+
+.dark-mode a {
+  color: #aceda4;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -21,6 +30,8 @@ img {
 
 a {
   color: #0864c7;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 h1 {
