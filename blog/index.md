@@ -3,16 +3,6 @@ title: "Index"
 date: "2021-05-10"
 ---
 
-
-# Blog
-
-A means for me to share things I find interesting that don't quite
-fit into the 280 character limit.
-
-### Recent
-
-- [Sapiens and the Merkle Web](/blog/test)
-
 ### Popular
 - [Objected-Oriented Programming in Rust](https://medium.com/dev-genius/object-oriented-programming-in-rust-691baf4d2996?sk=977a77798fc39d452d16a722a55284be)
 - [Building a Personal Coding Portfolio Website](https://medium.com/swlh/building-a-personal-coding-portfolio-website-60ccc6137f3?sk=b3b77ab2ea1d144e32b017093f374f4b)
