@@ -8,7 +8,7 @@ const postsDirectory = process.cwd() + '/blog'
 
 export default function Post({ postData }) {
   return (
-  <Layout skinny>
+  <>
     <Head>
       <title>{postData.title}</title>
     </Head>
@@ -17,7 +17,7 @@ export default function Post({ postData }) {
       <p className={"date"}>{format(parseISO(postData.date), 'LLLL d, yyyy')}</p>
       <div dangerouslySetInnerHTML={{ __html: postData.content }} />
     </article> 
-  </Layout>
+  </>
   )
 }
 

@@ -8,7 +8,7 @@ const postsDirectory = process.cwd() + '/blog'
 export default function Home({ postData, sortedPostsData }) {
   console.log(sortedPostsData)
   return (
-    <Layout home selected={''}>
+    <>
       <Head>
         <title>Blog</title>
       </Head>
@@ -26,7 +26,7 @@ export default function Home({ postData, sortedPostsData }) {
 
       <div dangerouslySetInnerHTML={{ __html: postData.content }} />
 
-    </Layout>
+    </>
   )
 }
 
