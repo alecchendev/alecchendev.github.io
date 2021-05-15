@@ -1,16 +1,16 @@
 import Head from 'next/head'
-import Layout from '../../components/layout'
+import Layout, { siteTitle } from '../../components/layout'
 import Link from 'next/link';
 import { getSortedPostsData, getPostData } from '../../lib/posts';
 
 const postsDirectory = process.cwd() + '/blog'
 
 export default function Home({ postData, sortedPostsData }) {
-  console.log(sortedPostsData)
   return (
     <>
       <Head>
-        <title>Blog</title>
+        <title>Blog{' - ' + siteTitle}</title>
+        <meta name='description' content={postData.description} />
       </Head>
 
       <h1>Blog</h1>

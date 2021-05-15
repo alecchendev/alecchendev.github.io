@@ -1,5 +1,6 @@
 ---
 title: "Index"
+description: "Alec Chen. Software engineer and rising sophomore studying computer science at University of Illinois at Urbana-Champaign (UIUC)."
 date: "2021-01-01"
 ---
 

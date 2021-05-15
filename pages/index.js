@@ -10,11 +10,11 @@ import { getSortedPostsData, getPostData } from '../lib/posts';
 const postsDirectory = process.cwd() + '/main'
 
 export default function Home({ postData, lastUpdated }) {
-
   return (
     <>
       <Head>
         <title>{siteTitle}</title>
+        <meta name='description' content={postData.description} />
       </Head>
 
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: postData.content }} />

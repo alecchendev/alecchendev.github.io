@@ -1,5 +1,6 @@
 ---
 title: "Consumption"
+description: "Books, tv shows, movies, and other media that I've enjoyed."
 date: "2021-05-08"
 ---
 

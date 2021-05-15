@@ -1,4 +1,4 @@
-import Layout from '../components/layout';
+import Layout, { siteTitle } from '../components/layout'
 import Head from 'next/head';
 import { getAllPostIds, getPostData } from '../lib/posts';
 
@@ -8,7 +8,8 @@ export default function Post({ postData }) {
   return (
   <>
     <Head>
-      <title>{postData.title}</title>
+      <title>{postData.title + ' - ' + siteTitle}</title>
+      <meta name='description' content={postData.description} />
     </Head>
     <article>
       <div dangerouslySetInnerHTML={{ __html: postData.content }} />

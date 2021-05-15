@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+description: "A collection of projects I've worked on."
 date: "2020-01-01"
 ---
 

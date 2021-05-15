@@ -1,4 +1,4 @@
-import Layout from '../../components/layout';
+import Layout, { siteTitle } from '../../components/layout'
 import Head from 'next/head';
 import styles from '../../styles/blog.module.css';
 import { parseISO, format } from 'date-fns'
@@ -10,7 +10,8 @@ export default function Post({ postData }) {
   return (
   <>
     <Head>
-      <title>{postData.title}</title>
+      <title>{postData.title + ' - ' + siteTitle}</title>
+      <meta name='description' content={postData.description} />
     </Head>
     <article>
       <h1>{postData.title}</h1>
@@ -22,7 +23,6 @@ export default function Post({ postData }) {
 }
 
 export async function getStaticPaths() {
-  console.log(process.cwd());
   const paths = getAllPostIds(postsDirectory);
   return {
     paths,

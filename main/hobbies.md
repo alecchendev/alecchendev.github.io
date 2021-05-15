@@ -1,5 +1,6 @@
 ---
 title: "Hobbies"
+description: "The main things I pursue in my free time."
 date: "2021-05-08"
 ---
 
