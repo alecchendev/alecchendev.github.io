@@ -1,6 +1,6 @@
 ---
 title: "Sapiens and the Permanent Web"
-description: "Connections between Sapiens by Yuval Noah Harari and IPFS along with the permanent/distributed/merkle web.
+description: "Connections between Sapiens by Yuval Noah Harari and IPFS along with the permanent/distributed/merkle web."
 date: "2021-05-10"
 ---
 
