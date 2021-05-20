@@ -16,13 +16,13 @@ item on these lists to be worth the time.
 
 Books
 - Sapiens
+- Meditations
 
 Tv Shows
-- Normal People
-- Silicon Valley
+- Sword Art Online
 
 Movies
-- Minari
+- Sound of Metal
 
 ### Past
 
@@ -57,6 +57,8 @@ Tv Shows
 - New Girl
 - Hollywood
 - Modern Love
+- Silicon Valley
+- Love Life
 
 Movies
 - Whiplash
@@ -109,3 +111,4 @@ Movies
 - Manchester by the Sea
 - Distant Strangers
 - Ladybird
+- Minari

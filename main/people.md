@@ -13,3 +13,5 @@ Should be adding greatly to this list very soon.
 - Juan Benet
 - Nikhil Pandey
 - Joseph Everett
+- Vitalik Buterin
+- 
