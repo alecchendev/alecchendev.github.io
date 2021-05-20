@@ -1,5 +1,14 @@
 # alecchendev.github.io
-A simple personal portfolio website to quickly showcase some things about me.
+A simple personal website that people can check out if they want to learn more about me.
+
+### V5
+[Check it out here](https://www.alecchendev.com)
+
+### V4
+![personal website v4](readme/personal-website-v4.gif)
+
+### V3
+...
 
 ### V2
 ![personal website v2](readme/personal-website-v2.gif)
