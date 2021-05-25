@@ -19,7 +19,7 @@ Books
 - Meditations
 
 Tv Shows
-- Sword Art Online
+- Normal People
 
 Movies
 - Sound of Metal
@@ -112,3 +112,4 @@ Movies
 - Distant Strangers
 - Ladybird
 - Minari
+- The Squid and the Whale

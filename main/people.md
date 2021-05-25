@@ -14,4 +14,3 @@ Should be adding greatly to this list very soon.
 - Nikhil Pandey
 - Joseph Everett
 - Vitalik Buterin
-- 
