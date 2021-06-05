@@ -8,9 +8,9 @@ date: "2021-01-01"
 
 Hey! I'm Alec.
 
-I'm a rising sophomore studying CS at UIUC with a growing interest in the rust programming language, IPFS/the distributed web, and fintech. I currently work at P&G as a software engineer/data science intern.
+I'm a student studying computer science at UIUC with a growing interest in web3, crypto, and decentralized systems. I currently work at AbbVie as an emerging tech intern with my main focus being on blockchain-related work.
 
-Outside of programming, my other interests include cooking, nutrition, film, and reading.
+Outside of tech, my other interests include cooking, nutrition, film, and reading.
 
 ### Where to find me
 Email: [alecchendev@gmail.com](mailto:alecchendev@gmail.com)

@@ -17,12 +17,14 @@ item on these lists to be worth the time.
 Books
 - Sapiens
 - Meditations
+- The History of Love
 
 Tv Shows
-- Normal People
+- How I Met Your Mother
 
 Movies
-- Sound of Metal
+- Rashomon
+- Bo Burnham's Inside
 
 ### Past
 
@@ -64,6 +66,7 @@ Movies
 - Whiplash
 - La La Land
 - A Quiet Place
+- Sound of Metal
 - Spotlight
 - Get Out
 - Batman Begins
