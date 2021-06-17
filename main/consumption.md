@@ -14,29 +14,31 @@ item on these lists to be worth the time.
 
 ### Recent
 
-Books
-- Sapiens
+Books (currently open)
 - Meditations
 - The History of Love
+- You Are Here
+- The Death and Life of Great American Cities
 
 Tv Shows
-- How I Met Your Mother
+- How I Met Your Mother (rewatching)
 
-Movies
-- Rashomon
-- Bo Burnham's Inside
+Movies (None recently)
 
 ### Past
 
-Books
-- Flowers For Algernon
-- Deep Work
-- On Writing
-- The War of Art
-- Outliers
-- Catcher in the Rye
-- The War On Normal People
-- Paper Menagerie
+Books (no longer open)
+- Fully completed
+	- Flowers For Algernon
+	- Deep Work
+	- On Writing
+	- The War of Art
+	- Outliers
+	- Catcher in the Rye
+	- The War On Normal People
+	- Paper Menagerie
+- Read substantial amount
+	- Sapiens
 
 Tv Shows
 - Bojack Horseman
@@ -116,3 +118,5 @@ Movies
 - Ladybird
 - Minari
 - The Squid and the Whale
+- Rashomon
+- Bo Burnham's Inside
