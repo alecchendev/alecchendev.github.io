@@ -21,7 +21,7 @@ export default function Home({ postData, sortedPostsData }) {
 
       <h3>Recent</h3>
       <ul>
-        {sortedPostsData.map(({ id, title, medium, date }) => <li><Link href={'/blog/' + id}>{title}</Link> <a href={medium}>(Medium)</a></li>)}
+        {sortedPostsData.map(({ id, title, medium, date }) => <li key={id}><Link href={'/blog/' + id}>{title}</Link> <a href={medium}>(Medium)</a></li>)}
       </ul>
 
       <div dangerouslySetInnerHTML={{ __html: postData.content }} />
