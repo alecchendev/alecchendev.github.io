@@ -19,7 +19,19 @@ to create something artistic of your own. With film having such an influence thr
 my life, it's been the craft that I've been wanting to work on the most. Although I
 haven't done much yet, I have a great appreciation for shows and movies, and on occasion
 I'll throw together some of my own shots. It is a bit of a pipe dream of mine to one day
-spend a period of my life working as a writer or director on a movie or series. 
+spend a period of my life working as a writer or director on a movie or series.
+
+### Learning
+A vast majority of my time goes towards just the consumption of information in all forms of media,
+for me most commonly including tweets, videos, podcasts/interviews, articles, papers, and books.
+Some might consider this just aimless media consumption, but I feel a lot of fulfillment and
+gratification from understanding and connecting new ideas. I usually jot down some highlights of
+the things I consume to try to digest and solidify the information in my head better, and I'll
+try to articulate (via writing) connections and thoughts I have as another means of processing the
+information. I'm currently looking for a better way of managing and syntehsizing the things I consume
+so if you have any suggestions or person experience I'd love to talk.
+
+Topics that have intrigued me recently: nutrition, urban planning, questioning traditional career/work culture/systems, anthropology or other topics through the lens of anthropology, information synthesis/consumption and content creation, and programming languages. Apologies for the word salad.
 
 ### Nutrition/Cooking
 

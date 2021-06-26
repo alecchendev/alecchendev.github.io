@@ -17,8 +17,8 @@ item on these lists to be worth the time.
 Books (currently open)
 - Meditations
 - The History of Love
-- You Are Here
 - The Death and Life of Great American Cities
+- Work: A History of How We Spend Our Time
 
 Tv Shows
 - How I Met Your Mother (rewatching)
@@ -39,6 +39,7 @@ Books (no longer open)
 	- Paper Menagerie
 - Read substantial amount
 	- Sapiens
+	- You Are Here
 
 Tv Shows
 - Bojack Horseman
