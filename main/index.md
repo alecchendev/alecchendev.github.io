@@ -8,9 +8,9 @@ date: "2021-01-01"
 
 Hey! I'm Alec.
 
-I'm a student studying computer science at UIUC with a growing interest in distributed/decentralized systems and cryptography. I currently work at AbbVie as an emerging tech intern with a focus on blockchain-related work.
+I'm a student studying computer science at UIUC with a growing interest in distributed systems and cryptography. I currently work at AbbVie as an emerging tech intern with a focus on blockchain-related work.
 
-Outside of tech, my other interests include cooking, nutrition, exercise, writing, and video creation.
+Outside of tech, I'm interested in all kinds of things, including cooking, nutrition, exercise, and film, to name a few.
 
 ### Where to find me
 Email: [alecchendev@gmail.com](mailto:alecchendev@gmail.com)

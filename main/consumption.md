@@ -6,19 +6,15 @@ date: "2021-05-08"
 
 # Consumption
 
-A highlight reel of the books, tv shows, movies, and miscellaneous media I've consumed.
+A highlight reel of the tv shows, movies, and miscellaneous media I've consumed.
 This is not a complete list of all I've gotten through, but a list of media
 that has resonated with me in one way or another. Maybe I thought the piece was interesting
 or it brought me to tears or it just gave me a good laugh; somehow I've found any given
-item on these lists to be worth the time.
+item on these lists to be worth the time. Recommendations welcome.
+
+Note: Recently removed books - soon will add other forms of media I consume regularly, e.g. YouTube channels, podcasts, newsletters, websites, artists, etc.
 
 ### Recent
-
-Books (currently open)
-- Meditations
-- The History of Love
-- The Death and Life of Great American Cities
-- Work: A History of How We Spend Our Time
 
 Tv Shows
 - How I Met Your Mother (rewatching)
@@ -26,20 +22,6 @@ Tv Shows
 Movies (None recently)
 
 ### Past
-
-Books (no longer open)
-- Fully completed
-	- Flowers For Algernon
-	- Deep Work
-	- On Writing
-	- The War of Art
-	- Outliers
-	- Catcher in the Rye
-	- The War On Normal People
-	- Paper Menagerie
-- Read substantial amount
-	- Sapiens
-	- You Are Here
 
 Tv Shows
 - Bojack Horseman

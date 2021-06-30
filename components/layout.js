@@ -20,6 +20,7 @@ export default function Layout({ children, home, skinny, selected, toggleDarkMod
         <Link href='/projects'>Projects</Link>
         <Link href='/hobbies'>Hobbies</Link>
         <Link href='/consumption'>Consumption</Link>
+        <Link href='/books'>Books</Link>
         <Link href='/advice'>Advice</Link>
         <Link href='/people'>People</Link>
         <Link href='/blog'>Blog</Link>
