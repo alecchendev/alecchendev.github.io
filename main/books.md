@@ -22,7 +22,7 @@ These are the books that I'm actively (however spurratically) reading at the tim
 - Work: A History of How We Spend Our Time
 - Letters From of Stoic
 - Amusing Ourselves to Death
-- Convenience Store Woman
+- Where the Wizards Stay Up Late
 
 ### Personal Canon
 
@@ -32,12 +32,13 @@ The books I study thoroughly. The books I can return to and continuously derive 
 
 ### Past
 
-Books I've either completed in their entirety or read a substantial amount of.
+Books I've either completed in their entirety or read a substantial amount of (relatively chronilogical - latest to earliest).
 
+- Convenience Store Woman
 - Sapiens
 - You Are Here
-- Subtle Art of Not Giving a F*ck
 - Flowers For Algernon
+- Subtle Art of Not Giving a F*ck
 - Deep Work
 - On Writing
 - Show Your Work
