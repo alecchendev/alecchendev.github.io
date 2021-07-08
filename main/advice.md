@@ -10,6 +10,8 @@ I'm so young I find it very difficult to think that I could have much to say, ho
 
 I will most certainly update this permanently rough draft, so check back here periodically!
 
+The text below is more targeted towards my younger sisters and is more specific to navigating the next 4 years of their lives. For general life/happiness/etc. I've been reading Bertrand Russell's *Conquest of Happiness* recently and besides some slightly outdated references/views, I would say this book in combination with stoicism and minimalism articulate very well the greater portion of my personal philosophy.
+
 ### Academics
 
 How to make the most of your education

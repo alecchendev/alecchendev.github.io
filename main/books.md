@@ -6,39 +6,34 @@ date: "2021-05-08"
 
 # Books 
 
-For a while I've seen the value in books, but only recently have I really *realized* the value in the thorough consumption of content in the written form. I'm slowly starting to reflect this realization in my lifestyle, and I figured opening another page on my website would further add to this move.
-
-At the moment I'm looking to build a personal library/canon, however I feel like I'm not well read enough to know which books it would include. So as always, recommendations are welcome.
-
-Note: I don't remember much from the few things I read before my last year or two of high school, so the list starts from that around that point in time.
+I discovered books far too late in my life. This page is a testament to my efforts to make up for this fact.
 
 ### Open
 
-These are the books that I'm actively (however spurratically) reading at the time of updating this page.
+The books that I'm actively (however spurratically) reading at the time of updating this page.
 
 - Meditations
 - The History of Love
 - The Death and Life of Great American Cities
 - Work: A History of How We Spend Our Time
-- Letters From of Stoic
 - Amusing Ourselves to Death
 - Where the Wizards Stay Up Late
+- The Conquest of Happiness
+- The History of Western Philosophy (soon to begin)
 
 ### Personal Canon
 
-The books I study thoroughly. The books I can return to and continuously derive wisdom or solace from.
+The books I return to and continuously derive wisdom and/or solace from.
 
 - ...TBD
 
 ### Past
 
-Books I've either completed in their entirety or read a substantial amount of (relatively chronilogical - latest to earliest).
+Books I've particularly enjoyed that I've either completed in their entirety or read a substantial amount of (relatively chronological - latest to earliest).
 
 - Convenience Store Woman
 - Sapiens
-- You Are Here
 - Flowers For Algernon
-- Subtle Art of Not Giving a F*ck
 - Deep Work
 - On Writing
 - Show Your Work

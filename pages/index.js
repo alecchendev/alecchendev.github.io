@@ -9,7 +9,7 @@ import { getSortedPostsData, getPostData } from '../lib/posts';
 
 const postsDirectory = process.cwd() + '/main'
 
-export default function Home({ postData, lastUpdated }) {
+export default function Home({ postData, lastUpdated, message }) {
   return (
     <>
       <Head>
@@ -19,7 +19,11 @@ export default function Home({ postData, lastUpdated }) {
 
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: postData.content }} />
 
-      <p className={"date"}>Last updated: {lastUpdated}</p>
+      <p className={"date"}>
+        Last updated: {lastUpdated}
+        <br/>
+        Last commit: {message}
+      </p>
 
     </>
   )
@@ -34,12 +38,21 @@ export async function getStaticProps() {
     headers: {'Accept': 'application/vnd.github.v3+json'}
   });
   const dateString = repoData.data.updated_at;
-  const formatted = format(parseISO(dateString), 'LLLL d, yyyy')
+  const formattedDate = format(parseISO(dateString), 'LLLL d, yyyy')
+
+  const commitData = await axios({
+    method: 'get',
+    url: 'https://api.github.com/repos/alecchendev/alecchendev.github.io/commits/master',
+    headers: {'Accept': 'application/vnd.github.v3+json'}
+  });
+  // console.log(commitData)
+  const message = commitData.data.commit.message;
 
   return {
     props: {
       postData,
-      lastUpdated: formatted
+      lastUpdated: formattedDate,
+      message
     }
   }
 

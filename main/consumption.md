@@ -6,24 +6,37 @@ date: "2021-05-08"
 
 # Consumption
 
-A highlight reel of the tv shows, movies, and miscellaneous media I've consumed.
-This is not a complete list of all I've gotten through, but a list of media
-that has resonated with me in one way or another. Maybe I thought the piece was interesting
-or it brought me to tears or it just gave me a good laugh; somehow I've found any given
-item on these lists to be worth the time. Recommendations welcome.
+The media that makes up the bulk of my information consumption/entertainment outside of books.
 
-Note: Recently removed books - soon will add other forms of media I consume regularly, e.g. YouTube channels, podcasts, newsletters, websites, artists, etc.
+### YouTube
 
-### Recent
+Current subscriptions
+- Captain Sinbad
+- What I've Learned
+- Nathaniel Drew + No Backup Plan
+- Matt D'Avella
+- Thoughtworthy Co
+- Hueguh
+- Tim Dessaint
+- Fly With Johnny Thai
+- Jenn Im
+- Babish Culinary Universe
+- Mina Rome
+- Lex Fridman
+- Charles Hoskinson
+- Marques Brownlee
+- Oliur / UltraLinx
+- Ben Awad
+- Alice Cappelle
+- communitychannel
 
-Tv Shows
-- How I Met Your Mother (rewatching)
+### Series
 
-Movies (None recently)
+Recent
+- How I Met Your Mother
+- Attack on Titan
 
-### Past
-
-Tv Shows
+Past
 - Bojack Horseman
 - Master of None
 - Fleabag
@@ -47,7 +60,11 @@ Tv Shows
 - Silicon Valley
 - Love Life
 
-Movies
+### Movies
+
+Recent (none)
+
+Past
 - Whiplash
 - La La Land
 - A Quiet Place
