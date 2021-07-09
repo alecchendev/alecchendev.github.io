@@ -10,7 +10,7 @@ I discovered books far too late in my life. This page is a testament to my effor
 
 ### Open
 
-The books that I'm actively (however spurratically) reading at the time of updating this page.
+The books that I'm actively (however sporadically) reading at the time of updating this page.
 
 - Meditations
 - The History of Love
