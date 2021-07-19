@@ -18,19 +18,20 @@ The books that I'm actively (however sporadically) reading at the time of updati
 - Work: A History of How We Spend Our Time
 - Amusing Ourselves to Death
 - Where the Wizards Stay Up Late
-- The Conquest of Happiness
 - The History of Western Philosophy (soon to begin)
 
 ### Personal Canon
 
-The books I return to and continuously derive wisdom and/or solace from.
+Currently in the early phase of building this for myself, but my plan is to have a set of books
+that I continuously return to and study thoroughly.
 
-- ...TBD
+- The Conquest of Happiness
 
 ### Past
 
-Books I've particularly enjoyed that I've either completed in their entirety or read a substantial amount of (relatively chronological - latest to earliest).
+Books I've particularly enjoyed that I've either completed in their entirety or read a substantial amount of (relatively chronological - latest to earliest) *and* thoroughly enjoyed.
 
+- The Conquest of Happiness
 - Convenience Store Woman
 - Sapiens
 - Flowers For Algernon

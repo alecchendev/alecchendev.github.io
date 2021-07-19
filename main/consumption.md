@@ -20,15 +20,11 @@ Current subscriptions
 - Tim Dessaint
 - Fly With Johnny Thai
 - Jenn Im
-- Babish Culinary Universe
-- Mina Rome
 - Lex Fridman
 - Charles Hoskinson
 - Marques Brownlee
-- Oliur / UltraLinx
 - Ben Awad
-- Alice Cappelle
-- communitychannel
+- Noel Deyzel
 
 ### Series
 
