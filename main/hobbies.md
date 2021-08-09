@@ -37,10 +37,7 @@ I generally am not too restrictive, but instead follow the themes of a certain d
 first priority is to enjoy good food, but still trying to pay attention to what's best for my
 health and longevity down the line.
 
-
 ### Exercise
-
-<!-- ![Me benching](../images/bench.png) -->
 
 I used to be a gymnast up until high school, and although I don't go quite as hard these days,
 I do enjoy all sorts of exercise, from weightlifting, calisthenics, biking, athletics, or even just walking around.
