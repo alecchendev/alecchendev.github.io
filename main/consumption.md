@@ -10,7 +10,7 @@ The media that makes up the bulk of my information consumption/entertainment out
 
 ### YouTube
 
-Current subscriptions
+Current subscriptions (recently haven't been keeping up as much as in the past)
 - Captain Sinbad
 - What I've Learned
 - Nathaniel Drew + No Backup Plan
@@ -30,7 +30,6 @@ Current subscriptions
 
 Recent
 - How I Met Your Mother
-- Attack on Titan
 
 Past
 - Bojack Horseman

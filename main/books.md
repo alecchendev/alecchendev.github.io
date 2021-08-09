@@ -12,13 +12,7 @@ I discovered books far too late in my life. This page is a testament to my effor
 
 The books that I'm actively (however sporadically) reading at the time of updating this page.
 
-- Meditations
-- The History of Love
-- The Death and Life of Great American Cities
-- Work: A History of How We Spend Our Time
-- Amusing Ourselves to Death
-- Where the Wizards Stay Up Late
-- The History of Western Philosophy (soon to begin)
+- The History of Western Philosophy
 
 ### Personal Canon
 
@@ -31,6 +25,7 @@ that I continuously return to and study thoroughly.
 
 Books I've particularly enjoyed that I've either completed in their entirety or read a substantial amount of (relatively chronological - latest to earliest) *and* thoroughly enjoyed.
 
+- Amusing Ourselves to Death
 - The Conquest of Happiness
 - Convenience Store Woman
 - Sapiens
