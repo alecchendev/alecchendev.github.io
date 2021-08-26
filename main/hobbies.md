@@ -25,7 +25,7 @@ spend a period of my life working as a writer or director on a movie or series.
 
 <img class="hobby-img" src="../images/keto.jpg" />
 <img class="hobby-img" src="../images/lunch.jpg" />
-<img class="hobby-img" src="../images/keto2.jpg" />
+<img class="hobby-img" src="../images/vegan.jpg" />
 
 I have no better general advice for my past self and the majority of people than to
 just hit the fundamentals of sleep, exercise, and nutrition. Cooking is not only
