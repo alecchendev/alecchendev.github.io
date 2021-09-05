@@ -13,6 +13,7 @@ I discovered books far too late in my life. This page is a testament to my effor
 The books that I'm actively (however sporadically) reading at the time of updating this page.
 
 - The History of Western Philosophy
+- Brave New World
 
 ### Personal Canon
 

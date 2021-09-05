@@ -12,7 +12,7 @@ For now I'm mostly just listing topics, but in the future I may expand on what p
 If you have recommendations for books, websites, newsletters, YouTube channels, twitter accounts, or anything related to these topics, I'm always excited to find a new way to explore!
 Further, if you or someone you know has an interest in any of the topics below don't hesitate to dm or email me! (contact on home page)
 
-- Programming languages - currently learning golang, flirting on and off with rust, intrigued by scala
+- Programming languages
 - Distributed systems
 - Cryptography
 - Urban design, cities, travel

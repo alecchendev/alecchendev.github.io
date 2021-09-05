@@ -58,9 +58,14 @@ Past
 ### Movies
 
 Recent
-- When Harry Met Sally
+
+- Office Space
+- Shawshank Redemption
+- Goodfellas
 
 Past
+
+- When Harry Met Sally
 - Serendipity
 - Good Morning Vietnam
 - Cousins
