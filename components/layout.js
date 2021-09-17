@@ -23,6 +23,7 @@ export default function Layout({ children, home, skinny, selected, toggleDarkMod
         <Link href='/consumption'>Consumption</Link>
         <Link href='/books'>Books</Link>
         <Link href='/advice'>Advice</Link>
+        <Link href='/notes'>Notes</Link>
         <a onClick={toggleDarkMode}>{colorMode}</a>
       </div>
 

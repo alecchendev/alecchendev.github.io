@@ -59,12 +59,16 @@ Past
 
 Recent
 
-- Office Space
-- Shawshank Redemption
-- Goodfellas
+- Good Will Hunting
+- Dallas Buyers Club
+- American Hustle
+- Breakfast Club
 
 Past
 
+- Office Space
+- Shawshank Redemption
+- Goodfellas
 - When Harry Met Sally
 - Serendipity
 - Good Morning Vietnam
