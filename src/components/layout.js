@@ -9,23 +9,26 @@ const Layout = ({ pageTitle, children }) => {
       <nav>
         <div className={styles.nav}>
             <div className={[styles.leftnav, styles.navsub].join(' ')}>
-                <a href="/" className={styles.navlink}>
+                <Link to="/" className={styles.navlink}>
                     Alec Chen
-                </a>
+                </Link>
             </div>
             <div className={[styles.rightnav, styles.navsub].join(' ')}>
-                <a href="/about" className={styles.navlink}>
+                <Link to="/about" className={styles.navlink}>
                     About
-                </a>
-                <a href="/writing" className={styles.navlink}>
+                </Link>
+                <Link to="/projects" className={styles.navlink}>
+                    Projects
+                </Link>
+                <Link to="/writing" className={styles.navlink}>
                     Writing
-                </a>
+                </Link>
             </div>
         </div>
       </nav>
-      <main>
+      <div className={styles.content}>
         {children}
-      </main>
+      </div>
     </div>
   )
 }

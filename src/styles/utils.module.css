@@ -1,7 +1,3 @@
-.content {
-    margin-top: 50px;
-    width: 100%;
-}
 
 .flexh {
     display: flex;
@@ -14,7 +10,7 @@
     object-fit: cover;
 }
 
-img {
+.indeximg {
     width: 100%;
     height: 100%;
     border-radius: 9999px;
@@ -26,7 +22,8 @@ img {
 }
 
 .card {
-    padding: 20px;
+    background-color: white;
+    padding: 25px;
     box-sizing: border-box;
     border: 1px solid black;
     border-radius: 5px;
@@ -35,6 +32,7 @@ img {
 
 .aboutsite {
     margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 .section {
@@ -49,11 +47,29 @@ p {
     /* margin: 0; */
 }
 
+.projectsWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 48%;
+    margin-bottom: 25px;
+}
+
+.projectImg {
+    margin-top: 15px;
+}
+
 @media (max-width: 1000px) {
     .myface {
         display: none;
     }
     .description {
+        width: 100%;
+    }
+    .project {
         width: 100%;
     }
 }
