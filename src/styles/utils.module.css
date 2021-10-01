@@ -1,3 +1,22 @@
+.bggreen {
+    background-color: #c1e1cd;
+}
+
+.bgyellow {
+    background-color: palegoldenrod;
+}
+
+.bgpurple {
+    background-color: lavender;
+}
+
+.bgblue {
+    background-color: skyblue;
+}
+
+.bgorange {
+    background-color:peachpuff;
+}
 
 .flexh {
     display: flex;

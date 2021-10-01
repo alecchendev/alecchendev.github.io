@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const ProjectsPage = () => {
   return (
-    <Layout pageTitle={"Alec Chen - Projects"}>
+    <Layout pageTitle={"Alec Chen - Projects"} bgcolor={styles.bgorange}>
         <div className={[styles.section, styles.card].join(' ')}>
             <h1>
                 Projects

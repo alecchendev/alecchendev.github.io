@@ -4,7 +4,7 @@ import * as styles from "../styles/utils.module.css";
 
 const WritingPage = () => {
   return (
-    <Layout pageTitle={"Alec Chen - Writing"}>
+    <Layout pageTitle={"Alec Chen - Writing"} bgcolor={styles.bgblue}>
         <div className={[styles.section, styles.card].join(' ')}>
             <h1>
                 Writing

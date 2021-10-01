@@ -5,10 +5,10 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle={"Alec Chen - Home"}>
+    <Layout pageTitle={"Alec Chen - Home"} bgcolor={styles.bggreen}>
         <div className={styles.flexh}>
             <div className={styles.myface}>
-                <StaticImage className={styles.indeximg} src="../images/butterdog.jpeg" alt="butter dog" fadeIn={false}/>
+                <StaticImage className={styles.indeximg} src="../images/profile.png" alt="butter dog" fadeIn={false}/>
             </div>
             <div className={[styles.description, styles.card].join(' ')}>
                 <h1>Hey! I'm Alec.</h1>
