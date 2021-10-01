@@ -1,0 +1,59 @@
+.content {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.flexh {
+    display: flex;
+    justify-content: space-between;
+}
+
+.myface {
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 9999px;
+    border: 1px solid black;
+}
+
+.description {
+    width: 70%;
+}
+
+.card {
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.aboutsite {
+    margin-top: 50px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+p {
+    /* margin: 0; */
+}
+
+@media (max-width: 1000px) {
+    .myface {
+        display: none;
+    }
+    .description {
+        width: 100%;
+    }
+}
