@@ -26,6 +26,7 @@ const Layout = ({ pageTitle, bgcolor, children }) => {
                   </Link>
               </div>
           </div>
+        <hr />
         </nav>
         <div className={styles.content}>
           {children}

@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout.js";
 import * as styles from "../styles/utils.module.css";
 import { StaticImage } from "gatsby-plugin-image";
+import spotifySocialGif from '../images/spotifySocial.gif'
 
 const ProjectsPage = () => {
   return (
@@ -21,7 +22,7 @@ const ProjectsPage = () => {
                 <h2>
                     Spotify Social
                 </h2>
-                <StaticImage className={styles.projectImg} src="../images/spotifySocial.gif" />
+                <img className={styles.projectImg} src={spotifySocialGif} alt="Spotify Social gif" />
                 <p>
                     I've made this site as a place for me to put any writing/notes I put together
                     as well as somewhere for people to learn a bit about me if they're curious.
