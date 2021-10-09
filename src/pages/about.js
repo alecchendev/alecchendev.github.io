@@ -7,42 +7,42 @@ const AboutPage = () => {
   return (
     <Layout pageTitle={"Alec Chen - About"} bgcolor={styles.bgyellow}>
         <div className={[styles.section, styles.card].join(' ')}>
-            <div className={styles.myface}>
+            {/* <div className={styles.myface}>
                 <StaticImage className={styles.indeximg} src="../images/profile.png" alt="butter dog" fadeIn={false}/>
-            </div>
+            </div> */}
             <h1>
                 About
             </h1>
             <p>
-                I've made this site as a place for me to put any writing/notes I put together
-                as well as somewhere for people to learn a bit about me if they're curious.
+                A page to give a little more of a human dimension to my website/work.
             </p>
         </div>
         <div className={[styles.section, styles.card].join(' ')}>
             <h2>
-                Background
+              Stuff I do
             </h2>
             <p>
-                I've made this site as a place for me to put any writing/notes I put together
-                as well as somewhere for people to learn a bit about me if they're curious.
+							A typical day in my life these days is composed of a combination of
+							very random things and occasions, with the following few consistent activities:
             </p>
+						<ul>
+							<li>Exercise</li>
+							<li>Coding/Writing</li>
+							<li>Cooking</li>
+						</ul>
         </div>
         <div className={[styles.section, styles.card].join(' ')}>
             <h2>
-                Stuff I do
+                Consumption
             </h2>
             <p>
-                I've made this site as a place for me to put any writing/notes I put together
-                as well as somewhere for people to learn a bit about me if they're curious.
-            </p>
-        </div>
-        <div className={[styles.section, styles.card].join(' ')}>
-            <h2>
-                Things I consume
-            </h2>
-            <p>
-                I've made this site as a place for me to put any writing/notes I put together
-                as well as somewhere for people to learn a bit about me if they're curious.
+                Some movies I like: Good Will Hunting, Whiplash, Sound of Metal
+								<br/>
+								Some shows I like: Bojack Horseman, Master of None, How I Met Your Mother, Fleabag
+								<br/>
+								Some books I like: The Conquest of Happiness, Flowers for Algernon, Catcher in the Rye
+								<br/>
+								Some artists I like: Joji, Aries, Tyler the Creator, Kendrick Lamar
             </p>
         </div>
     </Layout>

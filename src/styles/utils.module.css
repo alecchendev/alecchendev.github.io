@@ -22,6 +22,9 @@
     display: flex;
     justify-content: space-between;
 }
+.homesub {
+    width: 48%;
+}
 
 .myface {
     width: 25%;
@@ -42,11 +45,11 @@
 
 .card {
     background-color: white;
-    padding: 25px;
-    box-sizing: border-box;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+    /* padding: 25px; */
+    /* box-sizing: border-box; */
+    /* border: 1px solid black; */
+    /* border-radius: 5px; */
+    /* box-shadow: 10px 10px rgba(0, 0, 0, 0.1); */
 }
 
 .aboutsite {

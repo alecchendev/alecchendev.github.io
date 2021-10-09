@@ -4,7 +4,7 @@ import * as styles from '../styles/layout.module.css';
 
 const Layout = ({ pageTitle, bgcolor, children }) => {
   return (
-    <div className={[styles.master, bgcolor].join(' ')}>
+    <div className={[styles.master].join(' ')}>
       <div className={styles.wrapper}>
         <title>{pageTitle}</title>
         <nav>
@@ -15,9 +15,9 @@ const Layout = ({ pageTitle, bgcolor, children }) => {
                   </Link>
               </div>
               <div className={[styles.rightnav, styles.navsub].join(' ')}>
-                  <Link to="/about" className={styles.navlink}>
+                  {/* <Link to="/about" className={styles.navlink}>
                       About
-                  </Link>
+                  </Link> */}
                   <Link to="/projects" className={styles.navlink}>
                       Projects
                   </Link>
