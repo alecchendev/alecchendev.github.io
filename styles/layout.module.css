@@ -33,7 +33,7 @@
     }
 }
 
-@media (max-width: 833) {
+@media (max-width: 833px) {
     .postWidth {
         width: 90%;
     }
