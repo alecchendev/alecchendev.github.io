@@ -18,12 +18,17 @@
     background-color:peachpuff;
 }
 
+.intro {
+    margin-bottom: 50px;
+}
+
 .flexh {
     display: flex;
     justify-content: space-between;
 }
 .homesub {
     width: 48%;
+    margin-bottom: 25px;
 }
 
 .myface {
@@ -88,6 +93,12 @@ p {
 }
 
 @media (max-width: 1000px) {
+    .flexh {
+        flex-direction: column;
+    }
+    .homesub {
+        width: 100%;
+    }
     .myface {
         display: none;
     }

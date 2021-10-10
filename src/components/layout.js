@@ -7,7 +7,7 @@ const Layout = ({ pageTitle, bgcolor, children }) => {
     <div className={[styles.master].join(' ')}>
       <div className={styles.wrapper}>
         <title>{pageTitle}</title>
-        <nav>
+        {/* <nav>
           <div className={styles.nav}>
               <div className={[styles.leftnav, styles.navsub].join(' ')}>
                   <Link to="/" className={styles.navlink}>
@@ -15,9 +15,6 @@ const Layout = ({ pageTitle, bgcolor, children }) => {
                   </Link>
               </div>
               <div className={[styles.rightnav, styles.navsub].join(' ')}>
-                  {/* <Link to="/about" className={styles.navlink}>
-                      About
-                  </Link> */}
                   <Link to="/projects" className={styles.navlink}>
                       Projects
                   </Link>
@@ -27,7 +24,7 @@ const Layout = ({ pageTitle, bgcolor, children }) => {
               </div>
           </div>
         <hr />
-        </nav>
+        </nav> */}
         <div className={styles.content}>
           {children}
         </div>
