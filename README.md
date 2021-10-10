@@ -1,8 +1,11 @@
 # alecchendev.github.io
 A simple personal website that people can check out if they want to learn more about me.
 
+### V5.5
+![personal website v5.5](readme/personal-website-v5.5.gif)
+
 ### V5
-[Check it out here](https://www.alecchendev.com)
+![personal website v5](readme/personal-website-v5.gif)
 
 ### V4
 ![personal website v4](readme/personal-website-v4.gif)
