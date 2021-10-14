@@ -1,5 +1,5 @@
 ---
-title: 'Breaking Down Decentralization'
+title: 'Decentralization and Proof of Work'
 date: '2021-09-29'
 ---
 
