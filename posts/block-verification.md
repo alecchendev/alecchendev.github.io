@@ -1,5 +1,5 @@
 ---
-title: 'Block Verification'
+title: 'Block Verification in Bitcoin'
 date: '2021-10-05'
 ---
 
