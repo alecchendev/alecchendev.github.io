@@ -48,10 +48,11 @@ export default function Home({ allPostsData }) {
           <p>
             I'm a programmer at heart. Most days I'm either
             working on a side project, or looking for a side project to work on.
-            Most of the stuff I work on is public on my <a href="https://github.com/alecchendev">Github</a>.
-            The following are a some highlights.
+            Most of the stuff I work on is public on my <a href="https://github.com/alecchendev" target="_blank">Github</a>.
+            The following are some highlights.
           </p>
           <ul>
+            <li><a href="https://github.com/IlliniBlockchain/nft-mint" target="_blank">NFT Mint</a></li>
             <li><a href="https://github.com/alecchendev/spotify-social" target="_blank">Spotify Social</a></li>
             <li><a href="https://github.com/alecchendev/spotify-refresh-token" target="_blank">getyourspotifyrefreshtoken.com</a></li>
             <li><a href="https://github.com/alecchendev/spotify-social" target="_blank">3D Engine From Scratch</a></li>
