@@ -14,7 +14,7 @@ export default function Home({ allPostsData }) {
           I love to code, write, exercise, and cook.
           This last summer I worked as an emerging tech intern at AbbVie, and this
           summer (2022) I'll be a forward deployed software engineer intern at Palantir.
-          I love meeting new people, so don't hesitate to reach out about anything!
+          I love meeting new people, so feel free to reach out about anything!
         </p>
         <p>
           Email: <a href="mailto:alecchendev@gmail.com" target="_blank">alecchendev@gmail.com</a>
@@ -27,8 +27,10 @@ export default function Home({ allPostsData }) {
           <h2>Writing</h2>
           <p>
             Writing is a great way to organize my thoughts, tell stories,
-            and document things. From time to time I'll make an attempt at
-            one of the three. The following are those attempts.
+            and document things. From time to time the things I write will
+            make it out of my notes and out onto the web. My more polished
+            work is on my <a href="https://mirror.xyz/0x06CcfaB8c54e64BBFEc51c86027b471d4A600923" target="_blank">Mirror</a> and
+            the rest is right below.
           </p>
 
           <ul>
