@@ -7,15 +7,16 @@ The original bitcoin whitepaper is very readable and concise, but because of thi
 
 ## What is currency?
 
-Something where there is general consensus on the value.
+Something that people agree has value.
 
 Economic definition: medium of exchange, medium of accounting, store of value. Does bitcoin fit these? yes.
 
 The only thing we really need in order to use a currency is to know how much any person has of the currency, but how do we do this?
 
-The only thing we need for a functioning currency is to know how much any person has
+Why? So that we know they have enough to pay us, to know they aren't creating fake money, etc.
 
-Why? So that we know they have enough to pay us, to know they aren't creating fake money, etc. [1]
+This is easy with physical currency, you just bust out your bag of gold and we've got all we need. It gets a bit more complicated
+when it comes to digital currency.
 
 ## Digital currency
 
@@ -27,11 +28,11 @@ Note: these computers are managed by a central organization.
 
 These organizations have a lot of power because of the trust we put in them.
 
-With this power they can impose transaction fees, decide who is allowed to enter the market (leads to loss of privacy through requiring personal information to prevent fraud).
+With this power they can impose transaction fees and decide who is allowed to enter the market. This also leads to loss of privacy when they require substantial personal information to prevent fraud.
 
 We're subject to their infrastructure - if they change software, if their servers are down, if their tech can't scale properly.
 
-The only thing holding them back from abusing their power is the law, consequences that would ensue (were they to break the law) enforced by the government. [2]
+The only thing holding them back from abusing their power is the law, consequences that would ensue (were they to break the law) enforced by the government. [1]
 
 ## Decentralized currency
 
@@ -45,7 +46,7 @@ In the case of currency these transactions are financial transfers of currency b
 
 High level: a set of terms agreed upon by participating entities for how they can interact.
 
-Example in software: HTTP - hypertext transfer protocol - when your browser visits [google.com](http://google.com) it (among other things) sends a block of data in a certain format, a format that complies to the HTTP protocol, to a server that then responds with the right data, i.e. the html/css/js representing google's landing page.
+Example in software: HTTP - hypertext transfer protocol - when your browser visits google.com it (among other things) sends a block of data in a certain format, a format that complies to the HTTP protocol, to a server that then responds with the right data, i.e. the html/css/js representing google's landing page.
 
 If we just sent requests in any formats we liked, we'd have to write a lot of different software to make the internet work like it does today.
 
@@ -63,8 +64,8 @@ So how do these computers actually keep track of who has what? Basically...
 4. [Clever algorithms to come to consensus]
     1. For more on these clever algorithms - see "Decentralization and Proof of Work," "Block Verification in Bitcoin," and "Breaking Down Transaction Validation"
 
+...
+
 ## Notes
 
-[1] This is easy with physical currency, you just pull up your bag of gold and we've got all we need. We'll see how this is more nuanced when it comes to digital currency.
-
-[2] The government enforces the correct usage/management of the currency. They also have the power to create/regulate as much as they want. What if your government just kept printing money? Well they can. Enter hyperinflation, e.g. zimbabwe, venezuala.
+[1] The government enforces the correct usage/management of the currency. They also have the power to create/regulate as much as they want. What if your government just kept printing money? Well they can. Enter hyperinflation, e.g. zimbabwe, venezuala.
