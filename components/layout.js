@@ -12,14 +12,15 @@ const Layout = ({ pageTitle, home, children }) => {
       <div className={[styles.master].join(' ')}>
         <div className={styles.wrapper + ' ' + (home ? styles.homeWidth : styles.postWidth)}>
           <div className={styles.content}>
+            {
+              !home &&
+              (
+                <div className={styles.backLink}><Link href="/">Alec Chen</Link></div>
+              )
+            }
+            
             {children}
           </div>
-          {
-            !home &&
-            (
-              <div className={styles.backLink}><Link href="/">← Back to home</Link></div>
-            )
-          }
         </div>
       </div>
 

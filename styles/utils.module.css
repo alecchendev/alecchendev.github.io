@@ -6,9 +6,10 @@
 .flexh {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 .homesub {
-    width: 48%;
+    width: 100%;
 }
 
 .postTitle {

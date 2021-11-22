@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;400;500;600;700&display=swap');
+
 /* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;700&display=swap'); */
 
 :root {
     --text-color: #242424;
-    --bg-color: #9ddeeb;
+    --bg-color: #fff;
 }
 
 ::selection {
@@ -17,17 +21,32 @@ body {
     margin: 0;
     /* font-family: DM Sans; */
     font-family: -apple-system, BlinkMacSystemFont, Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* font-family: Sora; */
+    /* font-family: Inter; */
+    /* font-weight: 300; */
+    letter-spacing: .025em;
     line-height: 1.5;
     background-color:var(--bg-color);
     color: var(--text-color);
 }
 
 h1, h2, h3 {
-    font-family: DM Sans;
+    /* font-family: DM Sans; */
 }
 
 h2, h3 {
     margin-top: 35px;
+}
+
+blockquote {
+    margin-left: 0;
+    padding-left: 2em;
+    /* padding-left: auto; */
+    border-left: 3px solid black;
+}
+
+ul {
+    line-height: 1.5;
 }
 
 p, li, a {
