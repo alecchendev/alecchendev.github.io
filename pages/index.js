@@ -12,13 +12,8 @@ export default function Home({ allPostsData }) {
         <p>
           I'm a software engineer studying computer science and
           statistics at UIUC. I'm interested in nutrition, programming,
-          web3, film, and writing.
-        </p>
-        <p>
-          Currently working on various projects as a founding member of Illini
-          Blockchain. Most recently worked on a side project, weavewrite, to play around
-          with Arweave for a possible submission to their Open Web Hackathon.
-          In the midst of learning Solana development. Branching into DeFi.
+          web3, film, and writing. Currently working on various projects as
+          a founding member of Illini Blockchain.
         </p>
         <p>
           Email: <a href="mailto:alecchendev@gmail.com" target="_blank">alecchendev@gmail.com</a>
