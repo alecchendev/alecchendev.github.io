@@ -23,7 +23,7 @@
 	</div>
 
 	<div class='photo-box'>
-		<img src='me.png' alt='Picture of me' class='photo' />
+		<img src='/me.png' alt='Picture of me' class='photo' />
 		<p class='photo-caption'>Me in Chicago</p>
 	</div>
 
