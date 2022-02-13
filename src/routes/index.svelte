@@ -7,7 +7,7 @@
 	<div class='bio-box'>
 		<h1 class='header'>Hey, I'm Alec.</h1>
 		<p class='bio'>
-			Welcome to my website! I'm a second-year studying computer science and statistics at UIUC. I'll be working at Palantir this summer (2022) as an FDE intern in Washington D.C. I'm interested in cryptocurrency, currently co-founding Illini Blockchain, building on Solana.
+			Welcome to my website! I'm a second-year studying computer science and statistics at UIUC. I'll be working at Palantir this summer (2022) as an FDE intern in Washington D.C. I'm interested in cryptocurrency, currently co-founding Illini Blockchain, building on Solana. I like to write, and occasionally I'll brave my small corner of the web and publish something.
 		</p>
 		<p class='links'>
 			Email: <a href="mailto:alecchendev@gmail.com" target="_blank">alecchendev@gmail.com</a>
