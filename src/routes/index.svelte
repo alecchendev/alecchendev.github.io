@@ -19,14 +19,12 @@
 		</p>
 	</div>
 
-	<div class='photo-box'>
-		<img src='/meChicago3.jpg' alt='Picture of me' class='photo' />
-		<!-- <img src='/me.png' alt='Picture of me' class='photo' /> -->
+	<div>
+		<div class='photo-box'>
+			<img src='/meChicago3.jpg' alt='Picture of me' class='photo' />
+			<!-- <img src='/me.png' alt='Picture of me' class='photo' /> -->
+		</div>
 		<p class='photo-caption'>Me in Chicago</p>
-	</div>
-
-	<div class='link-box'>
-
 	</div>
 
 </div>
