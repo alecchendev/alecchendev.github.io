@@ -20,7 +20,8 @@
 	</div>
 
 	<div class='photo-box'>
-		<img src='/me.png' alt='Picture of me' class='photo' />
+		<img src='/meChicago3.jpg' alt='Picture of me' class='photo' />
+		<!-- <img src='/me.png' alt='Picture of me' class='photo' /> -->
 		<p class='photo-caption'>Me in Chicago</p>
 	</div>
 
@@ -52,10 +53,14 @@
 
 	.photo-box {
 		width: 300px;
+		height: 375px;
+		overflow: hidden;
 	}
 	.photo {
-		width: 100%;
-		height: auto;
+		/* object-fit: cover; */
+		width: 150%;
+		margin: -225px 0px 0px -75px;
+		/* height: 100%; */
 	}
 	.photo-caption {
 		text-align: center;
