@@ -6,8 +6,8 @@
 	<div class="bio-box">
 		<h1 class="header">Hey, I'm Alec.</h1>
 		<p class="bio">
-			Welcome to my website! I'm a second-year studying computer science and statistics at UIUC. I'm
-			working at Palantir this summer (2022) as an intern in Washington D.C. I like Bitcoin, and
+			Welcome to my website! This fall I'll be a third-year studying computer science at UIUC. I'm
+			currently working at Palantir this summer as an intern in Washington D.C. I like Bitcoin, and
 			watching Channel 5 with Andrew Callaghan. I also like to write, and occasionally I'll brave my
 			small corner of the web and publish something.
 		</p>
