@@ -12,11 +12,7 @@
 			small corner of the web and publish something.
 		</p>
 		<p class="links">
-			Email: <a href="mailto:alecchendev@gmail.com" target="_blank">alecchendev@gmail.com</a>,
-			<a href="mailto:alecchen1@protonmail.com" target="_blank">alecchen1@protonmail.com</a> (<a
-				href="https://api.protonmail.ch/pks/lookup?op=get&search=user.email@protonmail.com"
-				>PGP key</a
-			>)
+			Email: <a href="mailto:alecchendev@gmail.com" target="_blank">alecchendev@gmail.com</a>
 			<br />
 			alecchendev on
 			<a href="https://twitter.com/alecchendev" target="_blank">Twitter</a>,
