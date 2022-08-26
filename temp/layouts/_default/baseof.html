@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {{ block "title" . }}
+        {{ .Site.Title }}
+      {{ end }}
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    {{ block "style" . }}
+    {{ end }}
+  </head>
+  <body>
+    {{ block "header" .}}
+    {{ end }}
+    {{ block "main" . }}
+      <!-- The part of the page that begins to differ between templates -->
+    {{ end }}
+  </body>
+</html>
