@@ -16,7 +16,7 @@
 			<br />
 			alecchendev on
 			<a href="https://twitter.com/alecchendev" target="_blank">Twitter</a>,
-			<a href="https://github.com/alecchendev" target="_blank">Github</a>, and
+			<a href="https://github.com/alecchendev" target="_blank">GitHub</a>, and
 			<a href="https://alecchendev.medium.com/" target="_blank">Medium</a>
 		</p>
 	</div>
