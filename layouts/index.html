@@ -1,0 +1,16 @@
+{{ define "style"}}
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+{{ end }}
+
+{{ define "header" }}
+{{ end }}
+
+{{ define "main" }}
+  <div class="main">
+    <div class="photo-div">
+      <img src="meFieldMuseum.jpeg" class="photo" />
+    </div>
+    {{ .Content }}
+  </div>
+  
+{{ end }}

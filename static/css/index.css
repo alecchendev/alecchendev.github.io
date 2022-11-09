@@ -1,0 +1,28 @@
+
+html, body {
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+.main {
+    max-width: 90%;
+    width: 650px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.photo-div {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.photo {
+    width: 125%;
+    margin: -80px 0px 0px -25px;
+}

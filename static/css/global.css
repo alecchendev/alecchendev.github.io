@@ -1,0 +1,22 @@
+
+html, body {
+	color: #4c525c;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+}
+
+a {
+	color: #4d86f4;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
