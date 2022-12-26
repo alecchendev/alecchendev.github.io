@@ -54,6 +54,12 @@ a:visited {
 	/* color: rgb(0,80,160); */
 }
 
+code {
+	background-color: #f5f5f5;
+	padding: 3px 6px;
+	border-radius: 5px;
+}
+
 .main {
     max-width: var(--body-max-width);
     width: var(--body-width);
