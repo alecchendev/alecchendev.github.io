@@ -4,8 +4,12 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="main">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
-  </div>
+    <h1>Blog Posts</h1>
+    {{ range .Pages }}
+      <a href="{{.Permalink}}" class="post-link">
+        <div class="post">
+          <h2>{{ .Title }}</h2>
+        </div>
+      </a>
+    {{ end }}
 {{ end }}
