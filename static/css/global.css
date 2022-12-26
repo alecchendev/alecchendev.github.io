@@ -49,3 +49,10 @@ a:hover {
 a:visited {
 	/* color: rgb(0,80,160); */
 }
+
+.main {
+    max-width: var(--body-max-width);
+    width: var(--body-width);
+    margin: auto;
+    padding-bottom: 100px;
+}

@@ -7,12 +7,6 @@ h1 {
     text-align: center;
 }
 
-.main {
-    max-width: var(--body-max-width);
-    width: var(--body-width);
-    margin: auto;
-}
-
 .photo-div {
     width: 200px;
     height: 200px;
