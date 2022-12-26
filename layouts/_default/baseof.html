@@ -9,10 +9,20 @@
       {{ end }}
     </title>
     <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <link rel="stylesheet" type="text/css" href="/css/nav-bar.css" />
     {{ block "style" . }}
     {{ end }}
   </head>
   <body>
+    <div class="nav-bar">
+      <div class="nav-inner nav-left">
+        <a href="/"><span class="my-name">Alec Chen</span></a>
+      </div>
+      <div class="nav-inner nav-right">
+        <a href="/blog">Blog</a>
+        <a href="/dev-logs">Dev Logs</a>
+      </div>
+    </div>
     {{ block "header" .}}
     {{ end }}
     {{ block "main" . }}

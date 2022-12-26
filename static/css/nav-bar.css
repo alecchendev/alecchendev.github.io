@@ -1,0 +1,30 @@
+
+.nav-bar {
+    max-width: var(--body-max-width);
+    width: 850px;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    font-family: Manrope;
+}
+
+.nav-inner {
+    padding: 20px 0;
+}
+
+.nav-left {
+    font-size: 22px;
+}
+
+.nav-right {
+    font-size: 18px;
+    width: 20%;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.my-name {
+    font-weight: 700;
+}

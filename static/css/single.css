@@ -5,9 +5,9 @@ html, body {
 
 
 .main {
-    max-width: 90%;
-    width: 650px;
+    max-width: var(--body-max-width);
+    width: var(--body-width);
     margin: auto;
-    padding-top: 50px;
+    padding-top: var(--body-padding-top);
     padding-bottom: 100px;
 }

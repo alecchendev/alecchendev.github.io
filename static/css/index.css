@@ -8,10 +8,9 @@ h1 {
 }
 
 .main {
-    max-width: 90%;
-    width: 650px;
+    max-width: var(--body-max-width);
+    width: var(--body-width);
     margin: auto;
-    padding-top: 50px;
 }
 
 .photo-div {
