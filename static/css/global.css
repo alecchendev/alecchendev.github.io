@@ -9,6 +9,8 @@
 	--body-max-width: 90%;
 	--body-padding-top: 50px;
 
+	--font-size: 1.1rem;
+
 	--nav-height: 75px;
 	--nav-font-size: 18px;
 	--nav-font-size-mobile: 22px;
@@ -39,6 +41,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 2.25rem;
+}
+
+p, ul, ol, li, blockquote {
+	font-size: var(--font-size);
+}
+
+pre, code {
+	font-size: 1rem;
 }
 
 a {
