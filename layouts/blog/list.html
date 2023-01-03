@@ -1,0 +1,20 @@
+
+{{ define "style"}}
+  <link rel="stylesheet" type="text/css" href="/css/blog/list.css" />
+{{ end }}
+
+{{ define "main" }}
+    <h1>Blog</h1>
+    <p>
+      Various things I've written. Trying to put out weekly posts
+      going forward, mainly for me to just briefly reflect and document
+      my thoughts regarding my work on some sort of regular basis.
+    </p>
+    {{ range .Pages }}
+      <a href="{{.Permalink}}" class="post-link">
+        <div class="post">
+          <h2>{{ .Title }}</h2>
+        </div>
+      </a>
+    {{ end }}
+{{ end }}

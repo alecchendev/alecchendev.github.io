@@ -1,0 +1,181 @@
+
+.nav-bar {
+    height: var(--nav-height);
+    max-width: var(--body-max-width);
+    width: 850px;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    font-family: Manrope;
+}
+
+.nav-inner {
+    padding: 20px 0;
+}
+
+.nav-inner a {
+    color: var(--font-color);
+}
+
+.nav-left {
+    font-size: 22px;
+}
+
+.nav-right {
+    font-size: 1.25rem;
+    width: 20%;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.my-name {
+    font-weight: 700;
+}
+
+.nav-mobile {
+    display: none;
+    height: var(--nav-height);
+    padding-top: 25px;
+    font-size: var(--nav-font-size-mobile);
+    font-family: Manrope;
+}
+
+/* Hamburger fold out menu */
+#menu-toggle
+{
+    position: relative;
+    
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+#menu-toggle input
+{
+  display: block;
+  width: 35px;
+  height: 30px;
+  position: absolute;
+  margin-top: -3px;
+  margin-left: calc((100% - var(--body-max-width)) / 2);
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menu-toggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  left: calc((100% - var(--body-max-width)) / 2);
+  
+  background: var(--font-color);
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menu-toggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menu-toggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menu-toggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menu-toggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menu-toggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+.menu
+{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  
+  /* background: #ededed; */
+  background-color: var(--background-color);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  padding-left: calc((100% - var(--body-max-width)) / 2);
+}
+
+.menu a {
+    display: block;
+    margin-top: 15px;
+    color: var(--font-color);
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menu-toggle input:checked ~ div
+{
+  transform: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .nav-bar {
+        display: none;
+    }
+    .nav-mobile {
+        display: block;
+    }
+}

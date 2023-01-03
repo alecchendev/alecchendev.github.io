@@ -7,13 +7,6 @@ h1 {
     text-align: center;
 }
 
-.main {
-    max-width: 90%;
-    width: 650px;
-    margin: auto;
-    padding-top: 50px;
-}
-
 .photo-div {
     width: 200px;
     height: 200px;
@@ -23,6 +16,5 @@ h1 {
 }
 
 .photo {
-    width: 125%;
-    margin: -80px 0px 0px -25px;
+    width: 100%;
 }
