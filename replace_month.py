@@ -12,7 +12,8 @@ for filename in os.listdir(directory):
         with open(filepath, 'r') as f:
             lines = f.readlines()
         # Replace the month number on the second line with the corresponding month name
-        month_num = lines[1].split()[2]
+        tokens = lines[1].split()
+        month_num = tokens[2]
         num_to_month = {
             '01': 'Jan',
             '02': 'Feb',
@@ -30,6 +31,6 @@ for filename in os.listdir(directory):
 
         month_name = num_to_month.get(month_num)
         if month_name:
-            lines[1] = lines[1].replace(month_num, month_name)
+            lines[1] = ' '.join(tokens[:2] + [month_name] + tokens[3:])
         with open(filepath, 'w') as f:
             f.writelines(lines)
