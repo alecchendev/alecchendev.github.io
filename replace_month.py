@@ -31,6 +31,6 @@ for filename in os.listdir(directory):
 
         month_name = num_to_month.get(month_num)
         if month_name:
-            lines[1] = ' '.join(tokens[:2] + [month_name] + tokens[3:])
+            lines[1] = ' '.join(tokens[:2] + [month_name] + tokens[3:]) + '\n'
         with open(filepath, 'w') as f:
             f.writelines(lines)
