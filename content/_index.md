@@ -10,5 +10,5 @@ Welcome to my website! I'm currently in my third-year studying computer science 
 At the moment I'm taking a gap semester to focus on trying to contribute to Bitcoin open-source (most likely lightning-related).
 If you're interested in following my progress, check out the rest of this site.
 
-- Email: [alecchendev@gmail.com](mailto:alecchendev@gmail.com)
+- Email: alecchendev at gmail.com
 - alecchendev on [Github](https://github.com/alecchendev), [Twitter](https://twitter.com/alecchendev), and [Medium](https://alecchendev.medium.com/)
