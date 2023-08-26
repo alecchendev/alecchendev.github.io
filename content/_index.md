@@ -6,9 +6,7 @@ draft: false
 
 # Hello! I'm Alec.
 
-Welcome to my website! I'm currently in my third year studying computer science at UIUC (and enjoying it a lot!).
-I just took a gap semester to contribute to [LDK](https://github.com/lightningdevkit) and I'm continuing this summer
-as a participant in [Summer of Bitcoin](https://www.summerofbitcoin.org/).
+Welcome to my website! I'm currently in my fourth and final year studying computer science at UIUC (and enjoying it a lot!).
+I just spent the last (gap) semester and summer contributing to [LDK](https://github.com/lightningdevkit) (and enjoyed this a lot too!).
 
-- Email: alecchendev at gmail.com
-- alecchendev on [Github](https://github.com/alecchendev), [Twitter](https://twitter.com/alecchendev), and [Medium](https://alecchendev.medium.com/)
+[Email](mailto:alecchendev@gmail.com), [Github](https://github.com/alecchendev), [Twitter](https://twitter.com/alecchendev), [Medium](https://alecchendev.medium.com/)
