@@ -2,11 +2,10 @@
 .nav-bar {
     height: var(--nav-height);
     max-width: var(--body-max-width);
-    width: 850px;
+    width: var(--nav-width);
     margin: auto;
     justify-content: space-between;
     display: flex;
-    font-family: Manrope;
 }
 
 .nav-inner {
@@ -23,7 +22,7 @@
 
 .nav-right {
     font-size: 1.25rem;
-    width: 20%;
+    width: 25%;
 
     display: flex;
     justify-content: space-between;
@@ -39,7 +38,6 @@
     height: var(--nav-height);
     padding-top: 25px;
     font-size: var(--nav-font-size-mobile);
-    font-family: Manrope;
 }
 
 /* Hamburger fold out menu */
