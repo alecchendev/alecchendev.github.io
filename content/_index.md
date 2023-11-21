@@ -6,7 +6,8 @@ draft: false
 
 # Hello! I'm Alec.
 
-Welcome to my website! I'm currently in my fourth and final year studying computer science at UIUC (and enjoying it a lot!).
-I just spent the last (gap) semester and summer contributing to [LDK](https://github.com/lightningdevkit) (and enjoyed this a lot too!).
+Welcome to my website! I'm currently finishing up my final semester studying computer science at UIUC.
+I previously spent my spring semester and summer in 2023 contributing to [LDK](https://github.com/lightningdevkit),
+and now work at [Lightspark](https://www.lightspark.com).
 
-[Email](mailto:alecchendev@gmail.com), [Github](https://github.com/alecchendev), [Twitter](https://twitter.com/alecchendev), [Medium](https://alecchendev.medium.com/)
+[Email](mailto:alecchendev@gmail.com), [Github](https://github.com/alecchendev), [Twitter](https://twitter.com/alecchendev)
