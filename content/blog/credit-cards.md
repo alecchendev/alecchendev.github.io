@@ -4,6 +4,9 @@ date: 2023-03-01T01:14:31-06:00
 draft: false
 ---
 
+Note September 22, 2024: This is really outdated, but I'll leave this snapshot just for fun. I would like to make an updated version, but will probably only get to it
+if I happen to randomly think of it and have some aimless downtime, which who knows when will happen.
+
 I’d first like to acknowledge I don’t know all of these things for certain! These are just some concepts I’ve come to from my own thinking, however they are subject to change with exposure to new information.
 
 - It’s economical as a consumer to play the game. There are ridiculous discounts and promotions from credit card companies, and building credit has important perks. It seems to me that as a consumer living in a country with financial privilege, it’s in my best interest to utilize the perks of credit.
