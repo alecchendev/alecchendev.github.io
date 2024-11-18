@@ -10,7 +10,7 @@ Just wanted to share a bit about what I've been up to lately.
 
 I've been interested in electronics/control systems and a friend of mine recommended trying this out. I got a DC motor with encoder, and was able to make a program where I could specify a position to go to (whereas the inputs to the DC motor are basically go left or go right). This clip is basically like a rotary phone motion where I gave it a phone number and it moved to each number/back to zero, mimicking the motion of a rotary phone.
 
-![Go to PID gif](gotopid.gif)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JxMpKe2xeaU?si=ThxakXcdW2jEkc7j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 I think the crazier thing for me doing this project was I had to solder some parts together. I didn't anticipate having to do that, and I'd never done it before, but people do this when they're in middle school, so I got the supplies and melted some metal. I'm still really baffled that it worked. Like you just melt metal over these pieces, and electricity flows through them. That's so awesome!
 
@@ -22,7 +22,7 @@ I think the crazier thing for me doing this project was I had to solder some par
 
 I wanted to do some basic boolean algebra with some buttons, resistors, and an LED. I was able to do NOT, OR, NOR, AND, and NAND, but when it came to XOR I was struggling. It eventually led me to understanding transistors and diodes (and blowing up an LED), and I eventually cracked XOR (with 5 transistors).
 
-![Gif of my xor circuit](xor.gif)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u6OO8ie6QPM?si=mbwVTTTvEUtQSq-7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Physics calculator
 
@@ -36,7 +36,7 @@ Here's the [website](https://alecchen.dev/calculator/), [code](https://github.co
 
 Another control systems project. I saw people online doing pendulum balancing (a friend of mine did this in an undergrad class as well). I was considering trying to do the same project in real life, but first wanted to try it out in software only since I'm still really inexperienced with hardware.
 
-![Gif of pendulums training](pendulums.gif)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/43hPaizbdCI?si=1BYiiCKFwL5AIcX2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 I got the basic pendulum physics working, made a super naive algorithm to balance it if it was up (basically, if leaning left, go left), then started training a genetic algorithm for swinging it upwards from below (yea...I ditched the actual control systems part and just went another way lol). That had some okay results, though seemed to reach a local maximum. Some naive tweaks in the reward function (i.e. rewarding the max height reached in addition to general time spent close to goal) helped, but not enough. After that I got distracted with a different project.
 

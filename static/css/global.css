@@ -83,6 +83,6 @@ pre {
 	padding-top: 0;
 }
 
-img {
+img, iframe {
 	width: 100%;
 }
