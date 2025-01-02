@@ -1,31 +1,7 @@
 ---
-title: "Noobular dev log | 2024 Dec 31"
-date: 2024-11-17T15:00:00-06:00
-draft: true
----
-
-What's new with Noobular?
-
-- Points
-- Prerequisites
-- Db migrations
-- Math
-- Bunch of ui touch ups
-- Questions and choices are now markdown as well
-
-Demo!
-
-INSERT DEMO
-- Show all the content stuff inside of the hex module
-- Show exports and how they render in github
-- Show being able to edit a text file and update the course (how to not reveal auth?)
-    - Do this all locally
-- Demo the xor module with points and stuff
-
-Outline again, only the most interesting stuff
-- Summary of latest changes
-- Respect for math academy and the goal of noobular
-
+title: "Noobular dev log | 2025 Jan 1"
+date: 2025-01-01T15:00:00-06:00
+draft: false
 ---
 
 What's new with Noobular?
@@ -34,7 +10,7 @@ It's been almost 4 weeks since the last dev log and a bunch of stuff has changed
 don't think any of it is all that interesting to an outside observer, so I'll leave
 a demo and summarize the major things.
 
-DEMO
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x7JVgP6zkaI?si=c7PtCyihXMiesTZL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Latest changes
 
@@ -72,7 +48,8 @@ things for my cryptography course.
 
 I initially went with mathjax, but had some issues with formatting content
 upon loading more when taking a module, so eventually realized I could switch
-to server side rendering the latex with katex, and that's worked swimmingly.
+to server side rendering the latex with katex (which is more in line with my
+current architecture anyway), and that's worked swimmingly.
 
 Also, I've added the ability to have any markdown/latex content in questions
 and choices, which is a feature needed to do a bunch of kinds of content,
@@ -125,7 +102,10 @@ that I want to implement, but I have hesitated because they require a bunch more
 effort from the teacher to create a bunch of extra questions for each bit of knowledge,
 e.g. for review, a diagnostic exam, second chances when completing or retrying a module.
 I estimated it'd be about 15-30 questions per thing, and it turns out that [math
-academy has a similar estimate, and they actually just make them all by hand](https://www.justinmath.com/how-math-academy-creates-its-knowledge-graph/).
+academy has a similar estimate, and they actually just make them all by hand](https://www.justinmath.com/how-math-academy-creates-its-knowledge-graph/). I think the reality
+is there's not really a great shortcut to this, but that's okay. I'll continue
+to experiment with some sort of tools to make it easier, but for now I just gotta
+lay bricks.
 
 ## Math Academy and the goal of noobular
 
@@ -139,3 +119,18 @@ come upon something really unique from every other education platform, and
 it makes me so excited for the future. I've been continuing to use math academy
 myself, and am really excited to finish my current methods of proof course and
 move on to the latest probability and stats course.
+
+So math academy has proven that a computer system can be really effective for learning,
+at least for math. I think this or a similar system can be really effective for
+many other subjects. I would be really excited to see math academy expand into
+other subjects in the future, but ideally independent people/organizations can
+start teaching more effectively based on learnings from math academy's success,
+without necessarily relying on math academy to support them.
+
+That's the premise of Noobular: make a tool to allow anyone to start teaching
+math academy style. For now it's still just a silly side project I'm having fun
+working on in my free time, but that's at least the motivating context behind it.
+
+Long live math academy. Happy new year.
+
+Alec
