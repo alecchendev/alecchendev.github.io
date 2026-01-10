@@ -49,4 +49,4 @@ Variables:
 
 - All HTML content must use the `| safe` filter to prevent escaping
 - External links get `target="_blank" rel="noopener"` (handled in build script)
-- All CSS is loaded from `/css/styles.css`
+- All CSS is loaded from `/styles.css`
