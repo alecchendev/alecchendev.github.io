@@ -1,7 +1,6 @@
 ---
-title: "Approach to work | 2025 Dec 6"
-date: 2025-12-06T15:00:00-08:00
-draft: false
+date: 2025-12-06 15:00:00-08:00
+title: Approach to work | 2025 Dec 6
 ---
 
 *As with all of my writing, this is a snapshot of some thoughts at the time. Subject to change. Written in a way that sounds prescriptive, to be straightforward, but more meant to be notes to myself rather than advice for the general public. Grain of salt--take it with one.*
@@ -82,4 +81,3 @@ I enjoy reasoning about computers/physics, not necessarily *logic*. Might not be
 I enjoy good craft. This also compounds. It is easiest to just continue the current quality of a product, and if it's bleh, it'll become more bleh. If it's great, there's momentum to keep it great (you don't want to be that person who starts the enshittification). It is satisfying to make things well. To get details right. To be proud of someone coming along later and seeing what you made.
 
 That's all for now. This wasn't a super cohesive story, but things on my mind. Hope you enjoyed.
-

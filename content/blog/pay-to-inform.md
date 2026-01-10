@@ -1,7 +1,6 @@
 ---
-title: "Pay to inform discovery"
-date: 2023-07-22T15:31:36-05:00
-draft: false
+date: 2023-07-22 15:31:36-05:00
+title: Pay to inform discovery
 ---
 
 I initially posted this idea briefly on [nostr](https://nostr.com/nevent1qqsd4l44e8qt3mmh4wjt659lx3w0ftgr5el8324dneyymt38fuycaycpz4mhxue69uhhyetvv9ujumn0wd68ytnzvuhs7rmkyk) and [twitter](https://twitter.com/alecchendev/status/1682615734231347200), but I’ve been thinking about it more and wanted to elaborate here. Maybe a lot of this is common knowledge already, I don’t know. At the least this is a sort of summary of my thoughts on discovery and monetization.

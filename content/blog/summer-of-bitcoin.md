@@ -1,7 +1,6 @@
 ---
-title: "My Summer of Bitcoin 2023"
-date: 2023-08-19T23:27:07-05:00
-draft: false
+date: 2023-08-19 23:27:07-05:00
+title: My Summer of Bitcoin 2023
 ---
 
 ## Intro
@@ -136,4 +135,3 @@ Similarly, I wanted to know more about Bitcoin and Lightning before I started co
 ## Conclusion
 
 There’s much more I’d like to say more specifically on Bitcoin and Lightning, but this post is already quite long so, that’s all for now. It’s getting late, and I need to pack before moving back to campus tomorrow. And I really ought to get my laundry out of the dryer.
-

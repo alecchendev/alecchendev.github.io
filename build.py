@@ -33,7 +33,6 @@ class Page:
     filepath: Path
     title: str
     date: datetime
-    draft: bool
     content: str  # Rendered HTML
     url: str
     is_bundle: bool  # True if this is an index.md in a directory
@@ -96,7 +95,6 @@ def load_page(filepath: Path) -> Page:
 
     title = post.get('title', '')
     date = post.get('date', datetime.now())
-    draft = post.get('draft', False)
     content = render_markdown(post.content)
     url = calculate_url(filepath, CONTENT_DIR)
     is_bundle = filepath.name == 'index.md' and filepath.parent != CONTENT_DIR
@@ -105,7 +103,6 @@ def load_page(filepath: Path) -> Page:
         filepath=filepath,
         title=title,
         date=date,
-        draft=draft,
         content=content,
         url=url,
         is_bundle=is_bundle
@@ -119,12 +116,6 @@ def collect_pages() -> List[Page]:
 
     for md_file in CONTENT_DIR.rglob('*.md'):
         page = load_page(md_file)
-
-        # Skip drafts
-        if page.draft:
-            print(f"  Skipping draft: {md_file.relative_to(CONTENT_DIR)}")
-            continue
-
         pages.append(page)
         print(f"  Found: {md_file.relative_to(CONTENT_DIR)}")
 

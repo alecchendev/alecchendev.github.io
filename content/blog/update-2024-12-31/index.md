@@ -1,7 +1,6 @@
 ---
-title: "Noobular dev log | 2025 Jan 1"
-date: 2025-01-01T15:00:00-06:00
-draft: false
+date: 2025-01-01 15:00:00-06:00
+title: Noobular dev log | 2025 Jan 1
 ---
 
 What's new with Noobular?

@@ -1,7 +1,6 @@
 ---
-title: "Update | 2025 Nov 15"
-date: 2025-11-15T15:00:00-06:00
-draft: false
+date: 2025-11-15 15:00:00-06:00
+title: Update | 2025 Nov 15
 ---
 
 I've been meaning to write something for a while. The further I went without writing, the more things I wanted to share in the next post, which led to it being more daunting than necessary and me never actually posting anything.

@@ -1,7 +1,6 @@
 ---
-title: "Home"
-date: 2022-08-25T03:02:57-05:00
-draft: false
+date: 2022-08-25 03:02:57-05:00
+title: Home
 ---
 
 # Hello! I'm Alec.

@@ -1,7 +1,6 @@
 ---
-title: "Thoughts on Credit Cards"
-date: 2023-03-01T01:14:31-06:00
-draft: false
+date: 2023-03-01 01:14:31-06:00
+title: Thoughts on Credit Cards
 ---
 
 Note September 22, 2024: This is really outdated, but I'll leave this snapshot just for fun. I would like to make an updated version, but will probably only get to it
@@ -17,4 +16,3 @@ I’d first like to acknowledge I don’t know all of these things for certain! 
 - The real cost of reversible transactions is it requires a custodian to be fully in control of your funds. To be able to reverse a payment, the credit card company has to be able to pull the funds from the merchant, and so settlement must be delayed. Importantly this is only possible when the merchant does not hold their own funds either. Third party custody of funds not only risks people’s livelihoods on the trustworthiness of financial institutions, it also means these third parties have full control over who can participate in the economy. The only way to have custody over your own funds digitally seems to be to have some sort of non-reversible payments as a settlement layer.
 - Intermediaries increase transaction costs, either raising prices or hurting the merchant. These transaction costs apply on many transactions where reversibility or third party custody may not be necessary; the costs have remained because financial intermediaries have been the only way to accept digital payments up until recently. Importantly, these transaction costs also prevent the possibility of micro transactions. If you wanted to pay 10 different people a cent or a fraction of a cent, if an intermediary were to take a cut, it would mean some people you wanted to pay wouldn’t be paid at all (there can be workarounds for this but you get the point).
 - I previously thought that card companies take the loss when a fraudulent payment gets reversed, but actually it’s the merchant that takes the loss. Reversibility increases the merchant’s risk, requiring the intermediaries or the merchant to hassle the customer for information. Not only does this invade people’s privacy, this requires credentials or records recognizable within legal jurisdiction, which complicates cross border transactions.
-

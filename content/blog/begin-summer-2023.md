@@ -1,7 +1,6 @@
 ---
-title: "Entering Summer 2023"
-date: 2023-05-14T16:22:39-05:00
-draft: false
+date: 2023-05-14 16:22:39-05:00
+title: Entering Summer 2023
 ---
 
 My gap semester has officially ended, and Summer of Bitcoin starts this upcoming Monday, May 15th 2023. I figure this would be a good time to reflect on my semester, and think about how I want to approach the summer.
@@ -33,4 +32,3 @@ Build some more stuff with Rust. Cryptopals was fun, but they were one-off chall
 Finish the rest of the cryptopals sets. Review and polish past ones. Maybe do a writeup.
 
 Do some reading, mainly on some economics. Economics will help me understand Bitcoin more in that context, but generally it’s just something I’m interested in understanding better.
-
