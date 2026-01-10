@@ -1,11 +1,11 @@
 # Jinja2 Templates
 
-Converted from Hugo Go templates to Jinja2 for custom static site generation.
+Templates for static site generation using Jinja2.
 
-## Template Variables
+## Template Files
 
 ### base.html
-Base template that all others extend.
+Base template that all others extend. Contains navigation and site structure.
 
 Variables:
 - `site_title` - Site title (e.g., "Alec Chen's Website")
@@ -13,8 +13,6 @@ Variables:
 Blocks:
 - `title` - Page title (defaults to site_title)
 - `rss` - RSS feed link tags
-- `style` - Additional CSS files
-- `header` - Optional header content
 - `main` - Main page content
 
 ### index.html
@@ -30,7 +28,7 @@ Variables:
 - `title` - Page/post title
 - `content` - Rendered HTML content
 
-### blog_list.html
+### blog.html
 Blog index page.
 
 Variables:
@@ -38,7 +36,7 @@ Variables:
   - `url` - Relative URL to post
   - `title` - Post title
 
-### devlog_list.html
+### dev-log.html
 Dev log index page with expandable details.
 
 Variables:
@@ -47,19 +45,8 @@ Variables:
   - `title` - Entry title
   - `content` - Rendered HTML content (shown in details)
 
-## Key Conversions from Hugo
-
-| Hugo | Jinja2 |
-|------|--------|
-| `{{ block "name" . }}...{{ end }}` | `{% block name %}...{% endblock %}` |
-| `{{ .Content }}` | `{{ content \| safe }}` |
-| `{{ .Title }}` | `{{ title }}` |
-| `{{ .Site.Title }}` | `{{ site_title }}` |
-| `{{ range .Pages }}` | `{% for page in pages %}` |
-| `{{ .Permalink }}` | `{{ page.url }}` |
-
 ## Notes
 
 - All HTML content must use the `| safe` filter to prevent escaping
-- External links need `target="_blank" rel="noopener"` (handled in build script)
-- CSS files are referenced with absolute paths from root (e.g., `/css/global.css`)
+- External links get `target="_blank" rel="noopener"` (handled in build script)
+- All CSS is loaded from `/css/styles.css`

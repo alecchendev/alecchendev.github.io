@@ -70,7 +70,10 @@ def calculate_url(filepath: Path, base_path: Path) -> str:
 
     # Page bundles: index.md in a subdirectory
     # e.g., content/blog/my-post/index.md -> /blog/my-post/
+    # Special case: content/index/index.md -> / (homepage)
     if filepath.name == 'index.md':
+        if rel_path.parent == Path('index'):
+            return '/'
         return f'/{rel_path.parent}/'
 
     # Regular standalone pages: /section/filename/
@@ -127,15 +130,14 @@ def render_homepage(jinja_env: Environment, pages: List[Page]):
     """Render the homepage"""
     print("Rendering homepage...")
 
-    # Find the _index.md file
+    # Find the homepage (content/index/index.md)
     home_page = next(
-        (p for p in pages if p.filepath.name == '_index.md'
-         and p.filepath.parent == CONTENT_DIR),
+        (p for p in pages if p.url == '/'),
         None
     )
 
     if not home_page:
-        print("  Warning: No _index.md found in content/")
+        print("  Warning: No homepage found in content/")
         return
 
     template = jinja_env.get_template('index.html')
@@ -147,6 +149,10 @@ def render_homepage(jinja_env: Environment, pages: List[Page]):
     output_file = OUTPUT_DIR / 'index.html'
     output_file.parent.mkdir(parents=True, exist_ok=True)
     output_file.write_text(html, encoding='utf-8')
+
+    # Copy homepage bundle resources (images)
+    copy_page_resources(home_page)
+
     print(f"  Created: {output_file}\n")
 
 
@@ -222,8 +228,8 @@ def render_single_pages(jinja_env: Environment, pages: List[Page]):
     count = 0
 
     for page in pages:
-        # Skip index pages (already handled)
-        if page.filepath.name == '_index.md':
+        # Skip index pages (already handled separately)
+        if page.filepath.name == '_index.md' or page.url == '/':
             continue
 
         html = template.render(
