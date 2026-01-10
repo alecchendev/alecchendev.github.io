@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block style %}
+  <link rel="stylesheet" type="text/css" href="/css/dev-log/list.css" />
+{% endblock %}
+
+{% block main %}
+    <h1>Dev Log</h1>
+    <p>
+      From December 15, 2022 to April 1, 2023, as an effort to help myself
+      learn more effectively and document my journey, I wrote a small log
+      of things I learned or worked on each day.
+    </p>
+    {% for page in pages %}
+      <details>
+        <summary>
+          <a href="{{ page.url }}" class="post-link"></a>
+            <h2>{{ page.title }}</h2></summary>
+          </a>
+        </summary>
+        {{ page.content | safe }}
+      </details>
+    {% endfor %}
+{% endblock %}

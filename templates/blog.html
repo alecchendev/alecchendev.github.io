@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block rss %}
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/index.xml">
+{% endblock %}
+
+{% block style %}
+  <link rel="stylesheet" type="text/css" href="/css/blog/list.css" />
+{% endblock %}
+
+{% block main %}
+    <h1>Blog</h1>
+    <p>
+      From December 2022 through March 2023 I wrote weekly blogposts,
+      mainly for me to just briefly reflect and document
+      my thoughts regarding my work on some sort of regular basis. Now
+      I'll occasionally write a post whenever I feel like it.
+    </p>
+    <p>
+    <a href="/blog/index.xml" target="_blank">
+      RSS feed</a>,
+    <a href="https://alecchendev.substack.com/subscribe" target="_blank">
+      subscribe via email
+    </a>
+    </p>
+    {% for page in pages %}
+      <a href="{{ page.url }}" class="post-link">
+        <div class="post">
+          <h2>{{ page.title }}</h2>
+        </div>
+      </a>
+    {% endfor %}
+{% endblock %}

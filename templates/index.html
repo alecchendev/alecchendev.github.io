@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block style %}
+  <link rel="stylesheet" type="text/css" href="/css/index.css" />
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block main %}
+  <div>
+    <div class="photo-div">
+      <img src="images/meHuntington.png" class="photo" />
+    </div>
+    {{ content | safe }}
+  </div>
+{% endblock %}
