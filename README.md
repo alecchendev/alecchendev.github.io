@@ -7,4 +7,4 @@ how to develop:
 - `pip install -r requirements.txt`
 - to deactivate: `deactivate`
 - when editing content, run `python build.py` to build website
-- run `python3 -m http.server --directory .` and visit locally
+- run `python3 -m http.server --directory public` and visit locally
