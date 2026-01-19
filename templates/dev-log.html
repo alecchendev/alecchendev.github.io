@@ -1,22 +1,36 @@
 {% extends "base.html" %}
 
 {% block main %}
-  <div class="devlog-list">
+  <div class="devlog-page">
+
     <h1>Dev Log</h1>
+
+    <!-- Always show description -->
     <p>
       From December 15, 2022 to April 1, 2023, as an effort to help myself
       learn more effectively and document my journey, I wrote a small log
       of things I learned or worked on each day.
     </p>
-    {% for page in pages %}
-      <details>
-        <summary>
-          <a href="{{ page.url }}" class="post-link"></a>
-            <h2>{{ page.title }}</h2></summary>
-          </a>
-        </summary>
-        {{ page.content | safe }}
-      </details>
-    {% endfor %}
+
+    <!-- Show month links -->
+    <div class="month-list">
+      {% for month in months.values() %}
+        <div class="month-item">
+          <a href="{{ month.url }}">{{ month.title }} ({{ month.count }})</a>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Month listing (base page) OR Month entries (month page) -->
+    {% if month_key %}
+      <!-- Month page: show all entries for this month -->
+      <h2>{{ month_title }}</h2>
+      {% for entry in entries %}
+        <div class="day-entry">
+          <h3>{{ entry.title }}</h3>
+          {{ entry.content | safe }}
+        </div>
+      {% endfor %}
+    {% endif %}
   </div>
 {% endblock %}

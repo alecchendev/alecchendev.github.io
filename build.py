@@ -182,26 +182,78 @@ def render_blog_list(jinja_env: Environment, pages: List[Page]) -> List[Page]:
 
 
 def render_devlog_list(jinja_env: Environment, pages: List[Page]):
-    """Render dev-log index page"""
+    """Render dev-log index and month pages"""
     print("Rendering dev-log list...")
 
-    # Get all dev-log entries, sorted by date (newest first)
+    # Get all dev-log entries, validate filename format
     devlog_posts = [p for p in pages if 'dev-log' in str(p.filepath.parent)]
     devlog_posts = [p for p in devlog_posts if p.filepath.name != '_index.md']
-    devlog_posts.sort(key=lambda p: p.date, reverse=True)
 
+    # Validate filename format and sort by date
+    for page in devlog_posts:
+        assert re.match(r'^\d{4}-\d{2}-\d{2}\.md$', page.filepath.name), \
+            f"Invalid filename format: {page.filepath.name}. Expected YYYY-MM-DD.md"
+
+    devlog_posts.sort(key=lambda p: p.date, reverse=True)
     print(f"  Found {len(devlog_posts)} dev-log entries")
 
+    month_names = ['January', 'February', 'March', 'April', 'May', 'June',
+                   'July', 'August', 'September', 'October', 'November', 'December']
+    
+    # Group entries by month
+    months_data = {}
+    for page in devlog_posts:
+        # YYYY-MM
+        month_key = page.filepath.name[:7]
+        year, month = month_key.split('-')
+        if month_key not in months_data:
+            months_data[month_key] = {
+                "title": f"{month_names[int(month)-1]} {year}",
+                "url": f"/dev-log/{month_key}/",
+                "entries": [],
+                "count": 0
+            }
+        months_data[month_key]["entries"].append(page)
+        months_data[month_key]["count"] += 1
+
+    # Sort months in reverse chronological order
+    sorted_months = dict(sorted(months_data.items(), key=lambda x: x[0], reverse=True))
+
     template = jinja_env.get_template('dev-log.html')
+
+    # Render base dev-log page (month listing)
     html = template.render(
         site_title=SITE_TITLE,
-        pages=devlog_posts
+        months=sorted_months,
+        month_key=None,  # Indicates base page
+        entries=None,
+        month_title=None
     )
 
     output_file = OUTPUT_DIR / 'dev-log' / 'index.html'
     output_file.parent.mkdir(parents=True, exist_ok=True)
     output_file.write_text(html, encoding='utf-8')
-    print(f"  Created: {output_file}\n")
+    print(f"  Created: {output_file}")
+
+    # Render individual month pages
+    for month_key, month_data in sorted_months.items():
+        # Sort entries within month by date (newest first)
+        month_entries = sorted(month_data["entries"], key=lambda p: p.date, reverse=True)
+
+        html = template.render(
+            site_title=SITE_TITLE,
+            months=sorted_months,
+            month_key=month_key,
+            entries=month_entries,
+            month_title=month_data["title"]
+        )
+
+        output_file = OUTPUT_DIR / 'dev-log' / month_key / 'index.html'
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+        output_file.write_text(html, encoding='utf-8')
+        print(f"  Created: {output_file}")
+
+    print(f"  Generated {len(sorted_months) + 1} dev-log pages\n")
 
 
 def copy_page_resources(page: Page):
@@ -230,6 +282,10 @@ def render_single_pages(jinja_env: Environment, pages: List[Page]):
     for page in pages:
         # Skip index pages (already handled separately)
         if page.filepath.name == '_index.md' or page.url == '/':
+            continue
+
+        # Skip dev-log entries (they're only shown in month pages)
+        if 'dev-log' in str(page.filepath.parent):
             continue
 
         html = template.render(
