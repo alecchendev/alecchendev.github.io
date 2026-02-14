@@ -1,6 +1,6 @@
 ---
 date: 2025-12-06 15:00:00-08:00
-title: Approach to work | 2025 Dec 6
+title: Approach to work
 ---
 
 *As with all of my writing, this is a snapshot of some thoughts at the time. Subject to change. Written in a way that sounds prescriptive, to be straightforward, but more meant to be notes to myself rather than advice for the general public. Grain of salt--take it with one.*

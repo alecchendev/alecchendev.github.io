@@ -1,6 +1,6 @@
 ---
 date: 2024-12-04 15:00:00-06:00
-title: Noobular dev log | 2024 Dec 4
+title: Noobular dev log
 ---
 
 In the last 2-3 weeks I've been continuing to work on [Noobular](https://noobular.com) ([code](https://github.com/alecchendev/noobular)). See last week's post for the motivation, but the gist: it's sort of like duolingo, brilliant, math academy, etc. but anyone can upload content. I've been making solid progress and wanted to share.

@@ -1,6 +1,6 @@
 ---
 date: 2025-01-01 15:00:00-06:00
-title: Noobular dev log | 2025 Jan 1
+title: Noobular dev log
 ---
 
 What's new with Noobular?

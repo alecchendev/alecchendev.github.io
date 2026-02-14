@@ -24,6 +24,7 @@
     {% for page in pages %}
       <a href="{{ page.url }}" class="post-link">
         <div class="post">
+          <p class="post-date">{{ page.date.strftime('%Y-%m-%d') }}</p>
           <h2>{{ page.title }}</h2>
         </div>
       </a>

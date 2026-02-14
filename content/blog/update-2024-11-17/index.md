@@ -1,6 +1,6 @@
 ---
 date: 2024-11-17 15:00:00-06:00
-title: Update | 2024 Nov 17
+title: Update
 ---
 
 Just wanted to share a bit about what I've been up to lately.

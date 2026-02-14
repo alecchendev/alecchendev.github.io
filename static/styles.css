@@ -242,9 +242,27 @@ img, iframe {
 
 .post {
     background-color: #f5f5f5;
-    padding: 10px 25px;
+    padding: 25px 25px;
     margin: 20px 0;
     border-radius: 10px;
+}
+
+.post h2 {
+    margin: 0;
+}
+
+.post-date {
+    font-size: 1rem;
+    color: #777;
+    margin: 0;
+}
+
+.post-link:hover {
+    text-decoration: none;
+}
+
+.post-link:hover .post h2 {
+    text-decoration: underline;
 }
 
 /* Dev-log specific */
