@@ -13,7 +13,7 @@ I've been interested in electronics/control systems and a friend of mine recomme
 
 I think the crazier thing for me doing this project was I had to solder some parts together. I didn't anticipate having to do that, and I'd never done it before, but people do this when they're in middle school, so I got the supplies and melted some metal. I'm still really baffled that it worked. Like you just melt metal over these pieces, and electricity flows through them. That's so awesome!
 
-![Picture of my soldered motor driver](solder.png)
+![Picture of my soldered motor driver](picture-soldered-motor.png)
 
 [Here's the code.](https://github.com/alecchendev/arduino/blob/main/rotary.ino)
 
@@ -27,7 +27,7 @@ I wanted to do some basic boolean algebra with some buttons, resistors, and an L
 
 I already posted about this on twitter, but I'm just really proud of this project. I also recently added the ability to add your own units (still can't define your own conversions...yet), which is pretty cool.
 
-![Picture of multiplying custom units in physics calculator](newunits.png)
+![Picture of multiplying custom units in physics calculator](picture-multiplying-cust.png)
 
 Here's the [website](https://alecchen.dev/calculator/), [code](https://github.com/alecchendev/calculator).
 

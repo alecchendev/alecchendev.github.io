@@ -108,7 +108,7 @@ lay bricks.
 
 ## Math Academy and the goal of noobular
 
-![respect chart](chart.png)
+![respect chart](respect-chart.png)
 
 The more I learn about this company and the people behind it, the more I'm just
 in awe of the great work they've done.

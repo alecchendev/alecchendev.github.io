@@ -3,7 +3,7 @@ date: 2026-01-11 15:00:00-06:00
 title: The Dizziness of Freedom
 ---
 
-![augmented version of Maciej Rebisz's Cassini at Saturn](cassini.png)
+![augmented version of Maciej Rebisz's Cassini at Saturn](augmented-version-maciej.png)
 
 For the past four months I have felt anxiety more consistently and with higher intensity than I have felt in my whole life as far as I can remember. It's not crippling, and I am still able to live my normal life and be reasonably happy. But it definitely sucks.
 

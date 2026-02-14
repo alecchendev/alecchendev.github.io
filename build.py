@@ -32,6 +32,7 @@ class Page:
     """Represents a page/post with metadata and content"""
     filepath: Path
     title: str
+    subtitle: str
     date: datetime
     content: str  # Rendered HTML
     url: str
@@ -97,6 +98,7 @@ def load_page(filepath: Path) -> Page:
         post = frontmatter.load(f)
 
     title = post.get('title', '')
+    subtitle = post.get('subtitle', '')
     date = post.get('date', datetime.now())
     content = render_markdown(post.content)
     url = calculate_url(filepath, CONTENT_DIR)
@@ -105,6 +107,7 @@ def load_page(filepath: Path) -> Page:
     return Page(
         filepath=filepath,
         title=title,
+        subtitle=subtitle,
         date=date,
         content=content,
         url=url,
@@ -291,6 +294,7 @@ def render_single_pages(jinja_env: Environment, pages: List[Page]):
         html = template.render(
             site_title=SITE_TITLE,
             title=page.title,
+            subtitle=page.subtitle,
             content=page.content
         )
 

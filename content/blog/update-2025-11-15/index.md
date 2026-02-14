@@ -5,7 +5,7 @@ title: Update | 2025 Nov 15
 
 I've been meaning to write something for a while. The further I went without writing, the more things I wanted to share in the next post, which led to it being more daunting than necessary and me never actually posting anything.
 
-![alt text](drafts.png)
+![alt text](alt-text.png)
 
 So this is not "everything I've been up to over the last X months." This is more, "what's on my mind recently-ish."
 
@@ -47,11 +47,11 @@ Couple details I wanted to improve upon from the off-the-shelf stand:
 - Charging cable has to bend a little too much (phone is too low to surface)
 - Magnets are rad
 
-![Old stand](old_stand.jpeg)
+![Old stand](old-stand.jpeg)
 
-![3d model](3d.png)
+![3d model](3d-model.png)
 
-![New stand](new_stand.jpeg)
+![New stand](new-stand.jpeg)
 
 I use this new stand everyday and it works great! I shared it with my family and from popular demand I'm going to replicate these in some different colors to give to them as gifts.
 
@@ -59,7 +59,7 @@ I use this new stand everyday and it works great! I shared it with my family and
 
 Some months ago I made [this CLI](https://github.com/alecchendev/solar) to reproduce the results from Casey Handmer's solar + battery simulations and I got [a retweet from him](https://x.com/CJHandmer/status/1964910920242794931)! Here was one of the primary outputs:
 
-![solar cost](solar.png)
+![solar cost](solar-cost.png)
 
 Reproducing these results helped me grok them a bit more, which just increased my
 existing urges to participate somehow in the impending proliferation of solar.
@@ -67,6 +67,6 @@ It really feels like centennial step change. Ideally I'd love to participate
 by building hardware, but I've got some skills to gain before I can contribute
 meaningfully.
 
-![Physics problems](work.jpeg)
+![Physics problems](physics-problems.jpeg)
 
 We're working on it. Small steps every day.
