@@ -8,9 +8,7 @@ subtitle: "A look into my process and advice for other beginners."
 
 I recently published an article about the social network of my high school, and it required me to go through the process of a normal data science project. For other beginners, I want to share some of the important things I learned and what the process really looks like besides its flashy outcomes.
 
-You don’t have to read my previous article to read this one, but I’ll leave it here in case you’re curious.
-
-<a href="/blog/analyzing-the-social-network-of-my-high-school/" class="markup--anchor markup--mixtapeEmbed-anchor" data-href="/blog/analyzing-the-social-network-of-my-high-school/" title="/blog/analyzing-the-social-network-of-my-high-school/"><strong>Analyzing the Social Network of My High School</strong><br /> <em>What I learned from the data behind my high school’s senior class.</em>medium.com</a><a href="/blog/analyzing-the-social-network-of-my-high-school/" class="js-mixtapeImage mixtapeImage u-ignoreBlock" data-media-id="5d522f4e7ad79408cd505c689e96215d" data-thumbnail-img-id="1*926ELh-lw22v1SK0_gR0BA.png" style="background-image: url(1x926ELh-lw22v1SK0_gR0BA.png);"></a>
+You don’t have to read my previous article to read this one, but I’ll leave it [here](/blog/analyzing-the-social-network-of-my-high-school/) in case you’re curious.
 
 ### Cleaning and Reformatting
 
@@ -45,11 +43,9 @@ Having the right proportions for your graph will make it look cleaner and more i
 
 ![Two example charts, one with poor proportions, and the other with intentional spacing. Visualized by the author.](two-example-charts.png)
 
-Finally, colors will turn your numbers into art. Choosing a nice color palette will make the graph not only look cool but also it can help illustrate what certain components represent or what the visual is comparing. This is a brilliant article that goes over interesting concepts and resources for using color in data visualization.
+Finally, colors will turn your numbers into art. Choosing a nice color palette will make the graph not only look cool but also it can help illustrate what certain components represent or what the visual is comparing. [This is an article I like](https://blog.graphiq.com/finding-the-right-color-palettes-for-data-visualizations-fcd4e707a283) that goes over interesting concepts and resources for using color in data visualization.
 
-<a href="https://blog.graphiq.com/finding-the-right-color-palettes-for-data-visualizations-fcd4e707a283" class="markup--anchor markup--mixtapeEmbed-anchor" data-href="https://blog.graphiq.com/finding-the-right-color-palettes-for-data-visualizations-fcd4e707a283" title="https://blog.graphiq.com/finding-the-right-color-palettes-for-data-visualizations-fcd4e707a283"><strong>Finding the Right Color Palettes for Data Visualizations</strong><br /> <em>While good color palettes are easy to come by these days, finding the right color palette for data visualizations is…</em>blog.graphiq.com</a><a href="https://blog.graphiq.com/finding-the-right-color-palettes-for-data-visualizations-fcd4e707a283" class="js-mixtapeImage mixtapeImage u-ignoreBlock" data-media-id="52826c08509bea1ead4e6b7b5490a357" data-thumbnail-img-id="1*wG4NGJ_Q3qKm6lyznGMrxQ.jpeg" style="background-image: url(1xwG4NGJ_Q3qKm6lyznGMrxQ.jpeg);"></a>
-
-I personally like using the default color picker on Google, and I like Coolors for giving me palette ideas. Most of the time I mess around with some colors for a bit and it usually turns out okay.
+I personally like using the default color picker on Google, and I like [Coolors](https://coolors.co) for giving me palette ideas. Most of the time I mess around with some colors for a bit and it usually turns out okay.
 
 I tried to keep each section short because these ideas are kind of intuitive, but doing these few things well will give you the greatest returns on the quality of your visual. The rest of the more minute and advanced styling will help, but not nearly as much.
 
