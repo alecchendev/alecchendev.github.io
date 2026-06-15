@@ -188,16 +188,33 @@ def render_devlog_list(jinja_env: Environment, pages: List[Page]):
     """Render dev-log index and month pages"""
     print("Rendering dev-log list...")
 
-    # Get all dev-log entries, validate filename format
+    # Get all dev-log entries
     devlog_posts = [p for p in pages if 'dev-log' in str(p.filepath.parent)]
     devlog_posts = [p for p in devlog_posts if p.filepath.name != '_index.md']
 
-    # Validate filename format and sort by date
+    # Validate date format and sort by date
     for page in devlog_posts:
-        assert re.match(r'^\d{4}-\d{2}-\d{2}\.md$', page.filepath.name), \
-            f"Invalid filename format: {page.filepath.name}. Expected YYYY-MM-DD.md"
+        if page.is_bundle:
+            date_str = page.filepath.parent.name
+        else:
+            date_str = page.filepath.stem
+        assert re.match(r'^\d{4}-\d{2}-\d{2}$', date_str), \
+            f"Invalid date format in: {page.filepath.relative_to(CONTENT_DIR)}. Expected YYYY-MM-DD"
 
     devlog_posts.sort(key=lambda p: p.date, reverse=True)
+
+    # Copy bundle resources to month directory (YYYY-MM/ instead of YYYY-MM-DD/)
+    for page in devlog_posts:
+        if not page.is_bundle:
+            continue
+        bundle_dir = page.filepath.parent
+        month_dir = OUTPUT_DIR / 'dev-log' / bundle_dir.name[:7]
+        for item in bundle_dir.iterdir():
+            if item.is_file() and item.suffix != '.md':
+                dest = month_dir / item.name
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(item, dest)
+
     print(f"  Found {len(devlog_posts)} dev-log entries")
 
     month_names = ['January', 'February', 'March', 'April', 'May', 'June',
@@ -206,8 +223,9 @@ def render_devlog_list(jinja_env: Environment, pages: List[Page]):
     # Group entries by month
     months_data = {}
     for page in devlog_posts:
-        # YYYY-MM
-        month_key = page.filepath.name[:7]
+        # Derive date string from filename or parent directory (for bundles)
+        date_str = page.filepath.parent.name if page.is_bundle else page.filepath.stem
+        month_key = date_str[:7]
         year, month = month_key.split('-')
         if month_key not in months_data:
             months_data[month_key] = {
