@@ -313,7 +313,8 @@ def render_single_pages(jinja_env: Environment, pages: List[Page]):
             site_title=SITE_TITLE,
             title=page.title,
             subtitle=page.subtitle,
-            content=page.content
+            content=page.content,
+            date=page.date
         )
 
         output_file = get_output_path(page.url)

@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block main %}
-  <h1>{{ title }}</h1>
+  <h1 class="post-title">{{ title }}</h1>
+  <p class="post-date-page">{{ date.strftime('%Y-%m-%d') }}</p>
   {% if subtitle %}
     <p><em>{{ subtitle }}</em></p>
   {% endif %}
