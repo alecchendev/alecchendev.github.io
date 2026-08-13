@@ -1,0 +1,24 @@
+---
+date: 2026-06-21 12:00:00-08:00
+title: 2026 Jun 21
+---
+
+- Went out earlier in the morning to test while the winds were low. Here's a shot from yesterday + today.
+
+- <video controls width="100%">
+  <source src="powered_flight_park_test1.mp4" type="video/mp4">
+</video>
+
+- <video controls width="100%">
+  <source src="powered_flight_park_test2.mp4" type="video/mp4">
+</video>
+
+- In both cases, the plane veers right. This could be partly because of the wind, but I also noticed this tendency in my apartment tests. I think this might be uneven weight from the electronics. It could also be how the fuselage was starting to bend after many crashes. I should add better structural integrity to the fuselage at the joint at the end of the carbon fiber rod. The other thing it could be (probably this) is the torque from the propeller. Maybe I should actually balance the weight the other way to counteract this.
+- I added an extra rubber band to secure my horizontal stabilizer. It ended up failing launches after that, I believe because the tail has been hitting the sides of the launcher, but with a single rubber band, it's been weak enough that the tail just tilts but otherwise the aircraft launches fine. I should be able to help with this by adding more length the the aluminum extrusion connectors.
+- Even after using the boxes, it seemed to descend too much. I think this might be because after trying two rubber bands on the horizontal stabilizer, it squished the foam board enough that the incline became less significant. On many of my second day launches, the plane seemed to be more nose heavy than I'd previously observed. Separately, I think the couple inches of grass might also raise the floor a bit and get in the way of things. That being said, the launcher served pretty well in that I was able to just hold it in the air and release, and still get some decent launches, so that's nice.
+- Both in the apartment + outside, with power it seems to want to pitch up. I suspect this may be because of a similar issue I had run into on the launcher. The place where we're applying force is offset from the center of mass. I recently seen a picture of zipline's platform 1 aircraft, and the propeller sits quite a bit above the main frame. Similarly I'd seen jets have engines elevated on the tail. I realize now there is a balancing act between all the components of the plane. The elevated power system might propel you forward, but it also wants to rotate the plane, but at the same time, the wings and tail are fighting back with lift. I need to find the right balance on my plane. My aircraft is so small and slow that there isn't a ton of airflow, which I think may mean I have less flexibility in terms of design here. I wonder if I can just keep moving the propeller up until I reach something okay. I'll need to slightly redesign my fuselage to support this.
+- Another reason it could pitch up is just increased speed from the power system. So it's possible I could just lower the power and the placement of the force is okay already. However, the placement below the center of mass would always mean that in straight and level flight, the power would always be pulling up on the aircraft, so I'd need to make it more nose heavy to compensate. I'll play around with all this.
+- I'm very glad I have my launcher in a better place than before. I can now start reasoning more about the aerodynamics with power, which are complicated enough in themselves to get right. This is fun!
+- Another interesting observation: when I'm outside, I take tons of shots. And a bunch of them fail, and it feels like it sucks. But now having just a couple examples outside + apartment testing, I feel like I can actually gather quite a bit of info about what happened. Pretty interesting.
+- I have a slight urge to redesign the aircraft. I want to make it bigger so it gets better airflow and is less fragile to the wind. Hmm, I should better understand how the wind impacts things. Since even if my aircraft is bigger, if it's traveling at slow speeds, I'd expect winds of similar scale will mess things up quite a bit. The other thing I'm curious about is if I could implement some sort of control via an elevator to be able to help it keep in the air better even in the face of a mediocre launch or turbulence or malformed horizontal stabilizer incline or something. But honestly that's just adding another variable, and I should just make the aircraft fundamentals better. I don't think there's anything inherent to this design that will prevent it from making it to 10s airtime once I get all the details right. I think I just need to keep iterating.
+- I should watch moment of inertia video + laminar airflow video from the efficient engineer youtube channel to try and fill in some fundamentals.
