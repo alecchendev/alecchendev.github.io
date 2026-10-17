@@ -1,4 +1,5 @@
 ---
+slug: netflix-gender
 title: "She Treats, He Recruits: Analyzing Gender in Netflix’s Catalog"
 date: 2020-07-14 00:01:01.119000+00:00
 subtitle: "How I used basic NLP to look at how gender correlates to certain subjects on Netflix."

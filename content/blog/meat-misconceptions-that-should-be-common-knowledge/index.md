@@ -1,4 +1,5 @@
 ---
+slug: meat
 title: "Meat Misconceptions That Should Be Common Knowledge"
 date: 2020-08-25 04:00:27.342000+00:00
 subtitle: "The most important things I learned while investigating claims made in a pro-vegan film."

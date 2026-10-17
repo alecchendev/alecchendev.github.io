@@ -1,4 +1,5 @@
 ---
+slug: permanent-web
 title: "Sapiens and the Permanent Web"
 date: 2021-05-17 01:20:52.453000+00:00
 ---

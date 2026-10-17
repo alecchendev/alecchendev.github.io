@@ -1,4 +1,5 @@
 ---
+slug: television
 title: "The Worth of Television"
 date: 2020-07-28 17:00:17.055000+00:00
 subtitle: "How TV shows have brought me fulfillment beyond the usual entertainment and escapism."

@@ -1,4 +1,5 @@
 ---
+slug: spotify-refresh-token
 title: "Get Your Spotify Refresh Token With This Simple Web App"
 date: 2021-03-24 15:43:24.776000+00:00
 subtitle: "I made a simple site for developers to easily get their own refresh and access tokens for Spotify’s API. Check it out here."

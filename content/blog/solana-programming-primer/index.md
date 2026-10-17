@@ -1,4 +1,5 @@
 ---
+slug: solana-primer
 title: "Solana Programming Primer"
 date: 2022-04-01 04:49:25.896000+00:00
 subtitle: "Solana meets Rust (without Anchor)"

@@ -1,4 +1,5 @@
 ---
+slug: software-testing
 title: "A Crash Course on Software Testing But Interesting"
 date: 2020-09-19 06:17:46.901000+00:00
 subtitle: "Systematic testing, test-first programming, writing tests, and more."

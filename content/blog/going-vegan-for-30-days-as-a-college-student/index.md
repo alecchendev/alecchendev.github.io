@@ -1,4 +1,5 @@
 ---
+slug: vegan
 title: "Going Vegan for 30 Days as a College Student"
 date: 2020-10-30 21:00:03.382000+00:00
 subtitle: "It really wasn’t too bad."

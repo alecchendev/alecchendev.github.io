@@ -1,4 +1,5 @@
 ---
+slug: lightning-revocation
 title: "The Confusing Exchange of Revocation Secrets and Commitment Transactions on the Lightning Network"
 date: 2022-10-10 19:57:36.609000+00:00
 ---

@@ -1,4 +1,5 @@
 ---
+slug: mid90s
 title: "There’s More to ‘mid90s’ Than Nostalgia"
 date: 2020-06-28 02:49:05.527000+00:00
 subtitle: "Empathizing with a twelve-year-old skater in a time I never experienced."

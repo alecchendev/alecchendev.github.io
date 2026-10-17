@@ -1,4 +1,5 @@
 ---
+slug: weekly-1
 title: "Weekly 1: An Update, a Reflection, a Thought"
 date: 2020-12-12 01:01:06.910000+00:00
 subtitle: "This is part of a new series of articles that I’m planning on releasing on a weekly basis. Read to end for a proper introduction to this whole thing."

@@ -1,4 +1,5 @@
 ---
+slug: 4am
 title: "4am Bliss and Taking the World For Granted"
 date: 2020-05-03 20:10:45.320000+00:00
 subtitle: "A 20-hour day that I don’t regret."

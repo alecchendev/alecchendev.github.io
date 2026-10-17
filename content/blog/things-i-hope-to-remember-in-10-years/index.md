@@ -1,4 +1,5 @@
 ---
+slug: remember
 title: "Things I Hope to Remember in 10 Years"
 date: 2021-02-21 23:57:51.088000+00:00
 subtitle: "Life advice from an 18-year-old."

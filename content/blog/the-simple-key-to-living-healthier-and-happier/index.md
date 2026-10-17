@@ -1,4 +1,5 @@
 ---
+slug: healthier-and-happier
 title: "The Simple Key to Living Healthier and Happier"
 date: 2020-09-10 04:00:21.321000+00:00
 subtitle: "Stop worrying about it and hit the fundamentals."

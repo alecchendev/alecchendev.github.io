@@ -1,4 +1,5 @@
 ---
+slug: smart-contracts
 title: "Breaking Down Smart Contracts"
 date: 2022-02-11 00:32:40.835000+00:00
 ---

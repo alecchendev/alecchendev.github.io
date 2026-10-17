@@ -1,4 +1,5 @@
 ---
+slug: homemade
 title: "‘Homemade’ Is an Ode to Aspiring Filmmakers"
 date: 2020-07-07 15:00:02.372000+00:00
 subtitle: "How this quarantine film anthology changed my meaning of film."

@@ -1,4 +1,5 @@
 ---
+slug: data-science
 title: "Lessons From My First Data Science Project"
 date: 2020-06-07 01:33:35.646000+00:00
 subtitle: "A look into my process and advice for other beginners."
@@ -8,7 +9,7 @@ subtitle: "A look into my process and advice for other beginners."
 
 I recently published an article about the social network of my high school, and it required me to go through the process of a normal data science project. For other beginners, I want to share some of the important things I learned and what the process really looks like besides its flashy outcomes.
 
-You don’t have to read my previous article to read this one, but I’ll leave it [here](/blog/analyzing-the-social-network-of-my-high-school/) in case you’re curious.
+You don’t have to read my previous article to read this one, but I’ll leave it [here](/blog/high-school-network/) in case you’re curious.
 
 ### Cleaning and Reformatting
 

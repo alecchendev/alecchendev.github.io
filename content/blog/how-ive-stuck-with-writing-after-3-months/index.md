@@ -1,4 +1,5 @@
 ---
+slug: writing
 title: "How I’ve Stuck With Writing After 3 Months"
 date: 2020-08-12 16:01:46.647000+00:00
 subtitle: "What I’ve learned about making it past the first couple of pieces."

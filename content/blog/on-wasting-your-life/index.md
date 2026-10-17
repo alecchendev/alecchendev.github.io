@@ -1,4 +1,5 @@
 ---
+slug: wasting-your-life
 title: "On Wasting Your Life"
 date: 2020-07-29 00:00:00+00:00
 subtitle: "My experience coming to accept that I would’ve done things differently."

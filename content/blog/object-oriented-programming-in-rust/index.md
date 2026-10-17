@@ -1,4 +1,5 @@
 ---
+slug: rust-oop
 title: "Object-Oriented Programming in Rust"
 date: 2020-12-29 06:08:46.572000+00:00
 subtitle: "How Rust differs from other languages in one of the most common programming paradigms."

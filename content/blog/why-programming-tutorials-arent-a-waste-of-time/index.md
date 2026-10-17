@@ -1,4 +1,5 @@
 ---
+slug: tutorials
 title: "Why Programming Tutorials Aren’t a Waste of Time"
 date: 2020-12-08 03:45:45.411000+00:00
 subtitle: "A defense for follow-along coding tutorials."

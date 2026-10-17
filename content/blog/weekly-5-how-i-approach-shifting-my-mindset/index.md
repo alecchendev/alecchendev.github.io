@@ -1,4 +1,5 @@
 ---
+slug: weekly-5
 title: "Weekly 5: How I Approach Shifting My Mindset"
 date: 2021-01-10 03:44:51.148000+00:00
 subtitle: "Getting better at reading and being a wasteman."

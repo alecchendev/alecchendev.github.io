@@ -1,4 +1,5 @@
 ---
+slug: life-direction
 title: "What do you want to do with your life?"
 date: 2022-03-31 22:46:54.861000+00:00
 subtitle: "It’s treated as this daunting question, when in reality it’s much more innocent."

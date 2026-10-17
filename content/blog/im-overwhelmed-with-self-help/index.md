@@ -1,4 +1,5 @@
 ---
+slug: self-help
 title: "I’m Overwhelmed With Self-Help"
 date: 2020-10-05 16:43:19.006000+00:00
 subtitle: "Right now, I’m thinking, what should I be doing?"

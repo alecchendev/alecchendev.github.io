@@ -1,4 +1,5 @@
 ---
+slug: rust-webassembly
 title: "On Working With Rust, WebAssembly, Javascript, and WebGL"
 date: 2021-01-07 03:47:22.254000+00:00
 subtitle: "My experience learning and using Rust, WebAssembly, Javascript, and WebGL."

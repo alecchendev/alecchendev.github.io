@@ -1,4 +1,5 @@
 ---
+slug: high-school-network
 title: "Analyzing the Social Network of My High School"
 date: 2020-05-30 04:42:58.970000+00:00
 subtitle: "What I learned from the data behind my high school’s senior class."

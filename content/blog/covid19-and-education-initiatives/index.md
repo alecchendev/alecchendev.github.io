@@ -1,4 +1,5 @@
 ---
+slug: covid-education
 title: "COVID19 and Education Initiatives"
 date: 2020-03-15 02:16:11.755000+00:00
 subtitle: "COVID19 has not only been affected those that catch the virus, but it has administrators in every field on their knees. Already over six states have chosen to shutdown all of their schools, and according to Insider Higher Ed’s crowd-sourced data set, almost 250 colleges and universities have chosen to suspend or close on-campus classes for this semester."

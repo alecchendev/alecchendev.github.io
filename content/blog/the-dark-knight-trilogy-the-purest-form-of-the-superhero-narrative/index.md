@@ -1,4 +1,5 @@
 ---
+slug: dark-knight
 title: "The Dark Knight Trilogy: The Purest Form of the Superhero Narrative"
 date: 2021-01-25 03:05:59.148000+00:00
 subtitle: "An analysis of the superhero story archetype as seen in Christopher Nolan’s Batman movies."

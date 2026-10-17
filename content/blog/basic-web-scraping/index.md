@@ -1,4 +1,5 @@
 ---
+slug: web-scraping
 title: "Basic Web Scraping"
 date: 2020-06-28 00:50:51.476000+00:00
 subtitle: "Knowing just the fundamentals can get you almost anywhere."

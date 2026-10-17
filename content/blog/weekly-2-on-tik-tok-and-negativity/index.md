@@ -1,4 +1,5 @@
 ---
+slug: weekly-2
 title: "Weekly 2: On Tik Tok and Negativity"
 date: 2020-12-19 00:51:25.448000+00:00
 subtitle: "Short versus long form content and modes of thinking towards feeling bad."

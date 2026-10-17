@@ -1,4 +1,5 @@
 ---
+slug: running
 title: "How I Started Running"
 date: 2020-06-16 21:40:04.455000+00:00
 subtitle: "The simple ideas behind forming my new habit."

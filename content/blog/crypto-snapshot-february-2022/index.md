@@ -1,4 +1,5 @@
 ---
+slug: crypto-2022
 title: "Crypto Snapshot February 2022"
 date: 2022-02-13 05:51:20.858000+00:00
 subtitle: "Preface: this is merely a snapshot of my thoughts at the moment. Most if not all of this is subject to change as the space pans out. I’m a huge fan of crypto and think it’s really cool from an engineering and ideological perspective. Take the following with a grain of salt. I’d be more than happy to chat with anyone who has anything to say in response to this!"

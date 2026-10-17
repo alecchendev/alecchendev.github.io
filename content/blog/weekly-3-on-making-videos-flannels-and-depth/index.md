@@ -1,4 +1,5 @@
 ---
+slug: weekly-3
 title: "Weekly 3: On Making Videos, Flannels, and Depth"
 date: 2020-12-26 04:39:10.806000+00:00
 subtitle: "Not making videos, becoming comfortable in my clothes, and coloring maps."

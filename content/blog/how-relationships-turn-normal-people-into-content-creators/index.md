@@ -1,4 +1,5 @@
 ---
+slug: relationships-and-content
 title: "How Relationships Turn Normal People Into Content Creators"
 date: 2020-10-24 03:18:37.660000+00:00
 subtitle: "That constant never-ending text conversation and the role of expectations in our relationships."

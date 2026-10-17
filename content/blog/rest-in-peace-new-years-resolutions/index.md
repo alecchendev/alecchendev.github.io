@@ -1,4 +1,5 @@
 ---
+slug: resolutions
 title: "Rest in peace new year’s resolutions"
 date: 2022-02-13 05:50:34.182000+00:00
 subtitle: "At the beginning of this year I set out to become a crypto content creator. That was my resolution: to give a serious go at content creation — something that’s been on my mind for years now."

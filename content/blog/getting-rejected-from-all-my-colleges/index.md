@@ -1,4 +1,5 @@
 ---
+slug: college-rejections
 title: "Getting Rejected From All My Colleges"
 date: 2020-05-16 03:42:23.070000+00:00
 subtitle: "What I went through and how to deal with it if it happened to you."

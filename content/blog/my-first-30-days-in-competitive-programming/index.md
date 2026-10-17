@@ -1,4 +1,5 @@
 ---
+slug: competitive-programming
 title: "My First 30 Days in Competitive Programming"
 date: 2020-05-09 01:31:01.337000+00:00
 subtitle: "Analyzing my contest results and why they weren’t what I expected."

@@ -1,4 +1,5 @@
 ---
+slug: hollywood
 title: "How ‘Hollywood’ Shows Us the Power of Cinema"
 date: 2020-06-01 02:24:54.611000+00:00
 subtitle: "And how it sets itself as an example."

@@ -1,4 +1,5 @@
 ---
+slug: consumption
 title: "A New Look at Content Consumption"
 date: 2020-07-24 02:30:32.254000+00:00
 subtitle: "How to turn content creators into a positive influence in your life."

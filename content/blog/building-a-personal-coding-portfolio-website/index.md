@@ -1,4 +1,5 @@
 ---
+slug: portfolio
 title: "Building a Personal Coding Portfolio Website"
 date: 2020-12-15 01:32:07.973000+00:00
 subtitle: "Why you should build one and tips for design amateurs."

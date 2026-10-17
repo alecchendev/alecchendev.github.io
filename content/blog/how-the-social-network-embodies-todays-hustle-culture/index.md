@@ -1,4 +1,5 @@
 ---
+slug: social-network
 title: "How ‘The Social Network’ Embodies Today’s Hustle Culture"
 date: 2020-08-05 19:20:02.091000+00:00
 subtitle: "This movie reminded me how to combat this mindset that too many people think is one-size-fits-all."

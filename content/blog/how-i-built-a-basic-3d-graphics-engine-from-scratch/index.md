@@ -1,4 +1,5 @@
 ---
+slug: 3d-engine
 title: "How I Built a Basic 3D Graphics Engine From Scratch"
 date: 2020-12-01 05:57:47.724000+00:00
 subtitle: "The intuition behind rasterizing 3D space on a 2D screen."

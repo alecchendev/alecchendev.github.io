@@ -1,4 +1,5 @@
 ---
+slug: weekly-4
 title: "Weekly 4: On Fiction and Television Form"
 date: 2021-01-03 02:18:20.279000+00:00
 subtitle: "And a happy new year!"
