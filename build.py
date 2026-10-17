@@ -36,7 +36,6 @@ class Page:
     date: datetime
     content: str  # Rendered HTML
     url: str
-    original_url: str
     is_bundle: bool  # True if this is an index.md in a directory
 
 
@@ -102,9 +101,10 @@ def load_page(filepath: Path) -> Page:
     subtitle = post.get('subtitle', '')
     date = post.get('date', datetime.now())
     content = render_markdown(post.content)
-    original_url = calculate_url(filepath, CONTENT_DIR)
+    url = calculate_url(filepath, CONTENT_DIR)
     slug = post.get('slug')
-    url = f"{original_url.rstrip('/').rsplit('/', 1)[0]}/{slug}/" if slug else original_url
+    if slug:
+        url = f"{url.rstrip('/').rsplit('/', 1)[0]}/{slug}/"
     is_bundle = filepath.name == 'index.md' and filepath.parent != CONTENT_DIR
 
     return Page(
@@ -114,7 +114,6 @@ def load_page(filepath: Path) -> Page:
         date=date,
         content=content,
         url=url,
-        original_url=original_url,
         is_bundle=is_bundle
     )
 
@@ -287,14 +286,14 @@ def copy_page_resources(page: Page):
         return
 
     bundle_dir = page.filepath.parent
-    # Preserve resources at old URLs as well as the current page URL.
-    for url in {page.url, page.original_url}:
-        output_dir = get_output_path(url).parent
-        for item in bundle_dir.iterdir():
-            if item.is_file() and item.suffix != '.md':
-                dest = output_dir / item.name
-                dest.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(item, dest)
+    output_dir = get_output_path(page.url).parent
+
+    # Copy all files except the markdown file itself
+    for item in bundle_dir.iterdir():
+        if item.is_file() and item.suffix != '.md':
+            dest = output_dir / item.name
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(item, dest)
 
 
 def render_single_pages(jinja_env: Environment, pages: List[Page]):
@@ -328,13 +327,6 @@ def render_single_pages(jinja_env: Environment, pages: List[Page]):
 
         # Copy bundle resources (images, etc.)
         copy_page_resources(page)
-
-        if page.original_url != page.url:
-            redirect_file = get_output_path(page.original_url)
-            redirect_file.parent.mkdir(parents=True, exist_ok=True)
-            redirect_file.write_text(jinja_env.get_template('redirect.html').render(
-                url=f"{BASE_URL}{page.url}"
-            ), encoding='utf-8')
 
         count += 1
 
