@@ -82,6 +82,80 @@ img, iframe {
 	width: 100%;
 }
 
+/* Newsletter */
+
+.email-form {
+	display: flex;
+	gap: 0.75rem;
+	margin: 1.5rem 0 2rem;
+}
+
+.email-control {
+	display: flex;
+	flex: 1;
+	min-width: 0;
+	border: 1px solid var(--accent-color);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.email-control input, .email-control button {
+	font: inherit;
+	padding: 0.65rem 0.85rem;
+	border: 0;
+	border-radius: 0;
+}
+
+.email-control input {
+	flex: 1;
+	min-width: 0;
+}
+
+.email-control button {
+	background: #cde8d7;
+	color: var(--font-color);
+	cursor: pointer;
+}
+
+.email-control:focus-within {
+	box-shadow: 0 0 0 2px #cde8d7;
+}
+
+.email-control input:focus-visible {
+	outline: none;
+}
+
+.email-control button:hover:not(:disabled) {
+	background: #a9d8b9;
+}
+
+.email-control button:disabled {
+	cursor: default;
+}
+
+.email-rss {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	flex-shrink: 0;
+	border-radius: 10px;
+}
+
+.email-rss:hover {
+	background: #e3f2e8;
+}
+
+.email-status {
+	font-size: 0.95rem;
+	margin: -1rem 0 2rem;
+}
+
+.email-control button:focus-visible, .email-rss:focus-visible {
+	outline: 2px solid var(--accent-color);
+	outline-offset: -3px;
+}
+
 /* Navigation */
 
 .nav-bar {

@@ -14,13 +14,28 @@
       and document my thoughts regarding my work on a regular
       basis. Now I'll occasionally write a post whenever I feel like it.
     </p>
-    <p>
-    <a href="/blog/index.xml" target="_blank">
-      RSS feed</a>,
-    <a href="https://alecchendev.substack.com/subscribe" target="_blank">
-      subscribe via email
-    </a>
-    </p>
+    <form class="email-form" action="https://blog.alecchen.dev/subscribe" method="post"
+          data-subscribe aria-describedby="email-status">
+      <div class="email-control">
+        <input id="email-address" name="email" type="email" autocomplete="email"
+               aria-label="Your email address for new blog posts"
+               placeholder="Email for new posts" maxlength="254" required>
+        <button type="submit">Subscribe</button>
+      </div>
+      <a class="email-rss" href="/blog/index.xml" aria-label="Subscribe via RSS" title="Subscribe via RSS">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <circle cx="5" cy="19" r="1.5" fill="currentColor" stroke="none" />
+          <path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16" />
+        </svg>
+      </a>
+      <div hidden aria-hidden="true" inert>
+        <label for="email-website">Leave this empty</label>
+        <input id="email-website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+    </form>
+    <p id="email-status" class="email-status" role="status" aria-live="polite" hidden></p>
+    <script src="/email.js" defer></script>
     {% for page in pages %}
       <a href="{{ page.url }}" class="post-link">
         <div class="post">

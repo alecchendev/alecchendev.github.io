@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }} · Alec Chen</title>
+    {% if signup %}<script src="/email.js" defer></script>{% endif %}
+    <style>
+      body { font: 1.1rem/1.5 system-ui, sans-serif; max-width: 650px; margin: 4rem auto; padding: 0 1rem; }
+      a { color: #008b30; }
+      button { font: inherit; padding: .6rem 1rem; background: white; border: 1px solid #aaa; border-radius: 4px; cursor: pointer; }
+      .signup { display: flex; border: 1px solid #00ad3c; border-radius: 10px; overflow: hidden; }
+      .signup input { flex: 1; min-width: 0; font: inherit; padding: .65rem .85rem; border: 0; border-radius: 0; }
+      .signup button { border: 0; border-radius: 0; background: #cde8d7; }
+      .signup button:hover:not(:disabled) { background: #a9d8b9; }
+      .signup button:disabled { cursor: default; }
+      .signup:focus-within { box-shadow: 0 0 0 2px #cde8d7; }
+      .signup input:focus-visible { outline: none; }
+      .signup button:focus-visible { outline: 2px solid #00ad3c; outline-offset: -3px; }
+    </style>
+  </head>
+  <body>
+    <a href="{{ site_url }}/">Alec Chen</a>
+    <h1>{{ title }}</h1>
+    <p>{{ message }}</p>
+    {% if signup %}
+    <form class="signup" action="{{ public_url }}/subscribe" method="post"
+          data-subscribe aria-describedby="email-status">
+      <input name="email" type="email" autocomplete="email" maxlength="254" required
+             aria-label="Your email address for new blog posts" placeholder="Email for new posts">
+      <button type="submit">Subscribe</button>
+      <div hidden aria-hidden="true" inert>
+        <label for="website">Leave this empty</label>
+        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+    </form>
+    <p id="email-status" role="status" aria-live="polite" hidden></p>
+    {% endif %}
+    {% if token %}
+    <form action="{{ public_url }}/unsubscribe" method="post">
+      <input type="hidden" name="token" value="{{ token }}">
+      <button type="submit">Unsubscribe</button>
+    </form>
+    {% endif %}
+    <p><a href="{{ site_url }}/blog/">Back to the blog</a></p>
+  </body>
+</html>
