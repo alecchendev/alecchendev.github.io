@@ -47,7 +47,7 @@ To rebuild just the diagram, run `python3 diagrams/grid-ownership/build.py`.
 See the [integration handoff and future widget plan](/home/hermes/grid-terms/docs/blog-popups.md) in the local Gridterms checkout for file ownership, refresh commands, visual fixes, and the remaining work for a public widget.
 
 Link the first useful introduction of a term in Markdown, for example
-`[transformers](http://hermes-vps:8087/terms/transformer/)`. The normal build
+`[transformers](https://gridterms.org/terms/transformer/)`. The normal build
 recognizes explicit links to the saved Gridterms origin, embeds only the linked
 definitions and SVG templates in that post, and loads the reader assets only for
 posts that use them. Repeated links share one definition. Ordinary links remain
@@ -59,13 +59,12 @@ ordinary builds and GitHub Pages do not need the Gridterms checkout or a remote
 API. Refresh the snapshot from this VPS with:
 
 ```bash
-node /home/hermes/grid-terms/site/scripts/export-blog.mjs . http://hermes-vps:8087
+node /home/hermes/grid-terms/site/scripts/export-blog.mjs . https://gridterms.org
 ```
 
-The current full-entry links point to the private Tailscale preview. Before public
-launch, replace that origin in the authored Markdown and rerun the export with
-the public Gridterms origin. The pop-up definitions and diagrams are already
-served locally by the blog. The export is for this integration; a general public
-widget and installation guide remain future work.
+Full-entry links point to `https://gridterms.org`. Keep that origin consistent
+in the authored Markdown and export command so term links receive pop-ups.
+Definitions and diagrams are served locally by the blog. The export is for this
+integration; a general public widget and installation guide remain future work.
 
 Run `.venv/bin/python -m unittest test_build.py test_gridterms.py` for build checks.

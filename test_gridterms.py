@@ -7,7 +7,7 @@ import build
 
 class GridtermsTests(unittest.TestCase):
     def test_post_has_only_selected_unique_terms_and_matching_diagrams(self):
-        page = build.load_page(build.CONTENT_DIR / 'blog/grid-intro.md')
+        page = build.load_page(build.CONTENT_DIR / 'blog/grid-intro/index.md')
         terms = json.loads(page.gridterms['json'])
         self.assertEqual(len(terms), 17)
         self.assertEqual(page.content.count('data-grid-term='), 17)
@@ -19,7 +19,7 @@ class GridtermsTests(unittest.TestCase):
     def test_unrelated_links_and_code_stay_unchanged(self):
         html = build.render_markdown(
             '[Elsewhere](https://example.com/terms/transformer/)\n\n'
-            '`[Transformer](http://hermes-vps:8087/terms/transformer/)`'
+            '`[Transformer](https://gridterms.org/terms/transformer/)`'
         )
         annotated, glossary = prepare_gridterms(html)
         self.assertEqual(annotated, html)

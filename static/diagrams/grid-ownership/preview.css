@@ -21,6 +21,7 @@
   width: 100%;
   height: clamp(600px, calc(100dvh - 80px), 900px);
   border: 0;
+  border-radius: 12px;
 }
 
 .grid-preview-caption a,
