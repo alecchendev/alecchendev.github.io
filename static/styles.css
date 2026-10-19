@@ -349,6 +349,12 @@ img, iframe {
     text-decoration: underline;
 }
 
+.katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.25em 0;
+}
+
 /* Dev-log specific */
 
 .devlog-list h2 {

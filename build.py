@@ -7,6 +7,9 @@ Converts markdown files to HTML using Jinja2 templates
 import os
 import shutil
 import re
+import json
+import subprocess
+from html import unescape
 from pathlib import Path
 from datetime import datetime
 from dataclasses import dataclass
@@ -25,6 +28,10 @@ BASE_URL = "https://alecchen.dev"
 SITE_TITLE = "Alec Chen's Website"
 AUTHOR_NAME = "Alec Chen"
 AUTHOR_EMAIL = "alecchendev@gmail.com"
+KATEX_DIR = Path(__file__).resolve().parent / 'node_modules' / 'katex' / 'dist'
+MATH_PATTERN = re.compile(
+    r'<(span|div) class="arithmatex">(.*?)</\1>', re.DOTALL
+)
 
 
 @dataclass
@@ -45,9 +52,11 @@ def render_markdown(text: str) -> str:
         'extra',
         'codehilite',
         'fenced_code',
-        'tables'
-    ])
+        'tables',
+        'pymdownx.arithmatex'
+    ], extension_configs={'pymdownx.arithmatex': {'generic': True}})
     html = md.convert(text)
+    html = render_math(html)
 
     # Add target="_blank" rel="noopener" to external links
     html = re.sub(
@@ -57,6 +66,29 @@ def render_markdown(text: str) -> str:
     )
 
     return html
+
+
+def render_math(html: str) -> str:
+    """Replace protected math with KaTeX HTML and MathML at build time."""
+    equations = [
+        {'tex': unescape(match[2])[2:-2], 'displayMode': match[1] == 'div'}
+        for match in MATH_PATTERN.finditer(html)
+    ]
+    if not equations:
+        return html
+
+    try:
+        result = subprocess.run(
+            ['node', str(Path(__file__).with_name('render_math.cjs').resolve())],
+            input=json.dumps(equations), text=True, capture_output=True, check=True
+        )
+    except FileNotFoundError as error:
+        raise RuntimeError('Math rendering requires Node.js and npm ci.') from error
+    except subprocess.CalledProcessError as error:
+        raise RuntimeError(f'Math rendering failed: {error.stderr.strip()}') from error
+
+    rendered = iter(json.loads(result.stdout))
+    return MATH_PATTERN.sub(lambda match: next(rendered), html)
 
 
 def calculate_url(filepath: Path, base_path: Path) -> str:
@@ -100,7 +132,10 @@ def load_page(filepath: Path) -> Page:
     title = post.get('title', '')
     subtitle = post.get('subtitle', '')
     date = post.get('date', datetime.now())
-    content = render_markdown(post.content)
+    try:
+        content = render_markdown(post.content)
+    except RuntimeError as error:
+        raise RuntimeError(f'{filepath}: {error}') from error
     url = calculate_url(filepath, CONTENT_DIR)
     slug = post.get('slug')
     if slug:
@@ -149,7 +184,8 @@ def render_homepage(jinja_env: Environment, pages: List[Page]):
     template = jinja_env.get_template('index.html')
     html = template.render(
         site_title=SITE_TITLE,
-        content=home_page.content
+        content=home_page.content,
+        has_math='class="katex"' in home_page.content
     )
 
     output_file = OUTPUT_DIR / 'index.html'
@@ -269,7 +305,8 @@ def render_devlog_list(jinja_env: Environment, pages: List[Page]):
             months=sorted_months,
             month_key=month_key,
             entries=month_entries,
-            month_title=month_data["title"]
+            month_title=month_data["title"],
+            has_math=any('class="katex"' in page.content for page in month_entries)
         )
 
         output_file = OUTPUT_DIR / 'dev-log' / month_key / 'index.html'
@@ -317,6 +354,7 @@ def render_single_pages(jinja_env: Environment, pages: List[Page]):
             title=page.title,
             subtitle=page.subtitle,
             content=page.content,
+            has_math='class="katex"' in page.content,
             date=page.date,
             canonical_url=f"{BASE_URL}{page.url}"
         )
@@ -385,6 +423,15 @@ def copy_static_assets():
     print()
 
 
+def copy_math_assets():
+    """Self-host KaTeX styles and fonts; its JavaScript stays in the build."""
+    output_dir = OUTPUT_DIR / 'katex'
+    output_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(KATEX_DIR / 'katex.min.css', output_dir)
+    shutil.copytree(KATEX_DIR / 'fonts', output_dir / 'fonts')
+    shutil.copy2(KATEX_DIR.parent / 'LICENSE', output_dir)
+
+
 def clean_output():
     """Remove existing output directory"""
     if OUTPUT_DIR.exists():
@@ -402,6 +449,8 @@ def build():
     jinja_env = Environment(loader=FileSystemLoader(TEMPLATE_DIR))
 
     # Clean and prepare
+    if not (KATEX_DIR / 'katex.min.css').exists():
+        raise RuntimeError('Missing KaTeX build dependency. Run npm ci first.')
     clean_output()
 
     # Collect all pages
@@ -424,6 +473,8 @@ def build():
 
     # Copy static assets
     copy_static_assets()
+    if any('class="katex"' in page.content for page in pages):
+        copy_math_assets()
 
     print("=" * 60)
     print("Build complete!")
