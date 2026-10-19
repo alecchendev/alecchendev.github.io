@@ -19,6 +19,7 @@ import frontmatter
 import markdown
 from jinja2 import Environment, FileSystemLoader
 from feedgen.feed import FeedGenerator
+from gridterms import prepare_gridterms
 
 # Configuration
 CONTENT_DIR = Path("content")
@@ -45,6 +46,7 @@ class Page:
     content: str  # Rendered HTML
     url: str
     is_bundle: bool  # True if this is an index.md in a directory
+    gridterms: dict | None = None
 
 
 def render_markdown(text: str) -> str:
@@ -135,6 +137,7 @@ def load_page(filepath: Path) -> Page:
     date = post.get('date', datetime.now())
     try:
         content = render_markdown(post.content)
+        content, gridterms = prepare_gridterms(content)
     except RuntimeError as error:
         raise RuntimeError(f'{filepath}: {error}') from error
     url = calculate_url(filepath, CONTENT_DIR)
@@ -150,7 +153,8 @@ def load_page(filepath: Path) -> Page:
         date=date,
         content=content,
         url=url,
-        is_bundle=is_bundle
+        is_bundle=is_bundle,
+        gridterms=gridterms
     )
 
 
@@ -357,7 +361,8 @@ def render_single_pages(jinja_env: Environment, pages: List[Page]):
             content=page.content,
             has_math='class="katex"' in page.content,
             date=page.date,
-            canonical_url=f"{BASE_URL}{page.url}"
+            canonical_url=f"{BASE_URL}{page.url}",
+            gridterms=page.gridterms
         )
 
         output_file = get_output_path(page.url)

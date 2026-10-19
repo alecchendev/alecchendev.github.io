@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html{% if gridterms %} class="has-gridterms"{% endif %}>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,6 +15,10 @@
     {% endblock %}
 
     <link rel="stylesheet" type="text/css" href="/styles.css" />
+    {% if gridterms %}
+      <link rel="stylesheet" href="/gridterms/reader.css">
+      <script defer src="/gridterms/reader.js"></script>
+    {% endif %}
     {% if has_math %}<link rel="stylesheet" href="/katex/katex.min.css" />{% endif %}
 
   </head>
@@ -53,5 +57,6 @@
         <!-- The part of the page that begins to differ between templates -->
       {% endblock %}
     </div>
+    {% if gridterms %}{% include "gridterms.html" %}{% endif %}
   </body>
 </html>

@@ -50,7 +50,7 @@ jobs:
         uses: actions/configure-pages@v2
       - name: Build site
         run: |
-          python -m unittest test_build.py
+          python -m unittest test_build.py test_gridterms.py
           python build.py
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,9 @@
+<!-- Generated from Gridterms; refresh with export-blog.mjs. -->
+<dialog id="term-card" aria-labelledby="term-name" aria-describedby="term-definition">
+    <div class="card-heading"><h2 id="term-name"></h2><button class="card-close" type="button" aria-label="Close definition">×</button></div>
+    <p id="term-definition"></p>
+    <figure class="card-figure"><div class="card-art" id="term-art"></div><figcaption id="term-caption"></figcaption></figure>
+    <footer class="card-footer"><span>Gridterms</span><a id="term-more" target="_blank" rel="noopener">Read full entry ↗</a></footer>
+  </dialog>
+{{ gridterms.diagrams | safe }}
+<script type="application/json" id="term-data">{{ gridterms.json | safe }}</script>
