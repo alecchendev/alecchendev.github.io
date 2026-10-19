@@ -33,3 +33,10 @@ in the browser. Invalid or unsupported formulas stop the build with the source
 file and KaTeX error. See the [supported commands](https://katex.org/docs/supported.html).
 
 Run the math rendering checks with `python -m unittest test_build.py`.
+
+## Grid diagram
+
+The diagram's editable CSVs and original presentation template are in
+[`diagrams/grid-ownership/`](diagrams/grid-ownership/README.md).
+The normal site build regenerates the self-contained HTML automatically.
+To rebuild just the diagram, run `python3 diagrams/grid-ownership/build.py`.

@@ -1,0 +1,26 @@
+id,from,to,kind,label,detail
+p1,P1,P2,power,Injection,Power plants inject energy into the transmission system (sometimes first through generator step-up transformers).
+p2,P2,P3,power,Transfer,"Transmission carries bulk power to distribution substations, which reduce voltage for local delivery."
+p3,P3,E8,power,Delivery,"The distribution utility physically delivers power to homes and businesses, regardless of which retail supplier is chosen."
+m1,E8,E4,money,Supply charge,Customers pay for their energy supply. Bills may be issued by the retailer or consolidated by the distribution utility.
+m2,E8,E3,money,Delivery charge,"Customers ultimately fund regulated distribution service through delivery charges, paid directly or through consolidated billing."
+m3,E4,P4,money,Wholesale purchases,"Retail suppliers/load-serving entities buy wholesale electricity, often using market settlements and bilateral hedges."
+m4,P4,E1,money,Generator revenue,Market settlements credit generators for dispatched energy and other market services. Generators can also sell through bilateral contracts.
+m5,E3,P4,money,Network service charges,Illustrative case: a distribution utility is also a transmission network customer. In other arrangements another load-serving entity pays these charges.
+m6,P4,E2,money,Transmission tariff credits,Transmission owners receive regulated tariff revenue via transmission-service settlements. PJM bills network customers and allocates credits to owners; the customer and owner may even be the same company.
+m7,E1,E6,money,Buys generation equipment,"Plant developers and operators buy turbines, generators, inverters, transformers and related equipment."
+m8,E2,E6,money,Buys transmission gear,"Transmission utilities purchase breakers, large transformers, relays, wires, towers and other equipment."
+m9,E3,E6,money,Buys distribution gear,"Distribution utilities purchase transformers, switches, meters, reclosers, poles and cables."
+m10,E2,E7,money,FERC fees,"Illustrative payer: transmission utilities pay annual regulatory charges to FERC. FERC recovers its operating appropriation through annual charges and filing fees assessed on regulated industries; other regulated entities also pay. This is a funding flow, separate from regulatory oversight."
+m11,E3,E7,money,State PUC fees,State commissions such as the California PUC fund regulatory operations through fees assessed on regulated utilities. Utilities may recover these costs from customers through approved rates or bill surcharges. Funding arrangements vary by state; this arrow does not represent a direct tax payment from a household to a regulator.
+c1,E1,P1,control,"Owns, maintains, operates","The plant operator is responsible for day-to-day equipment operations and maintenance, subject to dispatch and reliability requirements."
+c2,E2,P2,control,"Owns, maintains, operates","The transmission owner maintains and physically operates its assets, implements protection settings, and performs field switching under applicable coordination procedures."
+c3,E3,P3,control,"Owns, maintains, operates","The distribution utility operates local feeders and equipment, responds to outages, and maintains protection systems."
+c4,E5,E1,control,Dispatch instructions,The ISO/RTO dispatches participating generators and sends setpoints or instructions; the owner still operates its equipment.
+c5,E5,E2,control,Regional grid coordination,"The ISO/RTO coordinates regional transmission-system operation, reliability and outage planning; transmission owners execute equipment-level work."
+c6,E5,P4,control,Runs market & billing,An ISO/RTO administers organized wholesale energy markets and associated settlements and transmission billing.
+c7,E7,E5,control,FERC oversight,FERC reviews ISO/RTO tariffs and wholesale-market rules; reliability regulation also involves NERC and regional entities.
+c8,E7,E2,control,Transmission rates (FERC),FERC regulates rates and tariffs for most interstate transmission by public utilities.
+c9,E7,E3,control,Distribution rates (states),State utility commissions typically set or approve regulated distribution rates for investor-owned utilities.
+c10,E7,E4,control,Retail supplier rules (states),State authorities oversee retail electricity sales and supplier licensing where retail choice exists.
+c11,E4,E8,control,Electricity supply contract,"The retail supplier is contractually responsible for supplying the customer’s energy, but does not route particular electrons through the wires."

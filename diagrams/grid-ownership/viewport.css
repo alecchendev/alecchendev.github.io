@@ -1,0 +1,55 @@
+/* Only the experimental output includes these layout changes. */
+#grid-ownership-viz .goviz-canvas,
+#grid-ownership-viz .goviz-wires { height: 720px; }
+
+@media (min-width: 1001px) and (min-height: 600px) {
+  #grid-ownership-viz {
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 310px;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  #grid-ownership-viz .goviz-header {
+    grid-column: 1 / -1;
+    padding: 12px 18px 10px;
+  }
+  #grid-ownership-viz h2 { margin: 4px 0; font-size: 22px; }
+  #grid-ownership-viz .goviz-toolbar {
+    grid-column: 1 / -1;
+    padding: 7px 12px;
+  }
+  #grid-ownership-viz .goviz-scrollhint { display: none; }
+  #grid-ownership-viz .goviz-viewport {
+    grid-column: 1;
+    grid-row: 3;
+    min-height: 0;
+    overflow: hidden;
+  }
+  #grid-ownership-viz .goviz-canvas { position: absolute; }
+  #grid-ownership-viz .goviz-info {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: auto;
+    border-top: 0;
+    border-left: 1px solid #dce6ee;
+  }
+  #grid-ownership-viz .goviz-info-head {
+    padding: 16px;
+    border-right: 0;
+    border-bottom: 1px solid #e8edf2;
+  }
+  #grid-ownership-viz .goviz-relations {
+    grid-template-columns: 1fr;
+    padding: 10px 16px;
+    gap: 2px;
+  }
+  #grid-ownership-viz .goviz-footer {
+    grid-column: 1 / -1;
+    padding: 8px 16px;
+  }
+}

@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who runs the grid? — interactive diagram</title>
+<style>body { margin: 0; }</style>
+</head>
+<body>
+<!-- GRID OWNERSHIP EXPLORER, self-contained HTML/CSS/JS, no dependencies -->
+<div id="grid-ownership-viz" class="goviz">
+  <div class="goviz-header">
+    <div class="goviz-kicker">THE U.S. ELECTRIC GRID, AN INTERACTIVE MAP</div>
+    <div class="goviz-headrow">
+      <div>
+        <h2>Who runs the grid? <span>Who gets paid?</span></h2>
+        <p>Follow the electricity, the money, and the decisions. Select any node or arrow to explore the relationship.</p>
+      </div>
+    </div>
+  </div>
+  <div class="goviz-toolbar">
+    <div class="goviz-filters" aria-label="Relationship layers">
+      <button type="button" data-layer="all" aria-pressed="true">Overview</button>
+      <button type="button" data-layer="power" aria-pressed="false"><span class="goviz-mini goviz-mini-power"></span>Electricity flow</button>
+      <button type="button" data-layer="money" aria-pressed="false"><span class="goviz-mini goviz-mini-money"></span>Money flows</button>
+      <button type="button" data-layer="control" aria-pressed="false"><span class="goviz-mini goviz-mini-control"></span>Ownership &amp; control</button>
+    </div>
+    <button type="button" class="goviz-reset" title="Clear selection and reset layout">↺ Reset</button>
+  </div>
+  <div class="goviz-scrollhint">↔ Swipe sideways to explore the full diagram</div>
+  <div class="goviz-viewport" tabindex="0" aria-label="Interactive map of grid entities and infrastructure. Select nodes or use relationship filters.">
+    <div class="goviz-canvas">
+      <svg class="goviz-wires" aria-hidden="true" viewBox="0 0 1280 720"></svg>
+      <div class="goviz-nodes"></div>
+      <span class="goviz-rowtitle" style="left:34px;top:35px">UPSTREAM SUPPLIERS &amp; OVERSIGHT</span>
+      <span class="goviz-rowtitle" style="left:34px;top:227px">ORGANIZATIONS</span>
+      <span class="goviz-rowtitle" style="left:34px;top:430px">PHYSICAL GRID &amp; CUSTOMERS</span>
+      <span class="goviz-rowtitle" style="left:476px;top:658px">MARKET &amp; SETTLEMENTS</span>
+    </div>
+    <div class="goviz-tooltip" hidden></div>
+  </div>
+  <div class="goviz-info" aria-live="polite">
+    <div class="goviz-info-head">
+      <div class="goviz-info-overline">SELECTED RELATIONSHIPS</div>
+      <div class="goviz-info-title">Transmission utilities</div>
+      <div class="goviz-info-description">They own and maintain physical transmission equipment, while an ISO/RTO coordinates regional operations.</div>
+    </div>
+    <div class="goviz-relations"></div>
+  </div>
+  <div class="goviz-footer">
+    <div><strong>How to read:</strong> Arrowheads show direction; colored lines distinguish flows. Drag a node to experiment with the layout.</div>
+    <div><strong>Model scope:</strong> Simplified U.S. ISO/RTO + retail-choice example. Roles can be combined in a vertically integrated utility; billing and transmission tariffs vary by region.</div>
+  </div>
+</div>
+<style>
+/* Entire widget is scoped to #grid-ownership-viz, minimizing blog-theme collisions. */
+#grid-ownership-viz { --g-ink:#172637; --g-muted:#64768b; --g-border:#dae4ed; --g-power:#177bb5; --g-money:#208660; --g-control:#8062bd; color:var(--g-ink); font:14px/1.48 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:#fff; border:1px solid #dfe7ef; border-radius:18px; overflow:hidden; box-shadow:0 16px 48px rgba(23,38,55,.07); max-width:100%; box-sizing:border-box; }
+#grid-ownership-viz *,#grid-ownership-viz *:before,#grid-ownership-viz *:after { box-sizing:border-box; }
+#grid-ownership-viz .goviz-header { padding:24px 27px 17px; background:linear-gradient(130deg,#fbfdff,#f3f8fc); }
+#grid-ownership-viz .goviz-kicker { font-size:10px; font-weight:800; letter-spacing:1.8px; color:#6d8398; }
+#grid-ownership-viz .goviz-headrow { display:flex; justify-content:space-between; align-items:flex-end; gap:20px; }
+#grid-ownership-viz h2 { color:#16293a; font-size:clamp(19px,2.2vw,28px); font-weight:750; letter-spacing:-.9px; line-height:1.2; margin:9px 0 8px; }
+#grid-ownership-viz h2 span { color:#698096; }
+#grid-ownership-viz .goviz-headrow p { color:#667b8e; margin:0; max-width:610px; font-size:12px; }
+#grid-ownership-viz .goviz-mini-power { background:var(--g-power); }
+#grid-ownership-viz .goviz-mini-money { background:var(--g-money); }
+#grid-ownership-viz .goviz-mini-control { background:var(--g-control); }
+#grid-ownership-viz .goviz-toolbar { padding:11px 20px; display:flex; gap:12px; justify-content:space-between; align-items:center; border-top:1px solid #e9eff5; border-bottom:1px solid #e0e8f0; background:#fff; }
+#grid-ownership-viz .goviz-filters { display:flex; flex-wrap:wrap; gap:5px; }
+#grid-ownership-viz button { font:inherit; cursor:pointer; }
+#grid-ownership-viz .goviz-filters button { display:inline-flex; align-items:center; gap:7px; color:#62758a; font-weight:650; background:transparent; border:1px solid transparent; border-radius:8px; padding:7px 10px; font-size:11px; line-height:1.2; transition:background .15s,border-color .15s,color .15s; }
+#grid-ownership-viz .goviz-filters button:hover { background:#f2f6fa; }
+#grid-ownership-viz .goviz-filters button[aria-pressed="true"] { color:#1d3449; background:#edf3f9; border-color:#d7e3ee; }
+#grid-ownership-viz .goviz-mini { width:7px; height:7px; border-radius:50%; }
+#grid-ownership-viz .goviz-reset { background:transparent; border:0; font-size:11px; font-weight:700; white-space:nowrap; color:#8291a1; padding:8px; }
+#grid-ownership-viz .goviz-reset:hover { color:#1f3348; }
+#grid-ownership-viz .goviz-scrollhint { display:none; padding:7px 18px;background:#f7fafc;border-bottom:1px solid #e3eaf0;color:#8698aa;font-size:10px;font-weight:650; }
+#grid-ownership-viz .goviz-viewport { background-color:#f7fafc; background-image:radial-gradient(#d4e1ea 0.85px, transparent .85px); background-size:18px 18px; overflow:auto; position:relative; width:100%; scrollbar-width:thin; scrollbar-color:#cbd8e3 transparent; outline-offset:-3px; }
+#grid-ownership-viz .goviz-canvas { width:1280px; height:822px; position:relative; transform-origin:top left; }
+#grid-ownership-viz .goviz-wires { display:block; width:1280px; height:822px; position:absolute; top:0;left:0;z-index:1; overflow:visible; pointer-events:none; }
+#grid-ownership-viz .goviz-nodes { position:absolute;inset:0;pointer-events:none;z-index:2; }
+#grid-ownership-viz .goviz-rowtitle { pointer-events:none;position:absolute;color:#9caebe;font-size:10px;font-weight:800;letter-spacing:1.6px;z-index:0; }
+#grid-ownership-viz .goviz-node { position:absolute;display:flex;text-align:left;align-items:flex-start;gap:12px;width:230px;min-height:90px;border:1px solid #d4dee8;background:#fff;border-radius:13px;padding:15px;box-shadow:0 3px 0 rgba(37,59,79,.035),0 4px 14px rgba(35,55,74,.045);color:#21354a;cursor:grab;user-select:none;touch-action:pan-x pan-y;pointer-events:auto;transition:opacity .18s,border-color .18s,box-shadow .18s; }
+#grid-ownership-viz .goviz-node:hover { border-color:#8fa8c1;box-shadow:0 9px 22px rgba(29,55,79,.12);z-index:4; }
+#grid-ownership-viz .goviz-node.g-active { border-color:#365b82;box-shadow:0 0 0 3px rgba(74,113,153,.13),0 10px 21px rgba(29,55,79,.13);z-index:4; }
+#grid-ownership-viz .goviz-node.g-dim { opacity:1; border-color:#e5edf4; background:#fbfdff; box-shadow:none; }
+#grid-ownership-viz .goviz-node.g-dim .g-text,#grid-ownership-viz .goviz-node.g-dim .g-symbol { opacity:.48; }
+#grid-ownership-viz .goviz-node.g-moving { cursor:grabbing;transition:none;z-index:6; }
+#grid-ownership-viz .goviz-node.g-physical { background:#f0f7fc;border-color:#c8dfed; }
+#grid-ownership-viz .goviz-node.g-market { background:#edf7f2;border-color:#c9e6d7; }
+#grid-ownership-viz .goviz-node .g-symbol { flex:0 0 34px;height:34px;display:grid;place-items:center;border-radius:9px;background:#eaf0f6;color:#4c708e;font-size:18px;font-weight:700;font-variant-emoji:text; }
+#grid-ownership-viz .goviz-node.g-physical .g-symbol { background:#dceef9;color:#166b9f; }
+#grid-ownership-viz .goviz-node.g-market .g-symbol { background:#d8eee3;color:#217758; }
+#grid-ownership-viz .goviz-node .g-text { min-width:0;display:block; }
+#grid-ownership-viz .goviz-node .g-name { display:block;font-size:13px;font-weight:800;letter-spacing:-.25px;line-height:1.28;color:#22354b; }
+#grid-ownership-viz .goviz-node .g-sub { display:block;font-size:10.5px;color:#75879a;line-height:1.35;margin-top:5px; }
+#grid-ownership-viz .goviz-tooltip { position:absolute;z-index:10;max-width:215px;background:#17293b;color:white;font-size:11px;line-height:1.4;padding:9px 12px;border-radius:9px;box-shadow:0 10px 28px rgba(0,0,0,.22);pointer-events:none; }
+#grid-ownership-viz .goviz-tooltip strong { display:block;margin-bottom:4px; }
+#grid-ownership-viz .goviz-info { display:grid;grid-template-columns:minmax(220px,.9fr) minmax(260px,1.6fr);border-top:1px solid #dce6ee;background:#fff;min-height:150px; }
+#grid-ownership-viz .goviz-info-head { padding:21px 25px; border-right:1px solid #e8edf2; }
+#grid-ownership-viz .goviz-info-overline { font-size:9.5px;letter-spacing:1.5px;color:#8192a3;font-weight:800; }
+#grid-ownership-viz .goviz-info-title { font-weight:800;font-size:17px;color:#21354a;line-height:1.3;margin:7px 0; }
+#grid-ownership-viz .goviz-info-description { color:#687b8e;font-size:12px;line-height:1.58; }
+#grid-ownership-viz .goviz-relations { padding:16px 24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 17px;align-content:start; }
+#grid-ownership-viz .goviz-relation { display:flex;gap:9px;align-items:flex-start;padding:7px 0;border:0;background:transparent;text-align:left;cursor:pointer;color:#425c72;font-size:11px;line-height:1.38; }
+#grid-ownership-viz .goviz-relation:hover .g-label { text-decoration:underline; }
+#grid-ownership-viz .goviz-relation .g-stroke { flex:0 0 15px;margin-top:6px;height:3px;border-radius:3px; }
+#grid-ownership-viz .goviz-relation strong { display:block;color:#2c4357;font-size:11.5px; }
+#grid-ownership-viz .goviz-relation em { display:block;color:#8090a0;font-style:normal;margin-top:2px; }
+#grid-ownership-viz .goviz-footer { border-top:1px solid #e9eff4;background:#fbfcfd;padding:12px 24px;display:flex;gap:11px 25px;justify-content:space-between;color:#8a98a7;font-size:10px;line-height:1.5; }
+#grid-ownership-viz .goviz-footer div { max-width:50%; }
+#grid-ownership-viz .goviz-footer strong { color:#66798a; }
+#grid-ownership-viz .goviz-wires .g-edge-hit { fill:none;stroke:transparent;stroke-width:17;pointer-events:stroke;cursor:pointer; }
+#grid-ownership-viz .goviz-wires .g-edge { fill:none;stroke-width:2.25;stroke-linecap:round;transition:opacity .15s,stroke-width .15s;pointer-events:none; }
+#grid-ownership-viz .goviz-wires .g-edge.g-emphasis { stroke-width:3.2; }
+#grid-ownership-viz .goviz-wires .g-arrowhead { pointer-events:none; }
+#grid-ownership-viz .goviz-wires .g-edge-label rect { fill:#fff;stroke:#dce6ee;stroke-width:1;rx:6;ry:6; }
+#grid-ownership-viz .goviz-wires .g-edge-label text { font:700 11px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#425a70;dominant-baseline:middle;text-anchor:middle; }
+#grid-ownership-viz button:focus-visible { outline:2px solid #488dca;outline-offset:2px; }
+@media (max-width:1050px) { #grid-ownership-viz .goviz-scrollhint { display:block; } }
+@media (max-width:700px) { #grid-ownership-viz .goviz-header { padding:19px 17px 15px; } #grid-ownership-viz .goviz-headrow { display:block; } #grid-ownership-viz .goviz-toolbar { padding:8px 11px; } #grid-ownership-viz .goviz-filters { gap:1px; } #grid-ownership-viz .goviz-filters button { padding:7px 8px;font-size:10px; } #grid-ownership-viz .goviz-info { grid-template-columns:1fr; } #grid-ownership-viz .goviz-info-head { border-right:0;border-bottom:1px solid #e8edf2;padding:17px; } #grid-ownership-viz .goviz-relations { padding:12px 17px; } #grid-ownership-viz .goviz-footer { display:block;padding:12px 17px; } #grid-ownership-viz .goviz-footer div { max-width:none;margin-bottom:6px; } }
+@media (max-width:450px) { #grid-ownership-viz .goviz-relations { grid-template-columns:1fr; } #grid-ownership-viz .goviz-reset { font-size:10px; } }
+@media (prefers-reduced-motion:reduce) { #grid-ownership-viz *,#grid-ownership-viz *:before { transition:none!important; } }
+
+/* Only the experimental output includes these layout changes. */
+#grid-ownership-viz .goviz-canvas,
+#grid-ownership-viz .goviz-wires { height: 720px; }
+
+@media (min-width: 1001px) and (min-height: 600px) {
+  #grid-ownership-viz {
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 310px;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  #grid-ownership-viz .goviz-header {
+    grid-column: 1 / -1;
+    padding: 12px 18px 10px;
+  }
+  #grid-ownership-viz h2 { margin: 4px 0; font-size: 22px; }
+  #grid-ownership-viz .goviz-toolbar {
+    grid-column: 1 / -1;
+    padding: 7px 12px;
+  }
+  #grid-ownership-viz .goviz-scrollhint { display: none; }
+  #grid-ownership-viz .goviz-viewport {
+    grid-column: 1;
+    grid-row: 3;
+    min-height: 0;
+    overflow: hidden;
+  }
+  #grid-ownership-viz .goviz-canvas { position: absolute; }
+  #grid-ownership-viz .goviz-info {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: auto;
+    border-top: 0;
+    border-left: 1px solid #dce6ee;
+  }
+  #grid-ownership-viz .goviz-info-head {
+    padding: 16px;
+    border-right: 0;
+    border-bottom: 1px solid #e8edf2;
+  }
+  #grid-ownership-viz .goviz-relations {
+    grid-template-columns: 1fr;
+    padding: 10px 16px;
+    gap: 2px;
+  }
+  #grid-ownership-viz .goviz-footer {
+    grid-column: 1 / -1;
+    padding: 8px 16px;
+  }
+}
+
+</style>
+<script>
+(() => {
+  const root = document.getElementById('grid-ownership-viz');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  const W=1280,H=720,NW=230,NH=90;
+  const COLORS={power:'#177bb5', money:'#208660', control:'#8062bd'};
+  // Generated from nodes.csv and relationships.csv; edit those files and rebuild.
+  // Coordinates (x,y) are the top-left corner of each node in a 1280 x 822 canvas.
+  // The graph is intentionally an illustrative model, not a universal U.S. billing arrangement.
+  const NODES = [
+  {
+    "id": "E6",
+    "title": "Equipment manufacturers",
+    "sub": "Hitachi Energy, Siemens Energy",
+    "symbol": "⚙",
+    "kind": "entity",
+    "x": 45,
+    "y": 89,
+    "description": "Design and manufacture transformers, switchgear, turbines, inverters, cables, and other grid hardware. Utilities and generators purchase the equipment."
+  },
+  {
+    "id": "E7",
+    "title": "Regulators",
+    "sub": "FERC, State utility commissions",
+    "symbol": "§",
+    "kind": "entity",
+    "x": 525,
+    "y": 89,
+    "description": "FERC oversees most interstate transmission tariffs and organized wholesale-market rules. State commissions typically oversee retail distribution rates and retail-supplier rules. Funding: FERC uses industry charges and filing fees; state commissions often use utility assessments. State arrangements vary."
+  },
+  {
+    "id": "E5",
+    "title": "ISOs / RTOs",
+    "sub": "PJM, MISO, CAISO",
+    "symbol": "◎",
+    "kind": "entity",
+    "x": 1005,
+    "y": 89,
+    "description": "Coordinate regional transmission operations, issue dispatch instructions to generators, plan system reliability, and administer organized wholesale markets. They generally do not own or maintain transmission lines."
+  },
+  {
+    "id": "E1",
+    "title": "Power plant operators",
+    "sub": "Constellation, Vistra",
+    "symbol": "◉",
+    "kind": "entity",
+    "x": 45,
+    "y": 280,
+    "description": "Build, own, operate and maintain generating assets. Sell power through wholesale markets or bilateral contracts; some also receive capacity or ancillary-service revenue."
+  },
+  {
+    "id": "E2",
+    "title": "Transmission utilities",
+    "sub": "ComEd, AEP",
+    "symbol": "♜",
+    "kind": "entity",
+    "x": 365,
+    "y": 280,
+    "description": "Build, own, operate and maintain high-voltage lines and substations. Recover allowed costs and returns through FERC-regulated transmission tariffs charged to transmission customers."
+  },
+  {
+    "id": "E3",
+    "title": "Distribution utilities",
+    "sub": "ComEd, PG&E",
+    "symbol": "▦",
+    "kind": "entity",
+    "x": 685,
+    "y": 280,
+    "description": "Own and maintain local lines, distribution substations, meters and transformers. Recover approved distribution costs through regulated delivery charges on customers’ bills."
+  },
+  {
+    "id": "E4",
+    "title": "Retail electricity suppliers",
+    "sub": "Constellation, Direct Energy",
+    "symbol": "↔",
+    "kind": "entity",
+    "x": 1005,
+    "y": 280,
+    "description": "Contract with end customers for electricity supply. Buy or hedge wholesale power and charge retail customers for the supply component of their bills. In many regions this is the distribution utility itself."
+  },
+  {
+    "id": "P1",
+    "title": "Generation facilities",
+    "sub": "Turbines, Solar arrays, Inverters",
+    "symbol": "⚡",
+    "kind": "physical",
+    "x": 45,
+    "y": 486,
+    "description": "Physical equipment converts primary energy into electrical power and injects that power into the network."
+  },
+  {
+    "id": "P2",
+    "title": "Transmission network",
+    "sub": "High-voltage lines, Substations",
+    "symbol": "〰",
+    "kind": "physical",
+    "x": 365,
+    "y": 486,
+    "description": "High-voltage conductors, breakers, transformers, protection systems and substations move bulk electrical energy across regions."
+  },
+  {
+    "id": "P3",
+    "title": "Distribution network",
+    "sub": "Feeders, Transformers, Meters",
+    "symbol": "⌁",
+    "kind": "physical",
+    "x": 685,
+    "y": 486,
+    "description": "Medium- and low-voltage equipment delivers electrical power from substations to customers and isolates local faults."
+  },
+  {
+    "id": "E8",
+    "title": "Consumers",
+    "sub": "Households, Businesses, Industry",
+    "symbol": "⌂",
+    "kind": "entity",
+    "x": 1005,
+    "y": 486,
+    "description": "Consume delivered electricity and ultimately fund generation, grid infrastructure, and system services through electricity bills. Large industrial customers may connect directly to transmission."
+  },
+  {
+    "id": "P4",
+    "title": "Wholesale market & settlements",
+    "sub": "Energy trades, Tariff billing",
+    "symbol": "$",
+    "kind": "market",
+    "x": 525,
+    "y": 695,
+    "description": "An ISO/RTO matches and settles wholesale energy transactions and administers transmission-related billing and credits. The financial flow shown is schematic; not every trade passes through a spot market."
+  }
+];
+  // kind = power | money | control. Arrow direction is FROM -> TO.
+  // Details explain simplifications and regional variations.
+  const EDGES = [
+  {
+    "id": "p1",
+    "from": "P1",
+    "to": "P2",
+    "kind": "power",
+    "label": "Injection",
+    "detail": "Power plants inject energy into the transmission system (sometimes first through generator step-up transformers)."
+  },
+  {
+    "id": "p2",
+    "from": "P2",
+    "to": "P3",
+    "kind": "power",
+    "label": "Transfer",
+    "detail": "Transmission carries bulk power to distribution substations, which reduce voltage for local delivery."
+  },
+  {
+    "id": "p3",
+    "from": "P3",
+    "to": "E8",
+    "kind": "power",
+    "label": "Delivery",
+    "detail": "The distribution utility physically delivers power to homes and businesses, regardless of which retail supplier is chosen."
+  },
+  {
+    "id": "m1",
+    "from": "E8",
+    "to": "E4",
+    "kind": "money",
+    "label": "Supply charge",
+    "detail": "Customers pay for their energy supply. Bills may be issued by the retailer or consolidated by the distribution utility."
+  },
+  {
+    "id": "m2",
+    "from": "E8",
+    "to": "E3",
+    "kind": "money",
+    "label": "Delivery charge",
+    "detail": "Customers ultimately fund regulated distribution service through delivery charges, paid directly or through consolidated billing."
+  },
+  {
+    "id": "m3",
+    "from": "E4",
+    "to": "P4",
+    "kind": "money",
+    "label": "Wholesale purchases",
+    "detail": "Retail suppliers/load-serving entities buy wholesale electricity, often using market settlements and bilateral hedges."
+  },
+  {
+    "id": "m4",
+    "from": "P4",
+    "to": "E1",
+    "kind": "money",
+    "label": "Generator revenue",
+    "detail": "Market settlements credit generators for dispatched energy and other market services. Generators can also sell through bilateral contracts."
+  },
+  {
+    "id": "m5",
+    "from": "E3",
+    "to": "P4",
+    "kind": "money",
+    "label": "Network service charges",
+    "detail": "Illustrative case: a distribution utility is also a transmission network customer. In other arrangements another load-serving entity pays these charges."
+  },
+  {
+    "id": "m6",
+    "from": "P4",
+    "to": "E2",
+    "kind": "money",
+    "label": "Transmission tariff credits",
+    "detail": "Transmission owners receive regulated tariff revenue via transmission-service settlements. PJM bills network customers and allocates credits to owners; the customer and owner may even be the same company."
+  },
+  {
+    "id": "m7",
+    "from": "E1",
+    "to": "E6",
+    "kind": "money",
+    "label": "Buys generation equipment",
+    "detail": "Plant developers and operators buy turbines, generators, inverters, transformers and related equipment."
+  },
+  {
+    "id": "m8",
+    "from": "E2",
+    "to": "E6",
+    "kind": "money",
+    "label": "Buys transmission gear",
+    "detail": "Transmission utilities purchase breakers, large transformers, relays, wires, towers and other equipment."
+  },
+  {
+    "id": "m9",
+    "from": "E3",
+    "to": "E6",
+    "kind": "money",
+    "label": "Buys distribution gear",
+    "detail": "Distribution utilities purchase transformers, switches, meters, reclosers, poles and cables."
+  },
+  {
+    "id": "m10",
+    "from": "E2",
+    "to": "E7",
+    "kind": "money",
+    "label": "FERC fees",
+    "detail": "Illustrative payer: transmission utilities pay annual regulatory charges to FERC. FERC recovers its operating appropriation through annual charges and filing fees assessed on regulated industries; other regulated entities also pay. This is a funding flow, separate from regulatory oversight."
+  },
+  {
+    "id": "m11",
+    "from": "E3",
+    "to": "E7",
+    "kind": "money",
+    "label": "State PUC fees",
+    "detail": "State commissions such as the California PUC fund regulatory operations through fees assessed on regulated utilities. Utilities may recover these costs from customers through approved rates or bill surcharges. Funding arrangements vary by state; this arrow does not represent a direct tax payment from a household to a regulator."
+  },
+  {
+    "id": "c1",
+    "from": "E1",
+    "to": "P1",
+    "kind": "control",
+    "label": "Owns, maintains, operates",
+    "detail": "The plant operator is responsible for day-to-day equipment operations and maintenance, subject to dispatch and reliability requirements."
+  },
+  {
+    "id": "c2",
+    "from": "E2",
+    "to": "P2",
+    "kind": "control",
+    "label": "Owns, maintains, operates",
+    "detail": "The transmission owner maintains and physically operates its assets, implements protection settings, and performs field switching under applicable coordination procedures."
+  },
+  {
+    "id": "c3",
+    "from": "E3",
+    "to": "P3",
+    "kind": "control",
+    "label": "Owns, maintains, operates",
+    "detail": "The distribution utility operates local feeders and equipment, responds to outages, and maintains protection systems."
+  },
+  {
+    "id": "c4",
+    "from": "E5",
+    "to": "E1",
+    "kind": "control",
+    "label": "Dispatch instructions",
+    "detail": "The ISO/RTO dispatches participating generators and sends setpoints or instructions; the owner still operates its equipment."
+  },
+  {
+    "id": "c5",
+    "from": "E5",
+    "to": "E2",
+    "kind": "control",
+    "label": "Regional grid coordination",
+    "detail": "The ISO/RTO coordinates regional transmission-system operation, reliability and outage planning; transmission owners execute equipment-level work."
+  },
+  {
+    "id": "c6",
+    "from": "E5",
+    "to": "P4",
+    "kind": "control",
+    "label": "Runs market & billing",
+    "detail": "An ISO/RTO administers organized wholesale energy markets and associated settlements and transmission billing."
+  },
+  {
+    "id": "c7",
+    "from": "E7",
+    "to": "E5",
+    "kind": "control",
+    "label": "FERC oversight",
+    "detail": "FERC reviews ISO/RTO tariffs and wholesale-market rules; reliability regulation also involves NERC and regional entities."
+  },
+  {
+    "id": "c8",
+    "from": "E7",
+    "to": "E2",
+    "kind": "control",
+    "label": "Transmission rates (FERC)",
+    "detail": "FERC regulates rates and tariffs for most interstate transmission by public utilities."
+  },
+  {
+    "id": "c9",
+    "from": "E7",
+    "to": "E3",
+    "kind": "control",
+    "label": "Distribution rates (states)",
+    "detail": "State utility commissions typically set or approve regulated distribution rates for investor-owned utilities."
+  },
+  {
+    "id": "c10",
+    "from": "E7",
+    "to": "E4",
+    "kind": "control",
+    "label": "Retail supplier rules (states)",
+    "detail": "State authorities oversee retail electricity sales and supplier licensing where retail choice exists."
+  },
+  {
+    "id": "c11",
+    "from": "E4",
+    "to": "E8",
+    "kind": "control",
+    "label": "Electricity supply contract",
+    "detail": "The retail supplier is contractually responsible for supplying the customer’s energy, but does not route particular electrons through the wires."
+  }
+];
+  NODES.forEach(n => { n.y = Math.round(n.y * .82); });
+  root.querySelectorAll('.goviz-rowtitle').forEach(el => {
+    el.style.top = `${Math.round(parseFloat(el.style.top) * .82)}px`;
+  });
+  const byId = Object.fromEntries(NODES.map(n => [n.id,n]));
+  const viewport=root.querySelector('.goviz-viewport');
+  const canvas=root.querySelector('.goviz-canvas');
+  const svg=root.querySelector('.goviz-wires');
+  const nodesEl=root.querySelector('.goviz-nodes');
+  const infoTitle=root.querySelector('.goviz-info-title');
+  const infoDescription=root.querySelector('.goviz-info-description');
+  const infoOverline=root.querySelector('.goviz-info-overline');
+  const relationsEl=root.querySelector('.goviz-relations');
+  const tooltip=root.querySelector('.goviz-tooltip');
+  const originals=Object.fromEntries(NODES.map(n=>[n.id,{x:n.x,y:n.y}]));
+  let layer='all',selected='E2',selectedEdge=null,hoverEdge=null,scale=1,drag=null;
+  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const plainName=id=>byId[id].title;
+  nodesEl.innerHTML=NODES.map(n=>`<button type="button" class="goviz-node g-${n.kind}" data-node="${n.id}" aria-label="${esc(n.title)}"><span class="g-symbol" aria-hidden="true">${esc(n.symbol)}&#xfe0e;</span><span class="g-text"><span class="g-name">${esc(n.title)}</span><span class="g-sub">${esc(n.sub)}</span></span></button>`).join('');
+  const nodeButtons=Object.fromEntries([...nodesEl.querySelectorAll('[data-node]')].map(el=>[el.dataset.node,el]));
+  function fit(){
+    // Injected into fit() only in the experimental output. Keep its scale
+    // variable in the original closure so dragging uses the same coordinates.
+    canvas.style.left = '0';
+    canvas.style.top = '0';
+    if (matchMedia('(min-width: 1001px) and (min-height: 600px)').matches) {
+      const width = viewport.clientWidth, height = viewport.clientHeight;
+      scale = Math.min(1, (width - 16) / W, (height - 16) / H);
+      canvas.style.transform = `scale(${scale})`;
+      canvas.style.margin = '0';
+      canvas.style.left = `${(width - W * scale) / 2}px`;
+      canvas.style.top = `${(height - H * scale) / 2}px`;
+      viewport.style.minHeight = '0';
+      return;
+    }
+
+    const width=viewport.clientWidth;
+    scale=Math.max(.74,Math.min(1,(width-12)/W));
+    canvas.style.transform=`scale(${scale})`;
+    // Transform doesn't change layout size; set the viewport's intrinsic scrollable size with a spacer.
+    canvas.parentElement.style.setProperty('--g-space-width',`${W*scale}px`);
+    canvas.style.marginBottom=`-${H*(1-scale)}px`;
+    canvas.style.marginRight=`-${W*(1-scale)}px`;
+    viewport.style.minHeight=`${H*scale}px`;
+  }
+  function edgePoints(e){
+    const a=byId[e.from],b=byId[e.to];
+    const ah=nodeButtons[a.id].offsetHeight,bh=nodeButtons[b.id].offsetHeight;
+    const ca={x:a.x+NW/2,y:a.y+ah/2},cb={x:b.x+NW/2,y:b.y+bh/2};
+    const dx=cb.x-ca.x,dy=cb.y-ca.y,len=Math.hypot(dx,dy)||1;
+    let curve=0;
+    if(e.kind==='money')curve=e.id==='m7'||e.id==='m8'||e.id==='m9'?-27:26;
+    // Route regulator funding around the sides of the oversight arrows.
+    if(e.id==='m10')curve=-240;
+    if(e.id==='m11')curve=320;
+    if(e.kind==='control')curve=e.id==='c4'||e.id==='c5'?-26:14;
+    const control={x:(ca.x+cb.x)/2-dy/len*curve,y:(ca.y+cb.y)/2+dx/len*curve};
+    const point=(t,A,C,B)=>({x:(1-t)*(1-t)*A.x+2*(1-t)*t*C.x+t*t*B.x,y:(1-t)*(1-t)*A.y+2*(1-t)*t*C.y+t*t*B.y});
+    const inside=(p,n,h)=>p.x>=n.x-8&&p.x<=n.x+NW+8&&p.y>=n.y-8&&p.y<=n.y+h+8;
+    // Find the curve's first exit from the source and last entry into the
+    // destination, allowing space for the entire arrowhead outside each card.
+    function boundary(n,h,reverse){
+      let inner=reverse?1:0;
+      for(let step=1;step<=64;step++){
+        let outer=reverse?1-step/64:step/64;
+        if(!inside(point(outer,ca,control,cb),n,h)){
+          for(let i=0;i<24;i++){
+            const middle=(inner+outer)/2;
+            if(inside(point(middle,ca,control,cb),n,h))inner=middle;
+            else outer=middle;
+          }
+          return (inner+outer)/2;
+        }
+        inner=outer;
+      }
+      return reverse?0:1;
+    }
+    const start=boundary(a,ah,false),end=boundary(b,bh,true);
+    if(start>=end)return null; // Overlapping cards leave no visible connection.
+    const A=point(start,ca,control,cb),B=point(end,ca,control,cb);
+    const cx=A.x+(end-start)*((1-start)*(control.x-ca.x)+start*(cb.x-control.x));
+    const cy=A.y+(end-start)*((1-start)*(control.y-ca.y)+start*(cb.y-control.y));
+    const C={x:cx,y:cy};
+    if(Math.hypot(B.x-A.x,B.y-A.y)<12)return null;
+    // End the shaft at the triangle's base, rather than drawing a stroked line
+    // all the way to its tip (where round caps can protrude past SVG markers).
+    let lo=0,hi=1;
+    for(let i=0;i<24;i++){
+      const middle=(lo+hi)/2,p=point(middle,A,C,B);
+      if(Math.hypot(B.x-p.x,B.y-p.y)>8)lo=middle;else hi=middle;
+    }
+    const shaftEnd=(lo+hi)/2,S=point(shaftEnd,A,C,B);
+    const shaftC={x:A.x+shaftEnd*(C.x-A.x),y:A.y+shaftEnd*(C.y-A.y)};
+    const nx=-(B.y-S.y)/8*3.5,ny=(B.x-S.x)/8*3.5;
+    const coords=p=>`${p.x.toFixed(2)},${p.y.toFixed(2)}`;
+    // Long diagonal payments can cross a physical node. Move their labels into clear gutters.
+    let t= e.id==='m6'?.20:e.id==='m4'?.21:e.id==='c6'?.19:.5;
+    // Keep labels along their original arrows, but out of the tighter node rows.
+    const labelWidth = Math.min(234, e.label.length * 6.35 + 21);
+    const candidates = Array.from({length: 37}, (_, i) => .05 + i * .025)
+      .sort((a, b) => Math.abs(a - t) - Math.abs(b - t));
+    for (const candidate of candidates) {
+      const v = 1 - candidate;
+      const x = v*v*A.x + 2*v*candidate*cx + candidate*candidate*B.x;
+      const y = v*v*A.y + 2*v*candidate*cy + candidate*candidate*B.y;
+      const clear = NODES.every(n =>
+        x + labelWidth/2 < n.x - 4 || x - labelWidth/2 > n.x + NW + 4 ||
+        y - 2 < n.y - 4 || y - 23 > n.y + nodeButtons[n.id].offsetHeight + 4);
+      if (clear) { t = candidate; break; }
+    }
+
+    const u=1-t;
+    return {d:`M${coords(A)} Q${coords(shaftC)} ${coords(S)}`,hitD:`M${coords(A)} Q${coords(C)} ${coords(B)}`,headD:`M${coords(B)} L${coords({x:S.x+nx,y:S.y+ny})} L${coords({x:S.x-nx,y:S.y-ny})} Z`,x:u*u*A.x+2*u*t*cx+t*t*B.x,y:u*u*A.y+2*u*t*cy+t*t*B.y};
+  }
+  function visible(e){return layer==='all'||e.kind===layer;}
+  function relevant(e){return selectedEdge===e.id||(selected && (e.from===selected||e.to===selected));}
+  function draw(){
+    const focused=selected||selectedEdge;
+    let out='';
+    for(const e of EDGES){
+      if(!visible(e))continue;
+      const p=edgePoints(e);
+      if(!p)continue;
+      const high=relevant(e)||hoverEdge===e.id,dim=focused&&!high;
+      const alpha=focused?(high?1:.085):(layer==='all'?(e.kind==='power'?.82:.26):.72);
+      const opacity=dim?.085:alpha;
+      const showLabel=high||(!focused&&e.kind==='power')||(!focused&&layer==='power');
+      out+=`<g data-edge="${e.id}" style="opacity:${opacity}"><path class="g-edge ${high?'g-emphasis':''}" d="${p.d}" stroke="${COLORS[e.kind]}"/><path class="g-arrowhead" d="${p.headD}" fill="${COLORS[e.kind]}"/><path class="g-edge-hit" d="${p.hitD}"/>`;
+      if(showLabel){const width=Math.min(234,e.label.length*6.35+21);
+        out+=`<g class="g-edge-label" transform="translate(${p.x.toFixed(1)},${(p.y-13).toFixed(1)})"><rect x="${(-width/2).toFixed(1)}" y="-10" width="${width.toFixed(1)}" height="21"/><text y=".9">${esc(e.label)}</text></g>`;
+      }
+      out+='</g>';
+    }
+    svg.innerHTML=out;
+    for(const n of NODES){
+      const el=nodeButtons[n.id];el.style.left=n.x+'px';el.style.top=n.y+'px';
+      const connected=EDGES.some(e=>visible(e)&&relevant(e)&&(e.from===n.id||e.to===n.id));
+      const active=selected===n.id||(selectedEdge&&[EDGES.find(e=>e.id===selectedEdge)?.from, EDGES.find(e=>e.id===selectedEdge)?.to].includes(n.id));
+      const muted=focused&&!connected&&!active;
+      el.classList.toggle('g-active',!!active);el.classList.toggle('g-dim',!!muted);
+      el.setAttribute('aria-pressed',String(!!active));
+    }
+    for(const group of svg.querySelectorAll('[data-edge]')){
+      const e=EDGES.find(e=>e.id===group.dataset.edge);
+      group.querySelector('.g-edge-hit').addEventListener('pointerenter',ev=>{if(hoverEdge===e.id)return;hoverEdge=e.id;tooltip.hidden=false;tooltip.innerHTML=`<strong>${esc(e.label)}</strong>${esc(e.detail)}`;placeTooltip(ev);draw();});
+      group.querySelector('.g-edge-hit').addEventListener('pointermove',placeTooltip);
+      group.querySelector('.g-edge-hit').addEventListener('pointerleave',()=>{hoverEdge=null;tooltip.hidden=true;draw();});
+      group.querySelector('.g-edge-hit').addEventListener('click',()=>{selected=null;selectedEdge=e.id;hoverEdge=null;tooltip.hidden=true;render();});
+    }
+  }
+  function placeTooltip(ev){const b=viewport.getBoundingClientRect(),max=viewport.clientWidth-220;
+    tooltip.style.left=`${Math.max(8,Math.min(ev.clientX-b.left+13,max))}px`;
+    tooltip.style.top=`${Math.max(8,Math.min(ev.clientY-b.top+15,viewport.clientHeight-82))}px`;
+  }
+  function inspector(){
+    const chosen=selectedEdge?EDGES.find(e=>e.id===selectedEdge):null;
+    const n=selected?byId[selected]:null;
+    const related=n?EDGES.filter(e=>visible(e)&&(e.from===n.id||e.to===n.id)):(chosen?[chosen]:[]);
+    infoOverline.textContent=n?'EXPLORE A ROLE':chosen?'EXPLORE A RELATIONSHIP':'HOW THE GRID FITS TOGETHER';
+    infoTitle.textContent=n?n.title:chosen?chosen.label:'Select any node or arrow';
+    infoDescription.textContent=n?n.description:chosen?chosen.detail:'Choose a relationship layer above, then click nodes or arrows to explore the physical, financial and operational connections.';
+    if(!related.length){relationsEl.innerHTML=`<div style="color:#8192a3;font-size:12px;padding:9px">${n?"No connections on this layer. Try a different one.":"Select a node or arrow above to inspect its relationships."}</div>`;return;}
+    relationsEl.innerHTML=related.map(e=>{
+      const other=n?(e.from===n.id?`→ ${plainName(e.to)}`:`← ${plainName(e.from)}`):`${plainName(e.from)} → ${plainName(e.to)}`;
+      return `<button type="button" class="goviz-relation" data-rel="${e.id}"><span class="g-stroke" style="background:${COLORS[e.kind]}"></span><span><strong class="g-label">${esc(e.label)}</strong><em>${esc(other)}</em></span></button>`;
+    }).join('');
+    relationsEl.querySelectorAll('[data-rel]').forEach(el=>el.addEventListener('click',()=>{selected=null;selectedEdge=el.dataset.rel;render();}));
+  }
+  function render(){
+    root.querySelectorAll('[data-layer]').forEach(b=>b.setAttribute('aria-pressed',String(layer===b.dataset.layer)));
+    draw();inspector();
+  }
+  root.querySelectorAll('[data-layer]').forEach(b=>b.addEventListener('click',()=>{layer=b.dataset.layer;selected=null;selectedEdge=null;hoverEdge=null;tooltip.hidden=true;render();}));
+  root.querySelector('.goviz-reset').addEventListener('click',()=>{layer='all';selected='E2';selectedEdge=null;hoverEdge=null;tooltip.hidden=true;NODES.forEach(n=>Object.assign(n,originals[n.id]));viewport.scrollLeft=0;render();});
+  for(const nodeEl of Object.values(nodeButtons)){
+    nodeEl.addEventListener('pointerdown',ev=>{
+      if(ev.button!==0)return;
+      drag={id:nodeEl.dataset.node,startX:ev.clientX,startY:ev.clientY,x:byId[nodeEl.dataset.node].x,y:byId[nodeEl.dataset.node].y,moved:false};
+      nodeEl.setPointerCapture(ev.pointerId);
+    });
+    nodeEl.addEventListener('pointermove',ev=>{
+      if(!drag||drag.id!==nodeEl.dataset.node)return;
+      const dx=(ev.clientX-drag.startX)/scale,dy=(ev.clientY-drag.startY)/scale;
+      if(Math.hypot(dx,dy)>5)drag.moved=true;
+      if(drag.moved){ev.preventDefault();const n=byId[drag.id];n.x=Math.max(12,Math.min(W-NW-12,drag.x+dx));n.y=Math.max(50,Math.min(H-NH-8,drag.y+dy));nodeEl.classList.add('g-moving');draw();}
+    });
+    nodeEl.addEventListener('pointerup',ev=>{
+      if(!drag||drag.id!==nodeEl.dataset.node)return;
+      const moved=drag.moved;drag=null;nodeEl.classList.remove('g-moving');
+      if(!moved){selected=nodeEl.dataset.node;selectedEdge=null;hoverEdge=null;tooltip.hidden=true;render();}
+      else draw();
+    });
+    nodeEl.addEventListener('pointercancel',()=>{drag=null;nodeEl.classList.remove('g-moving');draw();});
+    nodeEl.addEventListener('keydown',ev=>{
+      if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();selected=nodeEl.dataset.node;selectedEdge=null;render();}
+    });
+  }
+  if('ResizeObserver' in window)new ResizeObserver(fit).observe(viewport);
+  else window.addEventListener('resize',fit);
+  fit();render();
+})();
+</script>
+
+</body>
+</html>

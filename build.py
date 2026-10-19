@@ -9,6 +9,7 @@ import shutil
 import re
 import json
 import subprocess
+import sys
 from html import unescape
 from pathlib import Path
 from datetime import datetime
@@ -451,6 +452,10 @@ def build():
     # Clean and prepare
     if not (KATEX_DIR / 'katex.min.css').exists():
         raise RuntimeError('Missing KaTeX build dependency. Run npm ci first.')
+    subprocess.run([
+        sys.executable,
+        str(Path(__file__).resolve().parent / 'diagrams' / 'grid-ownership' / 'build.py')
+    ], check=True)
     clean_output()
 
     # Collect all pages
