@@ -1,0 +1,23 @@
+source_id,applies_to,title,url
+ferc-markets,E7 E5 E1 P4 c4 c6 c7 c8 m3 m4,FERC energy market overview,https://www.ferc.gov/opp/energy-markets
+ferc-primer,E1 E5 P4 m3 m4 c4 c6,FERC Energy Primer (2020),https://www.ferc.gov/sites/default/files/2020-06/energy-primer-2020.pdf
+pjm-owner-roles,E2 c2 c5,PJM tariff: transmission owner operating responsibilities,https://agreements.pjm.com/oatt/3907
+pjm-billing,P4 m5 m6 c6,PJM Guide to Billing: network service charges and credits,https://www.pjm.com/markets-and-operations/billing-settlements-and-credit/guide-to-billing.aspx
+pjm-operating-fees,E5 m12,PJM Administrative Cost Rates,https://www.pjm.com/committees-and-groups/committees/fc/pjm-admin-cost-rates.aspx
+ferc-funding,m10,FERC annual charges and filing fees,https://ferc.gov/general-information-0/annual-charges
+cpuc-funding,m11,CPUC Resolution M-4879: 2026 utility user fees,https://docs.cpuc.ca.gov/PublishedDocs/Published/G000/M590/K540/590540853.pdf
+ferc-transmission-rates,E2 m2 m5 m6 c8,FERC transmission formula rates and customer bills,https://www.ferc.gov/formula-rates-electric-transmission-proceedings-key-concepts-and-how-participate
+eia-grid,P1 P2 P3 E8 p1 p2 p3,EIA: electricity delivery to consumers,https://www.eia.gov/energyexplained/electricity/delivery-to-consumers.php
+doe-distributed-generation,P1 p1,DOE: distributed resources can connect to distribution,https://www.energy.gov/cmei/systems/solar-integration-distributed-energy-resources-and-microgrids-basics
+illinois-retail-choice,E3 E4 m1 m2 c3 c9 c10 c11,Illinois Commerce Commission: Electric Choice,https://icc.illinois.gov/downloads/public/consumer/LOCAL%20GOVERNMENT%20AGGREGATION.pdf
+generation-constellation,E1 c1,Example: Constellation generation business,https://www.constellationenergy.com/about
+generation-vistra,E1 c1,Example: Vistra generation business,https://vistracorp.com/about/
+transmission-aep,E2,Example: AEP owns and operates transmission,https://www.aep.com/about/businesses/
+utility-comed,E2 E3,Example: ComEd transmission and distribution network,https://careers.comed.com/comed
+utility-pge,E3 m8 m9,Example: PG&E transmission and distribution procurement,https://www.pge.com/en/about/doing-business-with-pge/purchase-programs.html
+supplier-constellation,E4 c11,Example: Constellation supplier and utility roles,https://www.constellation.com/energy-101/faqs/commercial-business-energy-faqs.html
+supplier-direct-energy,E4 m1 c10 c11,Example: Direct Energy supplier and delivery roles,https://www.directenergy.com/en/residential/energy/new-jersey
+equipment-hitachi,E6 m7 m8 m9,Example: Hitachi Energy grid equipment,https://www.hitachienergy.com/products-and-solutions
+equipment-siemens,E6 m7,Example: Siemens Energy gas turbines,https://www.siemens-energy.com/global/en/home/products-services/product-offerings/gas-turbines.html
+ferc-reliability,c7,"FERC: reliability standards, NERC and regional entities",https://www.ferc.gov/reliable-operation-bulk-power-system
+doe-large-customers,E8,DOE: some large industrial customers connect to transmission,https://www.energy.gov/sites/default/files/2016/04/f30/AMO%20Dispatchable%20DG%20and%20Manufacturing_Workshop%20Report_FINAL.PDF

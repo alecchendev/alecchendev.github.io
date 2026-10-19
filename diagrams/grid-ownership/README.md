@@ -20,6 +20,8 @@ This uses only Python's standard library and writes the self-contained
 - `template.html`: the original diagram's markup, styles, and interaction code,
   with two placeholders for the CSV data. Edit this for presentation changes;
   generated HTML is overwritten on each build.
+- `sources.csv`: primary sources for the audit, with space-separated node and
+  relationship IDs in `applies_to`. References stay outside the diagram UI.
 
 Use a spreadsheet editor or preserve standard CSV quoting when editing text
 containing commas or quotation marks. Keep row order to preserve the original
@@ -51,7 +53,32 @@ They are never included in `grid-ownership.html`.
 Relationships `m10` and `m11` show illustrative utility-to-regulator payments.
 FERC's operating appropriation is recovered through annual charges and filing
 fees ([FERC annual charges](https://ferc.gov/general-information-0/annual-charges)).
-California's PUC describes utility fees as funding its main operating account
-([CPUC funding explanation, appendix on Fund 0462](https://www.cpuc.ca.gov/-/media/cpuc-website/transparency/commissioner-committees/finance-and-administration/2018/02-07-18-2018-february-update-re-12-31-17-v5.pdf)).
+California's PUC assesses utility fees to fund its regulatory budget
+([CPUC Resolution M-4879, effective 2026](https://docs.cpuc.ca.gov/PublishedDocs/Published/G000/M590/K540/590540853.pdf)).
 State arrangements vary. The diagram therefore does not equate all regulator
 funding with general taxation or draw a direct household-to-regulator tax arrow.
+
+## Data audit, 2026-10-19
+
+Checked all 12 nodes, the 25 existing relationships, and the company examples
+against regulator, ISO/RTO, government and company sources. The revised text
+is about 20% shorter, including the added ISO/RTO funding relationship `m12`.
+
+The model represents a FERC-regulated ISO/RTO region with retail choice, using
+PJM as the transmission-billing example. It is not a universal U.S. arrangement:
+ERCOT, vertically integrated regions, public utilities and cooperatives can
+differ. Company names illustrate roles; they do not imply one common region or
+a commercial relationship between those companies.
+
+Generation owners and operators are grouped as generation companies; equipment
+operations may be contracted out. ISO/RTO coordination remains separate from
+owners' physical operation and maintenance. The markets/settlements node is a
+schematic billing hub; bilateral contracts need not settle through an ISO/RTO.
+The power arrows show one delivery path through a connected network, omitting
+distribution-connected generators and direct transmission customers.
+
+For `m5`, the distribution utility is an illustrative transmission customer.
+The responsible payer and the placement of transmission charges on retail
+bills vary. For `m12`, market and transmission customers pay administrative
+tariff charges, shown through settlements rather than as another customer node
+([PJM administrative cost recovery](https://www.pjm.com/committees-and-groups/committees/fc/pjm-admin-cost-rates.aspx)).

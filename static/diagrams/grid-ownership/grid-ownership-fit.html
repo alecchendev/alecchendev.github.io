@@ -43,13 +43,13 @@
     <div class="goviz-info-head">
       <div class="goviz-info-overline">SELECTED RELATIONSHIPS</div>
       <div class="goviz-info-title">Transmission utilities</div>
-      <div class="goviz-info-description">They own and maintain physical transmission equipment, while an ISO/RTO coordinates regional operations.</div>
+      <div class="goviz-info-description">Own, maintain and physically operate high-voltage lines and substations. Transmission tariffs recover approved costs, including an allowed return for investor-owned utilities.</div>
     </div>
     <div class="goviz-relations"></div>
   </div>
   <div class="goviz-footer">
     <div><strong>How to read:</strong> Arrowheads show direction; colored lines distinguish flows. Drag a node to experiment with the layout.</div>
-    <div><strong>Model scope:</strong> Simplified U.S. ISO/RTO + retail-choice example. Roles can be combined in a vertically integrated utility; billing and transmission tariffs vary by region.</div>
+    <div><strong>Model scope:</strong> FERC-regulated ISO/RTO region with retail choice. Companies may fill several roles; billing and tariffs vary. Power arrows simplify a connected network.</div>
   </div>
 </div>
 <style>
@@ -198,7 +198,7 @@
     "kind": "entity",
     "x": 45,
     "y": 89,
-    "description": "Design and manufacture transformers, switchgear, turbines, inverters, cables, and other grid hardware. Utilities and generators purchase the equipment."
+    "description": "Make transformers, switchgear, turbines, inverters and other equipment. Utilities and generation companies buy it to build and maintain their assets."
   },
   {
     "id": "E7",
@@ -208,7 +208,7 @@
     "kind": "entity",
     "x": 525,
     "y": 89,
-    "description": "FERC oversees most interstate transmission tariffs and organized wholesale-market rules. State commissions typically oversee retail distribution rates and retail-supplier rules. Funding: FERC uses industry charges and filing fees; state commissions often use utility assessments. State arrangements vary."
+    "description": "FERC regulates most interstate transmission and wholesale electricity sales. State commissions typically oversee investor-owned utility distribution rates and retail supplier rules."
   },
   {
     "id": "E5",
@@ -218,17 +218,17 @@
     "kind": "entity",
     "x": 1005,
     "y": 89,
-    "description": "Coordinate regional transmission operations, issue dispatch instructions to generators, plan system reliability, and administer organized wholesale markets. They generally do not own or maintain transmission lines."
+    "description": "Balance regional supply and demand, coordinate transmission, dispatch generators and run wholesale markets. These nonprofits do not own transmission lines."
   },
   {
     "id": "E1",
-    "title": "Power plant operators",
+    "title": "Generation companies",
     "sub": "Constellation, Vistra",
     "symbol": "◉",
     "kind": "entity",
     "x": 45,
     "y": 280,
-    "description": "Build, own, operate and maintain generating assets. Sell power through wholesale markets or bilateral contracts; some also receive capacity or ancillary-service revenue."
+    "description": "Own generating assets and sell power through wholesale markets or contracts. They may operate plants themselves or hire operators."
   },
   {
     "id": "E2",
@@ -238,7 +238,7 @@
     "kind": "entity",
     "x": 365,
     "y": 280,
-    "description": "Build, own, operate and maintain high-voltage lines and substations. Recover allowed costs and returns through FERC-regulated transmission tariffs charged to transmission customers."
+    "description": "Own, maintain and physically operate high-voltage lines and substations. Transmission tariffs recover approved costs, including an allowed return for investor-owned utilities."
   },
   {
     "id": "E3",
@@ -248,7 +248,7 @@
     "kind": "entity",
     "x": 685,
     "y": 280,
-    "description": "Own and maintain local lines, distribution substations, meters and transformers. Recover approved distribution costs through regulated delivery charges on customers’ bills."
+    "description": "Own and operate local wires, substations, transformers and meters. Regulated delivery charges fund service, maintenance and approved investment."
   },
   {
     "id": "E4",
@@ -258,7 +258,7 @@
     "kind": "entity",
     "x": 1005,
     "y": 280,
-    "description": "Contract with end customers for electricity supply. Buy or hedge wholesale power and charge retail customers for the supply component of their bills. In many regions this is the distribution utility itself."
+    "description": "Arrange electricity supply through wholesale purchases, contracts or generation, and charge customers for it. The local utility still delivers the power."
   },
   {
     "id": "P1",
@@ -268,7 +268,7 @@
     "kind": "physical",
     "x": 45,
     "y": 486,
-    "description": "Physical equipment converts primary energy into electrical power and injects that power into the network."
+    "description": "Facilities that convert energy from fuel, wind, water or sunlight into electricity. Some connect directly to distribution."
   },
   {
     "id": "P2",
@@ -278,7 +278,7 @@
     "kind": "physical",
     "x": 365,
     "y": 486,
-    "description": "High-voltage conductors, breakers, transformers, protection systems and substations move bulk electrical energy across regions."
+    "description": "High-voltage lines and substations move bulk power between generators, regions and distribution systems."
   },
   {
     "id": "P3",
@@ -288,7 +288,7 @@
     "kind": "physical",
     "x": 685,
     "y": 486,
-    "description": "Medium- and low-voltage equipment delivers electrical power from substations to customers and isolates local faults."
+    "description": "Local lines, substations, transformers and meters deliver electricity to most homes and businesses."
   },
   {
     "id": "E8",
@@ -298,17 +298,17 @@
     "kind": "entity",
     "x": 1005,
     "y": 486,
-    "description": "Consume delivered electricity and ultimately fund generation, grid infrastructure, and system services through electricity bills. Large industrial customers may connect directly to transmission."
+    "description": "Use electricity and fund supply, networks and grid services through their bills. Some large customers connect directly to transmission."
   },
   {
     "id": "P4",
-    "title": "Wholesale market & settlements",
+    "title": "Wholesale markets & settlements",
     "sub": "Energy trades, Tariff billing",
     "symbol": "$",
     "kind": "market",
     "x": 525,
     "y": 695,
-    "description": "An ISO/RTO matches and settles wholesale energy transactions and administers transmission-related billing and credits. The financial flow shown is schematic; not every trade passes through a spot market."
+    "description": "A schematic hub for wholesale trades and transmission billing. ISO/RTO trades settle here; bilateral contracts may be paid separately."
   }
 ];
   // kind = power | money | control. Arrow direction is FROM -> TO.
@@ -320,7 +320,7 @@
     "to": "P2",
     "kind": "power",
     "label": "Injection",
-    "detail": "Power plants inject energy into the transmission system (sometimes first through generator step-up transformers)."
+    "detail": "Large plants usually connect to transmission through step-up transformers; smaller generators can connect to distribution."
   },
   {
     "id": "p2",
@@ -328,7 +328,7 @@
     "to": "P3",
     "kind": "power",
     "label": "Transfer",
-    "detail": "Transmission carries bulk power to distribution substations, which reduce voltage for local delivery."
+    "detail": "Transmission supplies distribution substations, where transformers step down the voltage."
   },
   {
     "id": "p3",
@@ -336,7 +336,7 @@
     "to": "E8",
     "kind": "power",
     "label": "Delivery",
-    "detail": "The distribution utility physically delivers power to homes and businesses, regardless of which retail supplier is chosen."
+    "detail": "Local wires carry power to customers, whoever supplies their electricity."
   },
   {
     "id": "m1",
@@ -344,7 +344,7 @@
     "to": "E4",
     "kind": "money",
     "label": "Supply charge",
-    "detail": "Customers pay for their energy supply. Bills may be issued by the retailer or consolidated by the distribution utility."
+    "detail": "Customers pay for electricity supply, sometimes on the same bill as utility delivery charges."
   },
   {
     "id": "m2",
@@ -352,7 +352,7 @@
     "to": "E3",
     "kind": "money",
     "label": "Delivery charge",
-    "detail": "Customers ultimately fund regulated distribution service through delivery charges, paid directly or through consolidated billing."
+    "detail": "Delivery charges fund local network service and can include transmission and other regulated costs."
   },
   {
     "id": "m3",
@@ -360,7 +360,7 @@
     "to": "P4",
     "kind": "money",
     "label": "Wholesale purchases",
-    "detail": "Retail suppliers/load-serving entities buy wholesale electricity, often using market settlements and bilateral hedges."
+    "detail": "Suppliers buy wholesale electricity; some purchases settle through ISO/RTO markets and others through bilateral contracts."
   },
   {
     "id": "m4",
@@ -368,7 +368,7 @@
     "to": "E1",
     "kind": "money",
     "label": "Generator revenue",
-    "detail": "Market settlements credit generators for dispatched energy and other market services. Generators can also sell through bilateral contracts."
+    "detail": "Generators receive payments for energy and, where applicable, capacity and grid services. Bilateral sales may settle separately."
   },
   {
     "id": "m5",
@@ -376,7 +376,7 @@
     "to": "P4",
     "kind": "money",
     "label": "Network service charges",
-    "detail": "Illustrative case: a distribution utility is also a transmission network customer. In other arrangements another load-serving entity pays these charges."
+    "detail": "A distribution utility may pay for transmission service as a network customer. Other arrangements charge the supplier or another load-serving entity."
   },
   {
     "id": "m6",
@@ -384,7 +384,7 @@
     "to": "E2",
     "kind": "money",
     "label": "Transmission tariff credits",
-    "detail": "Transmission owners receive regulated tariff revenue via transmission-service settlements. PJM bills network customers and allocates credits to owners; the customer and owner may even be the same company."
+    "detail": "In PJM, network transmission charges are credited to transmission owners to recover their approved revenue requirements."
   },
   {
     "id": "m7",
@@ -392,7 +392,7 @@
     "to": "E6",
     "kind": "money",
     "label": "Buys generation equipment",
-    "detail": "Plant developers and operators buy turbines, generators, inverters, transformers and related equipment."
+    "detail": "Generation companies buy turbines, generators, inverters and other plant equipment."
   },
   {
     "id": "m8",
@@ -400,7 +400,7 @@
     "to": "E6",
     "kind": "money",
     "label": "Buys transmission gear",
-    "detail": "Transmission utilities purchase breakers, large transformers, relays, wires, towers and other equipment."
+    "detail": "Transmission utilities buy transformers, breakers, conductors and other network equipment."
   },
   {
     "id": "m9",
@@ -408,7 +408,7 @@
     "to": "E6",
     "kind": "money",
     "label": "Buys distribution gear",
-    "detail": "Distribution utilities purchase transformers, switches, meters, reclosers, poles and cables."
+    "detail": "Distribution utilities buy transformers, poles, switches and meters."
   },
   {
     "id": "m10",
@@ -416,7 +416,7 @@
     "to": "E7",
     "kind": "money",
     "label": "FERC fees",
-    "detail": "Illustrative payer: transmission utilities pay annual regulatory charges to FERC. FERC recovers its operating appropriation through annual charges and filing fees assessed on regulated industries; other regulated entities also pay. This is a funding flow, separate from regulatory oversight."
+    "detail": "FERC recovers its regular operating budget through annual charges and filing fees on regulated companies. Transmission utilities are one example."
   },
   {
     "id": "m11",
@@ -424,7 +424,15 @@
     "to": "E7",
     "kind": "money",
     "label": "State PUC fees",
-    "detail": "State commissions such as the California PUC fund regulatory operations through fees assessed on regulated utilities. Utilities may recover these costs from customers through approved rates or bill surcharges. Funding arrangements vary by state; this arrow does not represent a direct tax payment from a household to a regulator."
+    "detail": "Utilities pay assessments that fund state regulators, often recovered in customer bills. Rules vary by state."
+  },
+  {
+    "id": "m12",
+    "from": "P4",
+    "to": "E5",
+    "kind": "money",
+    "label": "ISO/RTO operating fees",
+    "detail": "Market and transmission customers pay tariff-based fees that fund ISO/RTO operations, shown here through settlements."
   },
   {
     "id": "c1",
@@ -432,7 +440,7 @@
     "to": "P1",
     "kind": "control",
     "label": "Owns, maintains, operates",
-    "detail": "The plant operator is responsible for day-to-day equipment operations and maintenance, subject to dispatch and reliability requirements."
+    "detail": "Generation companies own plant equipment; operations and maintenance may be contracted out. ISO/RTOs coordinate dispatch."
   },
   {
     "id": "c2",
@@ -440,7 +448,7 @@
     "to": "P2",
     "kind": "control",
     "label": "Owns, maintains, operates",
-    "detail": "The transmission owner maintains and physically operates its assets, implements protection settings, and performs field switching under applicable coordination procedures."
+    "detail": "Transmission owners maintain equipment and perform switching, coordinated with the ISO/RTO."
   },
   {
     "id": "c3",
@@ -448,7 +456,7 @@
     "to": "P3",
     "kind": "control",
     "label": "Owns, maintains, operates",
-    "detail": "The distribution utility operates local feeders and equipment, responds to outages, and maintains protection systems."
+    "detail": "Distribution utilities operate and maintain local equipment and restore service after outages."
   },
   {
     "id": "c4",
@@ -456,7 +464,7 @@
     "to": "E1",
     "kind": "control",
     "label": "Dispatch instructions",
-    "detail": "The ISO/RTO dispatches participating generators and sends setpoints or instructions; the owner still operates its equipment."
+    "detail": "The ISO/RTO sends participating generators output targets; plant operators run the equipment."
   },
   {
     "id": "c5",
@@ -464,7 +472,7 @@
     "to": "E2",
     "kind": "control",
     "label": "Regional grid coordination",
-    "detail": "The ISO/RTO coordinates regional transmission-system operation, reliability and outage planning; transmission owners execute equipment-level work."
+    "detail": "The ISO/RTO coordinates regional transmission reliability and outages; owners maintain and physically operate the equipment."
   },
   {
     "id": "c6",
@@ -472,7 +480,7 @@
     "to": "P4",
     "kind": "control",
     "label": "Runs market & billing",
-    "detail": "An ISO/RTO administers organized wholesale energy markets and associated settlements and transmission billing."
+    "detail": "The ISO/RTO runs organized wholesale markets and handles their settlements and applicable transmission billing."
   },
   {
     "id": "c7",
@@ -480,7 +488,7 @@
     "to": "E5",
     "kind": "control",
     "label": "FERC oversight",
-    "detail": "FERC reviews ISO/RTO tariffs and wholesale-market rules; reliability regulation also involves NERC and regional entities."
+    "detail": "FERC approves ISO/RTO tariffs and market rules. Reliability standards also involve NERC and regional entities."
   },
   {
     "id": "c8",
@@ -488,7 +496,7 @@
     "to": "E2",
     "kind": "control",
     "label": "Transmission rates (FERC)",
-    "detail": "FERC regulates rates and tariffs for most interstate transmission by public utilities."
+    "detail": "FERC approves transmission rates and tariffs for the public utilities shown here."
   },
   {
     "id": "c9",
@@ -496,7 +504,7 @@
     "to": "E3",
     "kind": "control",
     "label": "Distribution rates (states)",
-    "detail": "State utility commissions typically set or approve regulated distribution rates for investor-owned utilities."
+    "detail": "State commissions approve distribution rates for investor-owned utilities. Publicly owned and cooperative utilities may have different oversight."
   },
   {
     "id": "c10",
@@ -504,7 +512,7 @@
     "to": "E4",
     "kind": "control",
     "label": "Retail supplier rules (states)",
-    "detail": "State authorities oversee retail electricity sales and supplier licensing where retail choice exists."
+    "detail": "States set licensing and consumer-protection rules for competitive retail electricity suppliers."
   },
   {
     "id": "c11",
@@ -512,7 +520,7 @@
     "to": "E8",
     "kind": "control",
     "label": "Electricity supply contract",
-    "detail": "The retail supplier is contractually responsible for supplying the customer’s energy, but does not route particular electrons through the wires."
+    "detail": "The supplier arranges the customer’s electricity supply; the local utility provides physical delivery."
   }
 ];
   NODES.forEach(n => { n.y = Math.round(n.y * .82); });

@@ -43,7 +43,8 @@
 
 .grid-preview-mobile { display: none; }
 
-@media (max-width: 1050px) {
+/* Leave room for the page scrollbar and the diagram's 1001px minimum width. */
+@media (max-width: 1070px) {
   .grid-preview-wide {
     width: 100%;
     left: auto;
