@@ -23,7 +23,7 @@ I think this is one of the things I could improve on the most. I wouldn't say I'
 
 How do you cultivate a sense of urgency?
 
-I've observed many different reasons for my own and others' senses of urgency.
+I've observed many different [reasons](/blog/reasons) for my own and others' senses of urgency.
 
 Some people's sense of urgency comes from ego. They need to do something, make it succeed, or make it happen faster because they need to be *somebody*. In many cases, it comes from some attachment to their identity in some form, whether their identity surrounds their passion for a mission or some domain, or the need to make money, prove to people or themselves that they're capable, or even just be interesting. Having too big of an ego is annoying and ultimately detrimental, but cultivating an identity is a skill that can be [harnessed effectively](https://x.com/justinskycak/status/2085525832307720684).
 

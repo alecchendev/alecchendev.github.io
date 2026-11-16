@@ -30,4 +30,4 @@ title: Reasons to allocate effort
 - prove something
 - avoid something
 
-I wanted to lay some of these out plainly to show it's really not that deep. It's good to recognize what motivates you, to be real with yourself. But I've found myself focusing on grand narratives too much. Lately I'm valuing how one acts more than why.
+I wanted to lay some of these out plainly to show it's really not that deep. It's good to recognize what motivates you, to be real with yourself. But I've found myself focusing on grand narratives too much. Lately I'm valuing [how one acts more than why.](/blog/belief/)
